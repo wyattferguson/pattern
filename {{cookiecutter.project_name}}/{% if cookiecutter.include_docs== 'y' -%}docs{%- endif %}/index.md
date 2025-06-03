@@ -1,8 +1,11 @@
 # :rocket: {{cookiecutter.project_name}}
 
+[![Release](https://img.shields.io/github/v/release/{{cookiecutter.github}}/{{cookiecutter.project_slug}})](https://img.shields.io/github/v/release/{{cookiecutter.github}}/{{cookiecutter.project_slug}})
+[![License](https://img.shields.io/github/license/{{cookiecutter.github}}/{{cookiecutter.project_slug}})](https://img.shields.io/github/license/{{cookiecutter.github}}/{{cookiecutter.project_slug}})
+
 {{cookiecutter.project_description}}
 
-## Setup Enviroment + Dependancies
+## Installation
 
 Installation is using [UV](https://docs.astral.sh/uv/) to manage everything.
 
@@ -18,18 +21,6 @@ uv venv
 # install all the cool dependancies
 uv sync
 ```
-
-{% if cookiecutter.pypi_deploy== 'y' -%}
-
-## Pypi Deploy
-
-{%- endif %}
-
-{% if cookiecutter.include_docs== 'y' -%}
-
-## Docs Build + Publishing
-
-{%- endif %}
 
 ## CLI Commands
 

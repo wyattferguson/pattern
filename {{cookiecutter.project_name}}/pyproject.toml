@@ -81,7 +81,18 @@ ignore = [
     "CPY", # Flake8-copyright
     "T20", # Flake8-print
     "ERA", # Eradicate – detects commented-out code
-    "BLE001" # Catch-all exceptions
+    "BLE001", # Catch-all exceptions
+    "D105",
+    "D107",
+    "D203",
+    "D212",
+    "UP006",
+    "UP007",
+    "D400",
+    "D406",
+    "D407",
+    "PLC1901",
+    "UP035"
 ]
 
 [tool.ty]
