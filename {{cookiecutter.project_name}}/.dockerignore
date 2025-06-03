@@ -1,0 +1,83 @@
+# Project Specific
+tests/
+docs/
+.github/
+CONTRIBUTING.md
+CHANGELOG.md
+LICENSE
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+**/*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Virtual environment
+.env
+.venv/
+venv/
+
+# PyCharm
+.idea
+
+# Python mode for VIM
+.ropeproject
+**/.ropeproject
+
+# Vim swap files
+**/*.swp
+
+# VS Code
+.vscode/

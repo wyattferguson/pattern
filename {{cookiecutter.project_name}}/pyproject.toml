@@ -1,0 +1,99 @@
+
+[project]
+name = "{{cookiecutter.project_name}}"
+version = "{cookiecutter.version}}"
+description = "{{cookiecutter.project_description}}"
+authors = [{ name = "{{cookiecutter.author}}", email = "{{cookiecutter.email}}" }]
+readme = "README.md"
+license = {text = "{{cookiecutter.open_source_license}}"}
+keywords = ["python"]
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[dependency-groups]
+dev = [
+    "ty>=0.0.1a8",
+    {% if cookiecutter.include_tests == 'y' -%}
+    "pytest>=8.3.4",
+    "coverage>=7.8.2",
+    {% endif %}
+    "ruff>=0.9.5",
+    "taskipy>=1.14.1",
+    {% if cookiecutter.include_docs == 'y' -%}
+    "mkdocs>=1.4.2",
+    "mkdocs-material>=8.5.10",
+    "mkdocstrings[python]>=0.26.1",
+    "mkdocs-gen-files>=0.5.0",
+    "mkdocs-literate-nav>=0.6.1",
+    {% endif %}
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+
+[project.urls]
+homepage = "https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}"
+repository = "https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}.git"
+{% if cookiecutter.include_docs == 'y' -%}
+documentation = "https://{{cookiecutter.github}}.github.io/{{cookiecutter.project_slug}}"
+{% else %}
+documentation = "https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}"
+{% endif %}
+issues = "https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.taskipy.tasks]
+format = "ruff format ./{{cookiecutter.project_slug}}/"
+lint = "ruff check --fix ./{{cookiecutter.project_slug}}/"
+typecheck = "ty check"
+{% if cookiecutter.include_docs == 'y' -%}
+docs = "mkdocs build & task serve"
+serve = "mkdocs serve"
+doc_deploy = "mkdocs gh-deploy --force"
+{% endif %}
+{% if cookiecutter.include_tests == 'y' -%}
+tests = "pytest --verbose --color=yes tests"
+coverage = "coverage html && coverage report -m"
+{% endif %}
+run = "uv run ./{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py"
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+format.indent-style = "space"
+target-version = "py313"
+src = ["{{cookiecutter.project_slug}}", "tests"]
+
+[tool.ruff.lint]
+pydocstyle.convention = "google"
+fixable = ["ALL"]
+select = ["ALL"]
+ignore = [
+    "FA102", # Flake8-future-annotations
+    "F401", # Disable fix for unused imports
+    "B904", # Allow raising exceptions without from e
+    "PLR0913", # too many arguments
+    "CPY", # Flake8-copyright
+    "T20", # Flake8-print
+    "ERA", # Eradicate – detects commented-out code
+    "BLE001" # Catch-all exceptions
+]
+
+[tool.ty]
+src.root = "./{{cookiecutter.project_slug}}"
+environment.python = "./.venv"
+terminal.output-format = "concise"
+
+[tool.coverage.paths]
+source = ["{{cookiecutter.project_slug}}", "*/site-packages"]
+tests = ["tests", "*/tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["{{cookiecutter.project_slug}}", "tests"]

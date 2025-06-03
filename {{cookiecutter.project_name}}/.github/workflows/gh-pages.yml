@@ -1,0 +1,63 @@
+name: Build and Deploy GitHub Pages
+
+on:
+  # Trigger plublishing when a new release is created
+  release:
+    types: [published]
+
+  # Trigger publishing when pushed to main
+  # push:
+  #   branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  # Build MKDocs from Scratch
+  build_mkdocs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "{{ cookiecutter.python_version }}"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.6.5"
+
+      - name: Install only dev dependencies
+        run: uv sync --only-dev
+
+      - name: Build docs and trigger deploy
+        run: mkdocs gh-deploy --config-file mkdocs.yml --force
+
+  # Deploy docs to Github Pages
+  deploy_mkdocs:
+    needs: build_mkdocs
+    environment:
+      name: github-pages
+      url: https://{{cookiecutter.github}}.github.io/{{cookiecutter.project_slug}}/
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

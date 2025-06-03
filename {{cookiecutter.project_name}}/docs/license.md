@@ -1,6 +1,12 @@
-MIT License
+---
+title: License
+---
 
-Copyright (c) {{ cookiecutter.copyright_year }} Wyatt Ferguson
+# License
+
+## MIT License
+
+### Copyright (c) {{ cookiecutter.copyright_year }} Wyatt Ferguson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
