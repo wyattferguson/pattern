@@ -1,8 +1,5 @@
 # :rocket: {{cookiecutter.project_name}}
 
-[![Release](https://img.shields.io/github/v/release/{{cookiecutter.github}}/{{cookiecutter.project_slug}})](https://img.shields.io/github/v/release/{{cookiecutter.github}}/{{cookiecutter.project_slug}})
-[![License](https://img.shields.io/github/license/{{cookiecutter.github}}/{{cookiecutter.project_slug}})](https://img.shields.io/github/license/{{cookiecutter.github}}/{{cookiecutter.project_slug}})
-
 {{cookiecutter.project_description}}
 
 ## Installation

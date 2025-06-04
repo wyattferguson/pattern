@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Deprecated
 
-## [0.1.0] - {{ cookiecutter.copyright_year }}-01-01
+## [0.1.0] - {% now 'local', '%Y' %}-01-01
 
 ### Added
 
