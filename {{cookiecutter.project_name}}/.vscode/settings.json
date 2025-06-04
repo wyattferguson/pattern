@@ -1,0 +1,31 @@
+{
+  "python.testing.pytestArgs": ["tests"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+
+  // Ruff settings
+  "ruff.fixAll": true,
+  "ruff.organizeImports": true,
+  "ruff.lineLength": 100,
+  "ruff.lint.select": ["ALL"],
+  "ruff.lint.ignore": [
+    "FA102", // Flake8-future-annotations
+    "F401", // Disable fix for unused imports
+    "B904", // Allow raising exceptions without from e
+    "PLR0913", // too many arguments
+    "CPY", // Flake8-copyright
+    "T201", // Debugging print statements
+    "ERA", // Eradicate – detects commented-out code
+    "BLE001", // Catch-all exceptions
+    "D105", // undocumented magic method
+    "D107", // undocumented public init
+    "D203", // incorrect-blank-line-before-class
+    "D212", // multi-line-summary-first-line
+    "D400", // missing-trailing-period
+    "D407" // missing-dashed-underline-after-section
+  ],
+
+  // ty settings
+  "ty.experimental.completions.enable": true,
+  "ty.trace.server": "messages"
+}

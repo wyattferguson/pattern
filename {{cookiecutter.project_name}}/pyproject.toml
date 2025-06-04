@@ -5,10 +5,11 @@ version = "{cookiecutter.version}}"
 description = "{{cookiecutter.project_description}}"
 authors = [{ name = "{{cookiecutter.author}}", email = "{{cookiecutter.email}}" }]
 readme = "README.md"
-license = {text = "{{cookiecutter.open_source_license}}"}
+license = {file = "LICENSE"}
 keywords = ["python"]
 requires-python = ">=3.13"
 classifiers = [
+    "Programming Language :: Python",
     "Programming Language :: Python :: 3.13",
     "Typing :: Typed",
 ]
@@ -60,14 +61,14 @@ doc_deploy = "mkdocs gh-deploy --force"
 tests = "pytest --verbose --color=yes tests"
 coverage = "coverage html && coverage report -m"
 {% endif %}
-run = "uv run ./{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py"
+run = "uv run ./src/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py"
 
 [tool.ruff]
 line-length = 100
 indent-width = 4
 format.indent-style = "space"
 target-version = "py313"
-src = ["{{cookiecutter.project_slug}}", "tests"]
+src = ["src", "tests"]
 
 [tool.ruff.lint]
 pydocstyle.convention = "google"
@@ -91,14 +92,17 @@ ignore = [
 ]
 
 [tool.ty]
-src.root = "./{{cookiecutter.project_slug}}"
+src.root = "./src"
 environment.python = "./.venv"
 terminal.output-format = "concise"
 
 [tool.coverage.paths]
-source = ["{{cookiecutter.project_slug}}", "*/site-packages"]
-tests = ["tests", "*/tests"]
+source = ["src"]
+tests = ["tests"]
+
+[tool.coverage.report]
+skip_empty = true
 
 [tool.coverage.run]
 branch = true
-source = ["{{cookiecutter.project_slug}}", "tests"]
+source = ["src", "tests"]
