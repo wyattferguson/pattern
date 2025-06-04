@@ -18,17 +18,19 @@ Create new project:
 cookiecutter https://github.com/wyattferguson/cookiecutter-project.git
 ```
 
-## Features + Extras
+## Features
 
-- [UV](https://docs.astral.sh/uv/) - venv and dependency manager
-- [Ty](https://docs.astral.sh/ty/) - Static Type Checking
+- [UV](https://docs.astral.sh/uv/) - Python package and project manager
+- [Ruff](https://docs.astral.sh/ruff/) - Python linter and code formatter
+- [Ty](https://github.com/astral-sh/ty) - Extremely fast Python type checker (Alpha)
 - [Pytest](https://docs.pytest.org/en/stable/) - Testing
 - [Coverage](https://coverage.readthedocs.io/en/7.6.12/) - Test Coverage
 - [Taskipy](https://github.com/taskipy/taskipy) - Task runner for included CLI shortcuts
 - [MKDocs](https://squidfunk.github.io/mkdocs-material/) - Material Theme + Doc Creation
-- [Ruff](https://docs.astral.sh/ruff/) - Code Formatting + Linting
-- GitHub Actions - Publish MKDocs to GH Pages + Publish to Pypi
-- Dockerfile
+- GitHub Actions
+  - Publish docs to Github Pages
+  - Publish package to Pypi
+- Docker Support
 
 ## References
 

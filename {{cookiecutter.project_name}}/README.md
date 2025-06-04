@@ -2,7 +2,7 @@
 
 {{cookiecutter.project_description}}
 
-## Setup Enviroment + Dependancies
+## Setup + Installation
 
 Installation is using [UV](https://docs.astral.sh/uv/) to manage everything.
 
@@ -18,18 +18,6 @@ uv venv
 # install all the cool dependancies
 uv sync
 ```
-
-{% if cookiecutter.pypi_deploy== 'y' -%}
-
-## Pypi Deploy
-
-{%- endif %}
-
-{% if cookiecutter.include_docs== 'y' -%}
-
-## Docs Build + Publishing
-
-{%- endif %}
 
 ## CLI Commands
 
