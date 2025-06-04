@@ -1,4 +1,4 @@
-"""File Descriptor"""
+"""File Descriptor."""
 
 
 def main() -> None:

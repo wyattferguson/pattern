@@ -44,6 +44,17 @@ task format
 task docs
 ```
 
+{% if cookiecutter.pypi_deploy == 'y' %}
+
+## Pypi Deployment
+
+- Create an API Token on [PyPI](https://pypi.org/).
+- Add the API Token to your projects secrets with the name `PYPI_TOKEN`
+- Create a new release on Github.
+- Create a new tag in the form `*.*.*`.
+
+{%- endif %}
+
 ## License
 
 {{cookiecutter.open_source_license}}

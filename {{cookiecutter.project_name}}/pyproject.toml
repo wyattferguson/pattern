@@ -21,8 +21,7 @@ dev = [
     "ty>=0.0.1a8",
     {% if cookiecutter.include_tests == 'y' -%}
     "pytest>=8.3.4",
-    "coverage>=7.8.2",
-    {% endif %}
+    "coverage>=7.8.2",{% endif %}
     "ruff>=0.9.8",
     "taskipy>=1.14.1",
     {% if cookiecutter.include_docs == 'y' -%}
