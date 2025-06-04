@@ -15,7 +15,7 @@ uv tool install cookiecutter
 Create new project:
 
 ```
-cookiecutter https://github.com/wyattferguson/cookiecutter-project.git
+cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
 ```
 
 ## Features
@@ -31,6 +31,7 @@ cookiecutter https://github.com/wyattferguson/cookiecutter-project.git
   - Publish docs to Github Pages
   - Publish package to Pypi
 - Docker Support
+- VSCode - Settings and extension recommendations
 
 ## References
 
