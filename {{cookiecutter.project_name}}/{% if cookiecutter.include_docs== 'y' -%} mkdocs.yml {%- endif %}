@@ -10,8 +10,6 @@ copyright: Maintained by <a href="https://github.com/{{cookiecutter.github}}">{{
 nav:
   - Home: index.md
   - Modules: reference/
-  - Examples: examples.md
-  - Contributing: contributing.md
   - License: license.md
 plugins:
   - search
@@ -50,12 +48,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_name}}
-    - icon: fontawesome/brands/bluesky
-      link: https://{{cookiecutter.bluesky}}.bsky.social
-    - icon: fontawesome/solid/mug-hot
-      link: https://www.buymeacoffee.com/{{cookiecutter.buymeacoffee}}
-    # - icon: fontawesome/brands/python
-    #   link: https://pypi.org/project/{{cookiecutter.project_name}}
 
 markdown_extensions:
   - toc:
