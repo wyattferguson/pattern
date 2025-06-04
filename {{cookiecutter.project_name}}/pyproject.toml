@@ -79,20 +79,15 @@ ignore = [
     "B904", # Allow raising exceptions without from e
     "PLR0913", # too many arguments
     "CPY", # Flake8-copyright
-    "T20", # Flake8-print
+    "T201", # Debugging print statements
     "ERA", # Eradicate – detects commented-out code
     "BLE001", # Catch-all exceptions
-    "D105",
-    "D107",
-    "D203",
-    "D212",
-    "UP006",
-    "UP007",
-    "D400",
-    "D406",
-    "D407",
-    "PLC1901",
-    "UP035"
+    "D105", # undocumented magic method
+    "D107", # undocumented public init
+    "D203", # incorrect-blank-line-before-class
+    "D212", # multi-line-summary-first-line
+    "D400", # missing-trailing-period
+    "D407", # missing-dashed-underline-after-section
 ]
 
 [tool.ty]
