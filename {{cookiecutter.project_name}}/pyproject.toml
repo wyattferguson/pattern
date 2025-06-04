@@ -48,6 +48,9 @@ issues = "https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/{{cookiecutter.project_slug}}"]
+
 [tool.taskipy.tasks]
 format = "ruff format ./src/"
 lint = "ruff check --fix ./src/"
