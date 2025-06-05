@@ -2,7 +2,7 @@
 
 {{cookiecutter.project_description}}
 
-## Setup + Installation
+## Setup Dev Enviroment
 
 Installation is using [UV](https://docs.astral.sh/uv/) to manage everything.
 

@@ -1,5 +1,9 @@
-.mypy_cache/
-.pytest_cache/
+
+# PyCharm folder
+.idea/
+
+# Mac files
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -28,6 +32,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.pdm.toml
+*.lock
 
 # PyInstaller
 *.manifest

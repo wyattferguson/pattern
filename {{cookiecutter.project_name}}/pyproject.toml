@@ -21,16 +21,16 @@ dependencies = [
 dev = [
     "ty>=0.0.1a8",
     {% if cookiecutter.include_tests == 'y' -%}
-    "pytest>=8.3.4",
+    "pytest>=8.4.0",
     "coverage>=7.8.2",{% endif %}
-    "ruff>=0.9.8",
+    "ruff>=0.11.12",
     "taskipy>=1.14.1",
     {% if cookiecutter.include_docs == 'y' -%}
-    "mkdocs>=1.4.2",
-    "mkdocs-material>=8.5.10",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.14",
     "mkdocstrings[python]>=0.26.1",
     "mkdocs-gen-files>=0.5.0",
-    "mkdocs-literate-nav>=0.6.1",
+    "mkdocs-literate-nav>=0.6.2",
     {% endif %}
 ]
 
