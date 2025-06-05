@@ -18,7 +18,7 @@ Create new project:
 cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
 ```
 
-## Features
+## Features + Included Tools
 
 - [UV](https://docs.astral.sh/uv/) - Python package and project manager
 - [Ruff](https://docs.astral.sh/ruff/) - Python linter and code formatter
@@ -30,10 +30,15 @@ cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
 - GitHub Actions
   - Publish docs to Github Pages
   - Publish package to Pypi
+- GitHub Issue Templates
+  - Documentation
+  - Feature Request
+  - General Report
+  - Bug Report
 - Docker Support
 - VSCode - Settings and extension recommendations
 
-## References
+## Alternative Cookiecutter Projects
 
 - [cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) - fpgmaas version of a cookiecutter using UV.
 - [cookiecutter-uv-hypermodern-python](https://github.com/bosd/cookiecutter-uv-hypermodern-python) - bosd version of a cookiecutter uv project with github deployments.
