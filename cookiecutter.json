@@ -15,10 +15,19 @@
     "Closed Source"
   ],
   "version": "0.1.0",
-  "include_docs": "y",
-  "include_tests": "y",
-  "include_changelog": "y",
-  "include_docker": "y",
-  "uv_setup": "y",
-  "pypi_deploy": "y"
+  "development_status": [
+    "Development Status :: 1 - Planning",
+    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 6 - Mature",
+    "Development Status :: 7 - Inactive"
+  ],
+  "include_docs": ["y", "n"],
+  "include_tests": ["y", "n"],
+  "include_changelog": ["y", "n"],
+  "include_docker": ["y", "n"],
+  "uv_setup": ["y", "n"],
+  "pypi_deploy": ["y", "n"]
 }
