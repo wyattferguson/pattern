@@ -46,7 +46,7 @@ task docs
 
 ## License
 
-{{cookiecutter.open_source_license}}
+{{cookiecutter.license}}
 
 ## Contact + Support
 
