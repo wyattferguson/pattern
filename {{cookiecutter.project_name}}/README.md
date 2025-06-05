@@ -21,6 +21,8 @@ uv sync
 
 ## CLI Commands
 
+We've included a bunch of useful CLI commands for common project tasks using [taskipy](https://github.com/taskipy/taskipy).
+
 ```
 # run src/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py
 task run
@@ -52,6 +54,12 @@ task docs
 - Add the API Token to your projects secrets with the name `PYPI_TOKEN`
 - Create a new release on Github.
 - Create a new tag in the form `*.*.*`.
+
+{%- endif %}
+
+{% if cookiecutter.include_docs== 'y' -%}
+
+## Docs Build + Publishing
 
 {%- endif %}
 

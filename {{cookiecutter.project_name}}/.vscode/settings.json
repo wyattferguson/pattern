@@ -25,7 +25,18 @@
     "D407" // missing-dashed-underline-after-section
   ],
 
+  {% if cookiecutter.typechecker == 'ty' -%}
   // ty settings
   "ty.experimental.completions.enable": true,
-  "ty.trace.server": "messages"
+  "ty.trace.server": "messages",
+  {% else %}
+  // mypy settings
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyArgs": [
+    "--ignore-missing-imports",
+    "--follow-imports=silent",
+    "--show-column-numbers",
+    "--strict"
+  ]
+  {% endif %}
 }

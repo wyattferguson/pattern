@@ -1,6 +1,10 @@
 {
   "recommendations": [
+    {% if cookiecutter.typechecker == 'ty' -%}
     "astral-sh.ty",
+    {% else %}
+    "ms-python.mypy-type-checker",
+    {% endif %}
     "charliermarsh.ruff",
     "ms-python.python",
     "ms-python.vscode-pylance",

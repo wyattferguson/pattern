@@ -24,6 +24,7 @@
     "Development Status :: 6 - Mature",
     "Development Status :: 7 - Inactive"
   ],
+  "typechecker": ["mypy", "ty"],
   "include_docs": ["y", "n"],
   "include_tests": ["y", "n"],
   "include_changelog": ["y", "n"],

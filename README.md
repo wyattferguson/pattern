@@ -22,15 +22,15 @@ cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
 
 - [UV](https://docs.astral.sh/uv/) - Python package and project manager
 - [Ruff](https://docs.astral.sh/ruff/) - Python linter and code formatter
-- [Ty](https://github.com/astral-sh/ty) - Extremely fast Python type checker (Alpha)
+- Typechecking - Choose between [Ty](https://github.com/astral-sh/ty) and [Mypy](https://www.mypy-lang.org/)
 - [Pytest](https://docs.pytest.org/en/stable/) - Testing
 - [Coverage](https://coverage.readthedocs.io/en/7.6.12/) - Test Coverage
 - [Taskipy](https://github.com/taskipy/taskipy) - Task runner for included CLI shortcuts
 - [MKDocs](https://squidfunk.github.io/mkdocs-material/) - Material Theme + Doc Creation
-- GitHub Actions
+- GitHub Actions:
   - Publish docs to Github Pages
   - Publish package to Pypi
-- GitHub Issue Templates
+- GitHub Issue Templates:
   - Documentation
   - Feature Request
   - General Report
@@ -40,8 +40,11 @@ cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
 
 ## Alternative Cookiecutter Projects
 
+If this cookiecutter isnt your cup of tea, you might like one of these alternatives.
+
 - [cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) - fpgmaas version of a cookiecutter using UV.
 - [cookiecutter-uv-hypermodern-python](https://github.com/bosd/cookiecutter-uv-hypermodern-python) - bosd version of a cookiecutter uv project with github deployments.
+- [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) - Cookiecutter template for a Python package.
 
 ## License
 
