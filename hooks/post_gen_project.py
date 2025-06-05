@@ -9,7 +9,7 @@ import shutil
 import subprocess
 
 
-def setup_uv_enviroment() -> bool:
+def setup_uv_enviroment() -> None:
     step: int = 0
     try:
         # (Step: 0) change directory to project folder
@@ -25,10 +25,8 @@ def setup_uv_enviroment() -> bool:
 
         # (Step: 3) install dependencies
         subprocess.run(["uv", "sync"])
-        return True
     except Exception as e:
-        print(f"ERROR (Step:{step}): {e}")
-        return False
+        print(f"Setup Error (Step:{step}): {e}")
 
 
 def remove(filepath: str) -> None:
@@ -38,14 +36,14 @@ def remove(filepath: str) -> None:
         elif os.path.isdir(filepath):
             shutil.rmtree(filepath)
     except Exception as e:
-        print(f"ERROR (Remove {filepath}): {e}")
+        print(f"Remove Error (Remove {filepath}): {e}")
 
 
 if __name__ == "__main__":
-    create_docs = "{{cookiecutter.include_docs}}" == "y"
-    create_tests = "{{cookiecutter.include_tests}}" == "y"
-    uv_setup = "{{cookiecutter.uv_setup}}" == "y"
-    pypi_deploy = "{{cookiecutter.pypi_deploy}}" == "y"
+    create_docs: bool = "{{cookiecutter.include_docs}}" == "y"
+    create_tests: bool = "{{cookiecutter.include_tests}}" == "y"
+    uv_setup: bool = "{{cookiecutter.uv_setup}}" == "y"
+    pypi_deploy: bool = "{{cookiecutter.pypi_deploy}}" == "y"
 
     if not create_docs:
         remove("docs")

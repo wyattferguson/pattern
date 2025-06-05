@@ -35,10 +35,8 @@ cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
 
 ## References
 
-- [cookiecutter](https://www.cookiecutter.io/) - library for building coding project templates
 - [cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) - fpgmaas version of a cookiecutter using UV.
 - [cookiecutter-uv-hypermodern-python](https://github.com/bosd/cookiecutter-uv-hypermodern-python) - bosd version of a cookiecutter uv project with github deployments.
-- [Material Theme Docs](https://squidfunk.github.io/mkdocs-material/getting-started/) - Docs for MKDocs theme.
 
 ## License
 

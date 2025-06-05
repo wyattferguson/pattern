@@ -2,7 +2,7 @@
 
 
 def main() -> None:
-    """Super first thing to read when you open a file."""
+    """Main function descriptor."""
     print("Hello, World!")
 
 
