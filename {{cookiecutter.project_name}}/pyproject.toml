@@ -9,7 +9,7 @@ license = {file = "LICENSE"}
 keywords = ["python"]
 requires-python = ">=3.13"
 classifiers = [
-    {{cookiecutter.development_status}},
+    "{{cookiecutter.development_status}}",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3.13",
     "Typing :: Typed",
