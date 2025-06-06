@@ -14,26 +14,26 @@ uvx cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
 
 Then just follow the prompts to get all setup quickly.
 
-## Features + Included Tools
+## Features
 
-- [UV](https://docs.astral.sh/uv/) - Python package and project manager
-- [Ruff](https://docs.astral.sh/ruff/) - Python linter and code formatter
-- Typechecking - Choose between [Ty](https://github.com/astral-sh/ty) and [Mypy](https://www.mypy-lang.org/)
-- [Pytest](https://docs.pytest.org/en/stable/) - Testing
-- [Coverage](https://coverage.readthedocs.io/en/7.6.12/) - Test Coverage
-- [Taskipy](https://github.com/taskipy/taskipy) - Task runner for included CLI shortcuts
-- [MKDocs](https://squidfunk.github.io/mkdocs-material/) - Material Theme + Doc Creation
-- GitHub Actions:
+- :package: [UV](https://docs.astral.sh/uv/) - Python package and project manager
+- :crab: [Ruff](https://docs.astral.sh/ruff/) - Python linter and code formatter
+- :bug: Typechecking - Choose between [Ty](https://github.com/astral-sh/ty) and [Mypy](https://www.mypy-lang.org/)
+- :test_tube: [Pytest](https://docs.pytest.org/en/stable/) - Testing
+- :telescope: [Coverage](https://coverage.readthedocs.io/en/7.6.12/) - Test Coverage
+- :small_airplane: [Taskipy](https://github.com/taskipy/taskipy) - Task runner for included CLI shortcuts
+- :vhs: [MKDocs](https://squidfunk.github.io/mkdocs-material/) - Material Theme + Doc Creation
+- :screwdriver: GitHub Actions:
   - Publish docs to Github Pages
   - Publish package to Pypi
-- GitHub Issue Templates:
+- :octocat: GitHub Issue Templates:
   - Documentation
   - Feature Request
   - General Report
   - Bug Report
-- Changelog, Code of Conduct, and Contributing Guide templates.
-- Docker Support
-- VSCode - Settings and extension recommendations
+- :placard: Changelog, Code of Conduct, and Contributing Guide templates.
+- :whale2: Docker Support
+- :cocktail: VSCode - Settings and extension recommendations
 
 ## Alternative Cookiecutter Projects
 
