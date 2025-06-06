@@ -42,6 +42,9 @@ task lint
 # format with ruff
 task format
 
+# format, lint, and typecheck combined
+task precommit
+
 # generate docs & serve
 task docs
 ```
