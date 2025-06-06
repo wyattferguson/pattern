@@ -1,22 +1,18 @@
-# :cookie: Cookiecutter Python UV Project
+# :snake: Cookiecutter Python Project
 
 This project is setup for [cookiecutter](https://www.cookiecutter.io/) to get a new project scafolded out quickly.
 
 ## Setup New Project
 
-Pull down and setup new project with cookiecutter
-
-Install cookiecutter if needed:
-
-```
-uv tool install cookiecutter
-```
+Firstly make sure you [install uv](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) if you dont already have it.
 
 Create new project:
 
 ```
-cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
+uvx cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
 ```
+
+Then just follow the prompts to get all setup quickly.
 
 ## Features + Included Tools
 
