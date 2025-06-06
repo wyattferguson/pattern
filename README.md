@@ -31,6 +31,7 @@ Then just follow the prompts to get all setup quickly.
   - Feature Request
   - General Report
   - Bug Report
+- Changelog, Code of Conduct, and Contributing Guide templates.
 - Docker Support
 - VSCode - Settings and extension recommendations
 

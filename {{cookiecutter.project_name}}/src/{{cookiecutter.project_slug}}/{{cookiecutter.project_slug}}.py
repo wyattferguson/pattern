@@ -1,4 +1,4 @@
-"""File Descriptor."""
+"""{{ cookiecutter.project_slug }}."""
 
 
 def main() -> None:

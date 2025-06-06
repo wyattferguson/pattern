@@ -1,7 +1,6 @@
 {
-  "_copy_without_render": [".github/workflows/pypi-publish.yml"],
   "project_name": "project-name",
-  "project_slug": "{{cookiecutter.project_name|lower|replace(' ', '_')}}",
+  "project_slug": "{{cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_')}}",
   "project_description": "A project description",
   "author": "Your Name",
   "github": "github_profile",
@@ -24,11 +23,12 @@
     "Development Status :: 6 - Mature",
     "Development Status :: 7 - Inactive"
   ],
-  "typechecker": ["mypy", "ty"],
+  "typechecker": ["ty", "mypy"],
   "include_docs": ["y", "n"],
   "include_tests": ["y", "n"],
   "include_changelog": ["y", "n"],
+  "include_contributing_guide": ["y", "n"],
+  "include_code_of_conduct": ["y", "n"],
   "include_docker": ["y", "n"],
-  "uv_setup": ["y", "n"],
   "pypi_deploy": ["y", "n"]
 }

@@ -1,8 +1,4 @@
-"""
-post_gen_project - Run after project generation.
-- Setup UV venv and install dependencies.
-- Remove docs and tests folders if not needed.
-"""
+"""post_gen_project - Run after cookiecutter project generation."""
 
 import os
 import shutil
@@ -10,52 +6,54 @@ import subprocess
 
 
 def setup_uv_enviroment() -> None:
-    step: int = 0
+    """Set up the UV environment and install dependencies for the project."""
     try:
-        # (Step: 0) change directory to project folder
         subprocess.run(["cd", "{{cookiecutter.project_slug}}"], shell=True)
-
-        # (Step: 1) create enviroment
         subprocess.run(["uv", "venv"])
-        step += 1
-
-        # (Step: 2) activate enviroment with bash shortcut
-        subprocess.run(".venv\\Scripts\\activate", shell=True)
-        step += 1
-
-        # (Step: 3) install dependencies
         subprocess.run(["uv", "sync"])
     except Exception as e:
-        print(f"Setup Error (Step:{step}): {e}")
+        print(f"UV Setup Error: {e}")
 
 
 def remove(filepath: str) -> None:
+    """Remove a file or directory.
+
+    Args:
+        filepath (str): The path to the file or directory to remove.
+    """
     try:
         if os.path.isfile(filepath):
             os.remove(filepath)
         elif os.path.isdir(filepath):
             shutil.rmtree(filepath)
     except Exception as e:
-        print(f"Remove Error (Remove {filepath}): {e}")
+        print(f"Remove Error ({filepath}): {e}")
 
 
 if __name__ == "__main__":
-    create_docs: bool = "{{cookiecutter.include_docs}}" == "y"
-    create_tests: bool = "{{cookiecutter.include_tests}}" == "y"
-    uv_setup: bool = "{{cookiecutter.uv_setup}}" == "y"
-    pypi_deploy: bool = "{{cookiecutter.pypi_deploy}}" == "y"
-
-    if not create_docs:
+    if "{{cookiecutter.include_docs}}" != "y":
         remove("docs")
         remove(".github/workflows/gh-pages.yml")
 
-    if not create_tests:
+    if "{{cookiecutter.include_tests}}" != "y":
         remove("tests")
 
-    if uv_setup:
-        setup_uv_enviroment()
+    if "{{cookiecutter.include_docker}}" != "y":
+        remove("Dockerfile")
+        remove(".dockerignore")
 
-    if not pypi_deploy:
+    if "{{cookiecutter.include_changelog}}" != "y":
+        remove("CHANGELOG.md")
+
+    if "{{cookiecutter.include_contributing_guide}}" != "y":
+        remove("CONTRIBUTING.md")
+
+    if "{{cookiecutter.include_code_of_conduct}}" != "y":
+        remove("CODE_OF_CONDUCT.md")
+
+    if "{{cookiecutter.pypi_deploy}}" != "y":
         remove(".github/workflows/pypi-publish.yml")
+
+    setup_uv_enviroment()
 
     subprocess.run(["git", "init"])
