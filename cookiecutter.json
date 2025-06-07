@@ -25,7 +25,7 @@
   ],
   "typechecker": ["ty", "mypy"],
   "include_docs": ["y", "n"],
-  "include_tests": ["y", "n"],
+  "include_nox": ["y", "n"],
   "include_changelog": ["y", "n"],
   "include_contributing_guide": ["y", "n"],
   "include_code_of_conduct": ["y", "n"],

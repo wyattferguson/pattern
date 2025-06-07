@@ -1,10 +1,10 @@
-# :snake: Cookiecutter Python Project
+# :snake: Cookiecutter Python UV Project
 
-This project is setup for [cookiecutter](https://www.cookiecutter.io/) to get a new project scafolded out quickly.
+This is a modern, opinionated, cookiecutter template for your next Python project. Included is modern tooling and dependencies with sensible rules and settings.
 
 ## Setup New Project
 
-Firstly make sure you [install uv](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) if you dont already have it.
+Make sure you [install uv](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) if you dont already have it.
 
 Create new project:
 
@@ -16,23 +16,23 @@ Then just follow the prompts to get all setup quickly.
 
 ## Features
 
-- :package: [UV](https://docs.astral.sh/uv/) - Python package and project manager
-- :crab: [Ruff](https://docs.astral.sh/ruff/) - Python linter and code formatter
-- :bug: Typechecking - Choose between [Ty](https://github.com/astral-sh/ty) and [Mypy](https://www.mypy-lang.org/)
+- :package: [UV](https://docs.astral.sh/uv/) - Package and project manager
+- :crab: [Ruff](https://docs.astral.sh/ruff/) - Linter and code formatter.
+- :bug: Typechecking with [Ty](https://github.com/astral-sh/ty) or [Mypy](https://www.mypy-lang.org/)
 - :test_tube: [Pytest](https://docs.pytest.org/en/stable/) - Testing
-- :telescope: [Coverage](https://coverage.readthedocs.io/en/7.6.12/) - Test Coverage
+- :telescope: [Coverage](https://coverage.readthedocs.io/en/7.6.12/) - Test coverage
 - :small_airplane: [Taskipy](https://github.com/taskipy/taskipy) - Task runner for included CLI shortcuts
-- :vhs: [MKDocs](https://squidfunk.github.io/mkdocs-material/) - Material Theme + Doc Creation
+- :vhs: [MKDocs](https://squidfunk.github.io/mkdocs-material/) - Doc generation with material theme
 - :screwdriver: GitHub Actions:
   - Publish docs to Github Pages
-  - Publish package to Pypi
+  - Publish package to PyPI
 - :octocat: GitHub Issue Templates:
   - Documentation
   - Feature Request
   - General Report
   - Bug Report
 - :placard: Changelog, Code of Conduct, and Contributing Guide templates.
-- :whale2: Docker Support
+- :whale2: Docker support including extensive dockerignore file
 - :cocktail: VSCode - Settings and extension recommendations
 
 ## Alternative Cookiecutter Projects

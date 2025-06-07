@@ -35,8 +35,8 @@ if __name__ == "__main__":
         remove("docs")
         remove(".github/workflows/gh-pages.yml")
 
-    if "{{cookiecutter.include_tests}}" != "y":
-        remove("tests")
+    if "{{cookiecutter.include_nox}}" != "y":
+        remove("noxfile.py")
 
     if "{{cookiecutter.include_docker}}" != "y":
         remove("Dockerfile")

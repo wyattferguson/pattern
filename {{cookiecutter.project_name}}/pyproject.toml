@@ -27,9 +27,11 @@ dev = [
     {% else %}
     "mypy >=1.16.0",
     {% endif %}
-    {% if cookiecutter.include_tests == 'y' -%}
+    {% if cookiecutter.include_nox == 'y' -%}
+    "nox>=2025.5.1",
+    {% endif %}
     "pytest>=8.4.0",
-    "coverage>=7.8.2",{% endif %}
+    "coverage>=7.8.2",
     "ruff>=0.11.12",
     "taskipy>=1.14.1",
     {% if cookiecutter.include_docs == 'y' -%}
