@@ -1,11 +1,18 @@
 import nox
 
+nox.options.default_venv_backend = "uv"
 
-# nox -s test
+
 @nox.session(
+    name="vtests",
     python=["3.13", "3.12", "3.11", "3.10"],
-    venv_backend="uv",
     reuse_venv=True,
 )
-def test(session):
+def version_test(session):
+    """Run python version tests.
+
+    Args:
+        session (nox.Session): The nox session object.
+    """
+    session.install("pytest")
     session.run("pytest")

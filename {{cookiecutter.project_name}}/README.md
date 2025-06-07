@@ -49,6 +49,17 @@ task precommit
 task docs
 ```
 
+{% if cookiecutter.include_nox == 'y' %}
+
+## Nox
+
+```
+# run tests with multiple python versions (3.13,3.12,3.11,3.10)
+nox -s vtests
+```
+
+{%- endif %}
+
 {% if cookiecutter.pypi_deploy == 'y' %}
 
 ## PyPI Deployment
