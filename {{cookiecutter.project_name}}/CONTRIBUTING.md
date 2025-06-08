@@ -79,11 +79,5 @@ Your pull request needs to meet the following guidelines for acceptance:
 
 Feel free to submit early, though—we can always iterate on this.
 
-To run linting, code formatting , and typechecks before committing your change:
-
-```
-$ task precommit
-```
-
 It is recommended to open an issue before starting work on anything.
 This will allow a chance to talk it over with the owners and validate your approach.
