@@ -3,15 +3,15 @@
   "project_slug": "{{cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_')}}",
   "project_description": "A project description",
   "author": "Your Name",
-  "github": "github_profile",
+  "github_username": "github_username",
   "email": "author_email@example.com",
   "license": [
     "MIT license",
     "BSD license",
     "ISC license",
-    "Apache Software License 2.0",
-    "GNU General Public License v3",
-    "Closed Source"
+    "Mozilla Public License v2.0",
+    "Apache Software License v2.0",
+    "GNU GPL v3"
   ],
   "version": "0.1.0",
   "development_status": [

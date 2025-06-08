@@ -42,7 +42,7 @@ jobs:
     needs: build_mkdocs
     environment:
       name: github-pages
-      url: https://{{cookiecutter.github}}.github.io/{{cookiecutter.project_slug}}/
+      url: https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_slug}}/
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

@@ -44,14 +44,14 @@ dev = [
 ]
 
 [project.urls]
-homepage = "https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}"
-repository = "https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}.git"
+homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
+repository = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git"
 {% if cookiecutter.include_docs == 'y' -%}
-documentation = "https://{{cookiecutter.github}}.github.io/{{cookiecutter.project_slug}}"
+documentation = "https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_slug}}"
 {% else %}
-documentation = "https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}"
+documentation = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
 {% endif %}
-issues = "https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}/issues"
+issues = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/issues"
 
 [build-system]
 requires = ["hatchling"]

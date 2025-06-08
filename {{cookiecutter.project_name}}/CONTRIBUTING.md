@@ -1,12 +1,12 @@
-[source code]: https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}
+[source code]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}
 
 {% if cookiecutter.include_docs == 'y' -%}
-[documentation]: "https://{{cookiecutter.github}}.github.io/{{cookiecutter.project_slug}}"
+[documentation]: "https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_slug}}"
 {% else %}
-[documentation]: "https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}"
+[documentation]: "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
 {% endif %}
-[issue tracker]: https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}/issues
-[pull request]: https://github.com/{{cookiecutter.github}}/{{cookiecutter.project_slug}}/pulls
+[issue tracker]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/issues
+[pull request]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/pulls
 [code of conduct]: CODE_OF_CONDUCT.md
 
 # Contributor Guide

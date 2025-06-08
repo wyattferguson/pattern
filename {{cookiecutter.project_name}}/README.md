@@ -83,4 +83,4 @@ nox -s vtests
 
 ## Contact + Support
 
-Created by [{{cookiecutter.author}}](https://github.com/{{cookiecutter.github}})
+Created by [{{cookiecutter.author}}](https://github.com/{{cookiecutter.github_username}})
