@@ -40,9 +40,10 @@ Then just follow the prompts to get all setup quickly.
 
 If this cookiecutter isnt your cup of tea, you might like one of these alternatives.
 
-- [cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) - fpgmaas version of a cookiecutter using UV.
-- [cookiecutter-uv-hypermodern-python](https://github.com/bosd/cookiecutter-uv-hypermodern-python) - bosd version of a cookiecutter uv project with github deployments.
-- [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) - Cookiecutter template for a Python package.
+- [Fpgmaas cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) - fpgmaas version of a cookiecutter using UV.
+- [Bosd uv-hypermodern-python](https://github.com/bosd/cookiecutter-uv-hypermodern-python) - bosd version of a cookiecutter uv project with github deployments.
+- [Cookiecutter pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) - Cookiecutter template for a Python package.
+- [Neuroinformatics cookiecutter](https://github.com/neuroinformatics-unit/python-cookiecutter) - Utility to create a basic Python project structure with tests, CI etc.
 
 ## Contributing
 
