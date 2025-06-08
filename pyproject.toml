@@ -1,26 +1,75 @@
 [project]
 name = "cookiecutter-python-uv"
 version = "0.5.0"
-description = "A python cookiecutter application to create a new python project that uses uv to manage its dependencies."
+description = "A modern, opinionated, cookiecutter template for your next Python project."
 authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
-license = { text = "MIT" }
+license = { file = "LICENSE" }
 readme = "README.md"
 keywords = ['cookiecutter', 'template', 'uv', 'python', 'project', 'generator']
-requires-python = ">=3.12"
-dependencies = [
-  "cookiecutter>=2.1.1"
-]
+requires-python = ">=3.10,<4"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
-    "Programming Language :: Python :: >=3.12",
+    "Programming Language :: Python :: >=3.10",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Software Development :: Code Generators",
 ]
 
+dependencies = [
+  "cookiecutter>=2.1.1"
+]
+
+[dependency-groups]
+dev = [
+    "ty>=0.0.1a8",
+    "pytest>=8.4.0",
+    "ruff>=0.11.12",
+    "taskipy>=1.14.1",
+]
+
 [project.urls]
-Repository = "https://github.com/wyattferguson/cookiecutter-project"
-Documentation = "https://github.com/wyattferguson/cookiecutter-project"
-Homepage = "https://github.com/wyattferguson/cookiecutter-project"
+Repository = "https://github.com/wyattferguson/cookiecutter-python-uv"
+Documentation = "https://github.com/wyattferguson/cookiecutter-python-uv"
+Homepage = "https://github.com/wyattferguson/cookiecutter-python-uv"
+
+[tool.taskipy.tasks]
+format = "ruff format ./tests/"
+lint = "ruff check --fix ./tests/"
+typecheck = "ty check"
+tests = "pytest --verbose --color=yes tests"
+precommit = "task format && task lint && task typecheck"
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+format.indent-style = "space"
+target-version = "py313"
+src = ["tests"]
+
+[tool.ruff.lint]
+pydocstyle.convention = "google"
+fixable = ["ALL"]
+select = ["ALL"]
+ignore = [
+    "FA102", # Flake8-future-annotations
+    "F401", # Disable fix for unused imports
+    "B904", # Allow raising exceptions without from e
+    "PLR0913", # too many arguments
+    "CPY", # Flake8-copyright
+    "T201", # Debugging print statements
+    "ERA", # Eradicate – detects commented-out code
+    "BLE001", # Catch-all exceptions
+    "D105", # undocumented magic method
+    "D107", # undocumented public init
+    "D203", # incorrect-blank-line-before-class
+    "D212", # multi-line-summary-first-line
+    "D400", # missing-trailing-period
+    "D407", # missing-dashed-underline-after-section
+]
+
+[tool.ty]
+src.root = "./tests"
+environment.python = "./.venv"
+terminal.output-format = "concise"

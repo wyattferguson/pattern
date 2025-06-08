@@ -4,7 +4,7 @@ This is a modern, opinionated, cookiecutter template for your next Python projec
 
 ## Setup New Project
 
-Make sure you [install uv](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) if you dont already have it.
+Make sure you have [uv installed](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) before you start.
 
 Create new project:
 
