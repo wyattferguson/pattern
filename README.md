@@ -27,11 +27,8 @@ Then just follow the prompts to get all setup quickly.
 - :screwdriver: GitHub Actions:
   - Publish docs to Github Pages.
   - Publish package to PyPI.
-- :tropical_drink: GitHub Issue Templates:
-  - Documentation
-  - Feature Request
-  - General Report
-  - Bug Report
+- :tropical_drink: GitHub Issue Templates for documentation, feature requests, general reports, and bug reports.
+- :cactus: [Pre-commit](https://pre-commit.com/) - Linting, formatting, and common bug checks on Git commits.
 - :placard: Changelog, Code of Conduct, and Contributing Guide templates.
 - :whale2: Docker support including extensive dockerignore file.
 - :cocktail: VSCode - Settings and extension recommendations.
