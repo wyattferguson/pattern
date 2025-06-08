@@ -1,14 +1,3 @@
-[source code]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}
-
-{% if cookiecutter.include_docs == 'y' -%}
-[documentation]: "https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_slug}}"
-{% else %}
-[documentation]: "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
-{% endif %}
-[issue tracker]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/issues
-[pull request]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/pulls
-[code of conduct]: CODE_OF_CONDUCT.md
-
 # Contributor Guide
 
 Thank you for your interest in improving this project.
@@ -81,3 +70,14 @@ Feel free to submit early, though—we can always iterate on this.
 
 It is recommended to open an issue before starting work on anything.
 This will allow a chance to talk it over with the owners and validate your approach.
+
+[source code]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}
+
+{% if cookiecutter.include_docs == 'y' -%}
+[documentation]: "https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_slug}}"
+{% else %}
+[documentation]: "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
+{% endif %}
+[issue tracker]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/issues
+[pull request]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/pulls
+[code of conduct]: CODE_OF_CONDUCT.md
