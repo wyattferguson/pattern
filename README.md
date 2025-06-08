@@ -23,7 +23,7 @@ Then just follow the prompts to get all setup quickly.
 - :telescope: [Coverage](https://coverage.readthedocs.io/en/7.6.12/) - Test coverage.
 - :shaved_ice: [Nox](https://nox.thea.codes/en/stable/index.html) - Testing in multiple Python environments.
 - :small_airplane: [Taskipy](https://github.com/taskipy/taskipy) - Task runner for included CLI shortcuts.
-- :vhs: [MKDocs](https://squidfunk.github.io/mkdocs-material/) - Doc generation with material theme.
+- :vhs: [MKDocs](https://squidfunk.github.io/mkdocs-material/) - Doc generation with [material theme](https://github.com/squidfunk/mkdocs-material).
 - :screwdriver: GitHub Actions:
   - Publish docs to Github Pages.
   - Publish package to PyPI.
