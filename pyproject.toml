@@ -39,7 +39,6 @@ format = "ruff format ./tests/"
 lint = "ruff check --fix ./tests/"
 typecheck = "ty check"
 tests = "pytest --verbose --color=yes tests"
-precommit = "task format && task lint && task typecheck"
 
 [tool.ruff]
 line-length = 100

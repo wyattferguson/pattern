@@ -65,9 +65,9 @@ packages = ["src/{{cookiecutter.project_slug}}"]
 format = "ruff format ./src/"
 lint = "ruff check --fix ./src/"
 {% if cookiecutter.typechecker == 'ty' -%}
-typecheck = "ty check"
+type = "ty check"
 {% else %}
-typecheck = "mypy --strict ./src/"
+type = "mypy --strict ./src/"
 {% endif %}
 {% if cookiecutter.include_docs == 'y' -%}
 docs = "mkdocs build & task serve"
@@ -78,7 +78,6 @@ doc_deploy = "mkdocs gh-deploy --force"
 tests = "pytest --verbose --color=yes tests"
 coverage = "coverage html && coverage report -m"
 {% endif %}
-precommit = "task format && task lint && task typecheck"
 run = "uv run ./src/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py"
 
 [tool.ruff]

@@ -33,20 +33,14 @@ task tests
 # run test coverage and generate report
 task coverage
 
-# ty typechecking
-task typecheck
+# typechecking with Ty or Mypy
+task type
 
 # ruff linting
 task lint
 
 # format with ruff
 task format
-
-# format, lint, and typecheck combined
-task precommit
-
-# generate docs & serve
-task docs
 ```
 
 {% if cookiecutter.include_nox == 'y' %}
@@ -74,6 +68,19 @@ nox -s vtests
 {% if cookiecutter.include_docs== 'y' -%}
 
 ## Docs Build + Publishing
+
+Your basic doc functions for creating, serving, and deploying can be done through these CLI commands:
+
+```
+# generate docs & serve
+task docs
+
+# serve docs
+task serve
+
+# deploy docks to github.io
+task doc_deploy
+```
 
 {%- endif %}
 

@@ -2,7 +2,7 @@
 
 {{cookiecutter.project_description}}
 
-## Installation
+## Setup Dev Enviroment
 
 Installation is using [UV](https://docs.astral.sh/uv/) to manage everything.
 
@@ -21,8 +21,10 @@ uv sync
 
 ## CLI Commands
 
+We've included a bunch of useful CLI commands for common project tasks using [taskipy](https://github.com/taskipy/taskipy).
+
 ```
-# run {{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py
+# run src/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py
 task run
 
 # run all tests
@@ -40,9 +42,40 @@ task lint
 # format with ruff
 task format
 
+# format, lint, and typecheck combined
+task precommit
+
 # generate docs & serve
 task docs
 ```
+
+{% if cookiecutter.include_nox == 'y' %}
+
+## Nox
+
+```
+# run tests with multiple python versions (3.13,3.12,3.11,3.10)
+nox -s vtests
+```
+
+{%- endif %}
+
+{% if cookiecutter.pypi_deploy == 'y' %}
+
+## PyPI Deployment
+
+- Register your project and create an API Token on [PyPI](https://pypi.org/).
+- Add the API Token to your projects secrets with the name `PYPI_TOKEN`
+- Create a new release on Github.
+- Create a new tag in the form `*.*.*`.
+
+{%- endif %}
+
+{% if cookiecutter.include_docs== 'y' -%}
+
+## Docs Build + Publishing
+
+{%- endif %}
 
 ## License
 
