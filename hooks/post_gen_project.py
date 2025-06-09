@@ -26,6 +26,8 @@ def remove(filepath: str) -> None:
             os.remove(filepath)
         elif os.path.isdir(filepath):
             shutil.rmtree(filepath)
+        else:
+            print(f"Warning: {filepath} does not exist or is in another directory.")
     except Exception as e:
         print(f"Remove Error ({filepath}): {e}")
 
