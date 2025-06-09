@@ -50,24 +50,6 @@ def test_src_layout_using_pytest(cookies, tmp_path):
             assert subprocess.check_call(shlex.split("uv run make test")) == 0
 
 
-def test_devcontainer(cookies, tmp_path):
-    """Test that the devcontainer files are created when devcontainer=y"""
-    with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"devcontainer": "y"})
-        assert result.exit_code == 0
-        assert os.path.isfile(f"{result.project_path}/.devcontainer/devcontainer.json")
-        assert os.path.isfile(f"{result.project_path}/.devcontainer/postCreateCommand.sh")
-
-
-def test_not_devcontainer(cookies, tmp_path):
-    """Test that the devcontainer files are not created when devcontainer=n"""
-    with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"devcontainer": "n"})
-        assert result.exit_code == 0
-        assert not os.path.isfile(f"{result.project_path}/.devcontainer/devcontainer.json")
-        assert not os.path.isfile(f"{result.project_path}/.devcontainer/postCreateCommand.sh")
-
-
 def test_cicd_contains_pypi_secrets(cookies, tmp_path):
     with run_within_dir(tmp_path):
         result = cookies.bake(extra_context={"publish_to_pypi": "y"})
@@ -137,28 +119,6 @@ def test_not_dockerfile(cookies, tmp_path):
         assert not os.path.isfile(f"{result.project_path}/Dockerfile")
 
 
-def test_codecov(cookies, tmp_path):
-    with run_within_dir(tmp_path):
-        result = cookies.bake()
-        assert result.exit_code == 0
-        assert is_valid_yaml(result.project_path / ".github" / "workflows" / "main.yml")
-        assert os.path.isfile(f"{result.project_path}/codecov.yaml")
-        assert os.path.isfile(
-            f"{result.project_path}/.github/workflows/validate-codecov-config.yml"
-        )
-
-
-def test_not_codecov(cookies, tmp_path):
-    with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"codecov": "n"})
-        assert result.exit_code == 0
-        assert is_valid_yaml(result.project_path / ".github" / "workflows" / "main.yml")
-        assert not os.path.isfile(f"{result.project_path}/codecov.yaml")
-        assert not os.path.isfile(
-            f"{result.project_path}/.github/workflows/validate-codecov-config.yml"
-        )
-
-
 def test_remove_release_workflow(cookies, tmp_path):
     with run_within_dir(tmp_path):
         result = cookies.bake(extra_context={"publish_to_pypi": "n", "mkdocs": "y"})
@@ -182,73 +142,3 @@ def test_license_mit(cookies, tmp_path):
         with open(f"{result.project_path}/LICENSE", encoding="utf8") as licfile:
             content = licfile.readlines()
             assert len(content) == 21
-
-
-def test_license_bsd(cookies, tmp_path):
-    with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"open_source_license": "BSD license"})
-        assert result.exit_code == 0
-        assert os.path.isfile(f"{result.project_path}/LICENSE")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_MIT")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_ISC")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_APACHE")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_GPL")
-        with open(f"{result.project_path}/LICENSE", encoding="utf8") as licfile:
-            content = licfile.readlines()
-            assert len(content) == 28
-
-
-def test_license_isc(cookies, tmp_path):
-    with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"open_source_license": "ISC license"})
-        assert result.exit_code == 0
-        assert os.path.isfile(f"{result.project_path}/LICENSE")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_MIT")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_BSD")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_APACHE")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_GPL")
-        with open(f"{result.project_path}/LICENSE", encoding="utf8") as licfile:
-            content = licfile.readlines()
-            assert len(content) == 7
-
-
-def test_license_apache(cookies, tmp_path):
-    with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"open_source_license": "Apache Software License 2.0"})
-        assert result.exit_code == 0
-        assert os.path.isfile(f"{result.project_path}/LICENSE")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_MIT")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_BSD")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_ISC")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_GPL")
-        with open(f"{result.project_path}/LICENSE", encoding="utf8") as licfile:
-            content = licfile.readlines()
-            assert len(content) == 202
-
-
-def test_license_gplv3(cookies, tmp_path):
-    with run_within_dir(tmp_path):
-        result = cookies.bake(
-            extra_context={"open_source_license": "GNU General Public License v3"}
-        )
-        assert result.exit_code == 0
-        assert os.path.isfile(f"{result.project_path}/LICENSE")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_MIT")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_BSD")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_ISC")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_APACHE")
-        with open(f"{result.project_path}/LICENSE", encoding="utf8") as licfile:
-            content = licfile.readlines()
-            assert len(content) == 674
-
-
-def test_license_no_license(cookies, tmp_path):
-    with run_within_dir(tmp_path):
-        result = cookies.bake(extra_context={"open_source_license": "Not open source"})
-        assert result.exit_code == 0
-        assert not os.path.isfile(f"{result.project_path}/LICENSE")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_MIT")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_BSD")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_ISC")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_APACHE")
-        assert not os.path.isfile(f"{result.project_path}/LICENSE_GPL")

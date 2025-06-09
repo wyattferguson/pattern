@@ -4,7 +4,7 @@ Based on https://github.com/fpgmaas/cookiecutter-uv/tree/main/tests
 
 from __future__ import annotations
 
-from tests.utils import run_within_dir
+from utils import run_within_dir
 
 
 def test_full_structure(cookies, tmp_path):

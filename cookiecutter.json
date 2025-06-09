@@ -1,10 +1,10 @@
 {
-  "project_name": "project-name",
+  "project_name": "project_name",
   "project_slug": "{{cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_')}}",
-  "project_description": "A project description",
+  "project_description": "A brief description of your project.",
   "author": "Your Name",
   "github_username": "github_username",
-  "email": "author_email@example.com",
+  "email": "email@example.com",
   "license": [
     "MIT license",
     "BSD license",
@@ -13,7 +13,7 @@
     "Apache Software License v2.0",
     "GNU GPL v3"
   ],
-  "version": "0.0.1",
+  "version": "0.1.0",
   "development_status": [
     "Development Status :: 1 - Planning",
     "Development Status :: 2 - Pre-Alpha",
@@ -31,5 +31,24 @@
   "include_code_of_conduct": "y",
   "include_docker": "y",
   "pypi_deploy": "y",
-  "_copy_without_render": [".github/*"]
+  "_copy_without_render": [".github/*"],
+  "__prompts__": {
+    "project_name": "Name of your project",
+    "project_slug": "Slug for your project (used in URLs and package names)",
+    "version": "Initial version of your project",
+    "project_description": "Project description",
+    "author": "Author's name",
+    "github_username": "GitHub username",
+    "email": "Email",
+    "license": "License for the project",
+    "development_status": "Development status of the project",
+    "typechecker": "Typechecker to use",
+    "include_docs": "Include documentation?",
+    "include_nox": "Include Nox for environment testing?",
+    "include_changelog": "Include a changelog?",
+    "include_contributing_guide": "Include a contributing guide?",
+    "include_code_of_conduct": "Include a code of conduct?",
+    "include_docker": "Include Docker support?",
+    "pypi_deploy": "Include PyPI deployment scripts?"
+  }
 }
