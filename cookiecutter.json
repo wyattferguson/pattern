@@ -24,11 +24,11 @@
     "Development Status :: 7 - Inactive"
   ],
   "typechecker": ["ty", "mypy"],
-  "include_docs": ["y", "n"],
-  "include_nox": ["y", "n"],
-  "include_changelog": ["y", "n"],
-  "include_contributing_guide": ["y", "n"],
-  "include_code_of_conduct": ["y", "n"],
-  "include_docker": ["y", "n"],
-  "pypi_deploy": ["y", "n"]
+  "include_docs": "y",
+  "include_nox": "y",
+  "include_changelog": "y",
+  "include_contributing_guide": "y",
+  "include_code_of_conduct": "y",
+  "include_docker": "y",
+  "pypi_deploy": "y"
 }
