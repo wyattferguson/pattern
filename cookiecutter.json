@@ -13,7 +13,7 @@
     "Apache Software License v2.0",
     "GNU GPL v3"
   ],
-  "version": "0.1.0",
+  "version": "0.0.1",
   "development_status": [
     "Development Status :: 1 - Planning",
     "Development Status :: 2 - Pre-Alpha",
@@ -29,5 +29,7 @@
   "include_changelog": "y",
   "include_contributing_guide": "y",
   "include_code_of_conduct": "y",
-  "include_docker": "y"
+  "include_docker": "y",
+  "pypi_deploy": "y",
+  "_copy_without_render": [".github/*"]
 }

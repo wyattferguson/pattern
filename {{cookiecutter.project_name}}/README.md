@@ -12,9 +12,6 @@ To get it all running from scratch:
 # create a virtual enviroment
 uv venv
 
-# activate virtual enviroment
-.venv\Scripts\activate
-
 # install all the cool dependancies
 uv sync
 ```

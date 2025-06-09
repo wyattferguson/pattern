@@ -34,7 +34,7 @@ if __name__ == "__main__":
     if "{{cookiecutter.include_docs}}" != "y":
         remove("docs")
         remove("mkdocs.yml")
-        # remove(".github/workflows/gh-pages.yml")
+        remove(".github/workflows/gh-pages.yml")
 
     if "{{cookiecutter.include_nox}}" != "y":
         remove("noxfile.py")
@@ -52,8 +52,8 @@ if __name__ == "__main__":
     if "{{cookiecutter.include_code_of_conduct}}" != "y":
         remove("CODE_OF_CONDUCT.md")
 
-    # if "{{cookiecutter.pypi_deploy}}" != "y":
-    #     remove(".github/workflows/pypi-publish.yml")
+    if "{{cookiecutter.pypi_deploy}}" != "y":
+        remove(".github/workflows/pypi-publish.yml")
 
     setup_uv_enviroment()
 
