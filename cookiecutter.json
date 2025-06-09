@@ -29,8 +29,5 @@
   "include_changelog": "y",
   "include_contributing_guide": "y",
   "include_code_of_conduct": "y",
-  "include_docker": "y",
-  "pypi_deploy": "y"
-  // "_copy_without_render": [".github/workflows/pypi-publish.yml"],
-  // "_copy_without_render": [".github/workflows/gh-pages.yml"]
+  "include_docker": "y"
 }
