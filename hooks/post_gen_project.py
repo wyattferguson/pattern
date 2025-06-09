@@ -30,7 +30,8 @@ def remove(filepath: str) -> None:
         print(f"Remove Error ({filepath}): {e}")
 
 
-if __name__ == "__main__":
+def prune_unwanted_files() -> None:
+    """Remove unwanted files and directories from the project."""
     if "{{cookiecutter.include_docs}}" != "y":
         remove("docs")
         remove("mkdocs.yml")
@@ -55,6 +56,18 @@ if __name__ == "__main__":
     if "{{cookiecutter.pypi_deploy}}" != "y":
         remove(".github/workflows/pypi-publish.yml")
 
-    setup_uv_enviroment()
 
-    subprocess.run(["git", "init"])
+def setup_git() -> None:
+    """Initialize a git repository and set up the initial commit."""
+    try:
+        subprocess.run(["git", "init", "-b", "main"])
+        subprocess.run(["git", "add", "."])
+        subprocess.run(["git", "commit", "-m", "Initial commit"])
+    except Exception as e:
+        print(f"Git Setup Error: {e}")
+
+
+if __name__ == "__main__":
+    setup_uv_enviroment()
+    prune_unwanted_files()
+    setup_git()

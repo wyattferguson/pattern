@@ -23,9 +23,6 @@ Follow these steps to push your new project.
 
 ```
 cd "{{cookiecutter.project_name}}"
-git init -b main
-git add .
-git commit -m "Init commit"
 git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter._project_slug}}.git
 git push -u origin main
 ```
