@@ -6,7 +6,7 @@ authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
 license = { file = "LICENSE" }
 readme = "README.md"
 keywords = ['cookiecutter', 'template', 'uv', 'python', 'project', 'generator']
-requires-python = ">=3.10,<4"
+requires-python = ">=3.12,<4"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -34,6 +34,7 @@ dev = [
 Repository = "https://github.com/wyattferguson/cookiecutter-python-uv"
 Documentation = "https://github.com/wyattferguson/cookiecutter-python-uv"
 Homepage = "https://github.com/wyattferguson/cookiecutter-python-uv"
+Issues = "https://github.com/wyattferguson/cookiecutter-python-uv/issues"
 
 [tool.taskipy.tasks]
 format = "ruff format ./tests/"
