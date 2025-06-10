@@ -1,6 +1,6 @@
 {
   "project_name": "project_name",
-  "project_slug": "{{cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_')}}",
+  "project_slug": "{{cookiecutter.project_name|slugify(separator='_')}}",
   "project_description": "A brief description of your project.",
   "author": "Your Name",
   "github_username": "github_username",
@@ -32,6 +32,7 @@
   "include_docker": "y",
   "pypi_deploy": "y",
   "_copy_without_render": [".github/*"],
+  "_extensions": ["cookiecutter.extensions.SlugifyExtension"],
   "__prompts__": {
     "project_name": "Name of your project",
     "project_slug": "Slug for your project (used in URLs and package names)",

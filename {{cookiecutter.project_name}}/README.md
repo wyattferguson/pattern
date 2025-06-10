@@ -23,7 +23,7 @@ Follow these steps to push your new project.
 
 ```
 cd "{{cookiecutter.project_name}}"
-git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter._project_slug}}.git
+git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
 git push -u origin main
 ```
 
@@ -32,7 +32,7 @@ git push -u origin main
 We've included a bunch of useful CLI commands for common project tasks using [taskipy](https://github.com/taskipy/taskipy).
 
 ```
-# run src/{{cookiecutter._project_slug}}/{{cookiecutter._project_slug}}.py
+# run src/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py
 task run
 
 # run all tests

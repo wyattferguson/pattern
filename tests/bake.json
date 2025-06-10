@@ -1,0 +1,21 @@
+{
+  "cookiecutter": {
+    "project_name": "Cool Zone",
+    "project_slug": "cool_zone",
+    "project_description": "A great project that does cool things.",
+    "author": "Wyatt Ferguson",
+    "github_username": "wyattferguson",
+    "email": "wyattxdev@duck.com",
+    "license": "MIT license",
+    "version": "0.1.2",
+    "development_status": "Development Status :: 4 - Beta",
+    "typechecker": "ty",
+    "include_docs": "y",
+    "include_nox": "y",
+    "include_changelog": "y",
+    "include_contributing_guide": "y",
+    "include_code_of_conduct": "y",
+    "include_docker": "y",
+    "pypi_deploy": "y"
+  }
+}
