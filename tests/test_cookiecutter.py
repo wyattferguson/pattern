@@ -39,16 +39,15 @@ def verify_pyproject_bake(pyproject: dict[str, Any], recipe: dict[str, str]) -> 
         )
 
 
-def test_bake(cookies: Cookies) -> None:
+@pytest.mark.parametrize("recipe", [COOKIE_FULL_BAKE, COOKIE_MIN_BAKE])
+def test_cookiecutter(cookies: Cookies, recipe: dict[str, str]) -> None:
     """Test the baking process with different recipes."""
-    recipes = [COOKIE_FULL_BAKE, COOKIE_MIN_BAKE]
-    for recipe in recipes:
-        project_path = bake_project(cookies, recipe)
-        pyproject = load_pyproject_toml(project_path)
-        verify_pyproject_bake(pyproject, recipe)
+    project_path = bake_recipe(cookies, recipe)
+    pyproject = load_pyproject_toml(project_path)
+    verify_pyproject_bake(pyproject, recipe)
 
 
-def bake_project(cookies: Cookies, recipe: dict[str, str]) -> Path:
+def bake_recipe(cookies: Cookies, recipe: dict[str, str]) -> Path:
     """Bake a new project from a cookiecutter template.
 
     Args:
