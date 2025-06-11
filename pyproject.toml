@@ -6,7 +6,7 @@ authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
 license = { file = "LICENSE" }
 readme = "README.md"
 keywords = ['cookiecutter', 'template', 'uv', 'python', 'project', 'generator']
-requires-python = ">=3.10,<4"
+requires-python = ">=3.12,<4"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -23,22 +23,26 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "ty>=0.0.1a8",
+    "mypy >=1.16.0",
     "pytest>=8.4.0",
+    "pytest-cookies>=0.7.0",
     "ruff>=0.11.12",
     "taskipy>=1.14.1",
+    "toml>=0.10.2",
+    "types-toml>=0.10.8.20240310",
 ]
 
 [project.urls]
 Repository = "https://github.com/wyattferguson/cookiecutter-python-uv"
 Documentation = "https://github.com/wyattferguson/cookiecutter-python-uv"
 Homepage = "https://github.com/wyattferguson/cookiecutter-python-uv"
+Issues = "https://github.com/wyattferguson/cookiecutter-python-uv/issues"
 
 [tool.taskipy.tasks]
 format = "ruff format ./tests/"
 lint = "ruff check --fix ./tests/"
-typecheck = "ty check"
-tests = "pytest --verbose --color=yes tests"
+type = "mypy --strict ./tests/"
+tests = "pytest --verbose -s --color=yes tests"
 
 [tool.ruff]
 line-length = 100
@@ -60,15 +64,21 @@ ignore = [
     "T201", # Debugging print statements
     "ERA", # Eradicate – detects commented-out code
     "BLE001", # Catch-all exceptions
+    "D100", # missing docstring in public module
     "D105", # undocumented magic method
     "D107", # undocumented public init
     "D203", # incorrect-blank-line-before-class
     "D212", # multi-line-summary-first-line
-    "D400", # missing-trailing-period
     "D407", # missing-dashed-underline-after-section
+    "S311", # rand-usage
 ]
 
-[tool.ty]
-src.root = "./tests"
-environment.python = "./.venv"
-terminal.output-format = "concise"
+[tool.mypy]
+files = ["tests"]
+disallow_untyped_defs = true
+disallow_any_unimported = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true

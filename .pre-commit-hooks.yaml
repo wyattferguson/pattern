@@ -1,0 +1,25 @@
+repos:
+  # Common bug fixes and style checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v5.0.0"
+    hooks:
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-json
+        exclude: ^{{cookiecutter.project_name}}/
+        args: [--autofix, --no-sort-keys]
+      - id: check-toml
+        exclude: ^{{cookiecutter.project_name}}/
+      - id: check-yaml
+        exclude: ^{{cookiecutter.project_name}}/
+
+  # Ruff linting and formatting
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: "v0.11.13"
+    hooks:
+      - id: ruff-check
+        args: [--fix --config=pyproject.toml]
+      - id: ruff-format
+        args: [--config=pyproject.toml]

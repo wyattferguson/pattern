@@ -23,7 +23,7 @@
     "Development Status :: 6 - Mature",
     "Development Status :: 7 - Inactive"
   ],
-  "typechecker": ["ty", "mypy"],
+  "typechecker": ["mypy", "ty"],
   "include_docs": "y",
   "include_nox": "y",
   "include_changelog": "y",
@@ -44,7 +44,7 @@
     "license": "License for the project",
     "development_status": "Development status of the project",
     "typechecker": "Typechecker to use",
-    "include_docs": "Include documentation?",
+    "include_docs": "Include documentation support?",
     "include_nox": "Include Nox for environment testing?",
     "include_changelog": "Include a changelog?",
     "include_contributing_guide": "Include a contributing guide?",
