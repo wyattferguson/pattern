@@ -23,6 +23,7 @@
     "D203", // incorrect-blank-line-before-class
     "D212", // multi-line-summary-first-line
     "D407", // missing-dashed-underline-after-section
+    "S311", // rand-usage
   ],
 
   {% if cookiecutter.typechecker == 'ty' -%}

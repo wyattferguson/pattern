@@ -105,6 +105,7 @@ ignore = [
     "D212", # multi-line-summary-first-line
     "D400", # missing-trailing-period
     "D407", # missing-dashed-underline-after-section
+    "S311", # rand-usage
 ]
 
 
