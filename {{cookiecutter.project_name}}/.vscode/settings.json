@@ -17,6 +17,7 @@
     "T201", // Debugging print statements
     "ERA", // Eradicate – detects commented-out code
     "BLE001", // Catch-all exceptions
+    "D100", // missing docstring
     "D105", // undocumented magic method
     "D107", // undocumented public init
     "D203", // incorrect-blank-line-before-class

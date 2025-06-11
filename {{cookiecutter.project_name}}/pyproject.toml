@@ -98,6 +98,7 @@ ignore = [
     "T201", # Debugging print statements
     "ERA", # Eradicate – detects commented-out code
     "BLE001", # Catch-all exceptions
+    "D100", # missing docstring in public module
     "D105", # undocumented magic method
     "D107", # undocumented public init
     "D203", # incorrect-blank-line-before-class
@@ -115,11 +116,12 @@ terminal.output-format = "concise"
 {% else %}
 [tool.mypy]
 files = ["src", "tests"]
+ignore_missing_imports = true
 disallow_untyped_defs = true
-disallow_any_unimported = true
+disallow_any_unimported = false
 no_implicit_optional = true
 check_untyped_defs = true
-warn_return_any = true
+warn_return_any = false
 warn_unused_ignores = true
 show_error_codes = true
 {% endif %}
