@@ -42,7 +42,7 @@ Issues = "https://github.com/wyattferguson/cookiecutter-python-uv/issues"
 format = "ruff format ./tests/"
 lint = "ruff check --fix ./tests/"
 type = "mypy --strict ./tests/"
-tests = "pytest --verbose -s --color=yes tests"
+tests = "pytest --color=yes tests"
 
 [tool.ruff]
 line-length = 100

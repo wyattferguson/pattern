@@ -52,6 +52,8 @@ cookie_min_bake: dict[str, Any] = {
     ],
 }
 
+recipes: list[dict[str, Any]] = [cookie_full_bake, cookie_min_bake]
+
 required_files: list[str] = [
     "pyproject.toml",
     "README.md",
