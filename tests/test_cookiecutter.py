@@ -5,7 +5,7 @@ from typing import Any
 
 import pytest
 import toml
-from pytest_cookies.plugin import Cookies, Result
+from pytest_cookies.plugin import Cookies, Result  # type: ignore[import-untyped]
 
 from tests.config import (
     COOKIE_FULL_BAKE,
@@ -18,7 +18,7 @@ def load_pyproject_toml(tmp_path: Path) -> dict[str, Any]:
     pyproject_path = tmp_path / "pyproject.toml"
     if not pyproject_path.exists():
         pytest.fail("pyproject.toml does not exist.")
-    with open(pyproject_path, encoding="utf-8") as f:
+    with Path.open(pyproject_path, encoding="utf-8") as f:
         try:
             return toml.load(f)
         except Exception as e:
@@ -35,7 +35,8 @@ def verify_pyproject_bake(pyproject: dict[str, Any], recipe: dict[str, str]) -> 
 
     if pyproject["project"]["description"] != recipe["project_description"]:
         pytest.fail(
-            f"Pyproject Error: {recipe['project_description']} != {pyproject['project']['description']}"
+            f"Pyproject Error: {recipe['project_description']} "
+            f"!= {pyproject['project']['description']}",
         )
 
 

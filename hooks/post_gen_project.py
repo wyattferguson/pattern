@@ -1,16 +1,17 @@
-"""post_gen_project - Run after cookiecutter project generation."""
+"""Run after cookiecutter to finish environment setup and remove excluded files."""
 
 import os
 import shutil
 import subprocess
+from pathlib import Path
 
 
 def setup_uv_enviroment() -> None:
     """Set up the UV environment and install dependencies for the project."""
     try:
-        subprocess.run(["cd", "{{cookiecutter.project_slug}}"], shell=True)
-        subprocess.run(["uv", "venv"])
-        subprocess.run(["uv", "sync"])
+        subprocess.run(["cd", "{{cookiecutter.project_slug}}"], shell=True, check=False)
+        subprocess.run(["uv", "venv"], check=False)
+        subprocess.run(["uv", "sync"], check=False)
     except Exception as e:
         print(f"UV Setup Error: {e}")
 
@@ -22,9 +23,10 @@ def remove(filepath: str) -> None:
         filepath (str): The path to the file or directory to remove.
     """
     try:
-        if os.path.isfile(filepath):
-            os.remove(filepath)
-        elif os.path.isdir(filepath):
+        path = Path(filepath)
+        if path.is_file():
+            path.unlink()
+        elif path.is_dir():
             shutil.rmtree(filepath)
         else:
             print(f"Warning: {filepath} does not exist or is in another directory.")
@@ -62,9 +64,9 @@ def prune_unwanted_files() -> None:
 def setup_git() -> None:
     """Initialize a git repository and set up the initial commit."""
     try:
-        subprocess.run(["git", "init", "-b", "main"])
-        subprocess.run(["git", "add", "."])
-        subprocess.run(["git", "commit", "-m", "Initial commit"])
+        subprocess.run(["git", "init", "-b", "main"], check=False)
+        subprocess.run(["git", "add", "."], check=False)
+        subprocess.run(["git", "commit", "-m", "Initial commit"], check=False)
     except Exception as e:
         print(f"Git Setup Error: {e}")
 

@@ -69,7 +69,6 @@ ignore = [
     "D107", # undocumented public init
     "D203", # incorrect-blank-line-before-class
     "D212", # multi-line-summary-first-line
-    "D400", # missing-trailing-period
     "D407", # missing-dashed-underline-after-section
 ]
 
@@ -82,3 +81,7 @@ check_untyped_defs = true
 warn_return_any = true
 warn_unused_ignores = true
 show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false
