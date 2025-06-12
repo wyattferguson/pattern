@@ -1,20 +1,20 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any
 
 import pytest
 import toml
 from pytest_cookies.plugin import Cookies, Result  # type: ignore[import-untyped]
 
 from tests.config import (
+    Recipe,
     recipes,
     required_files,
 )
 
 
 @pytest.fixture(params=recipes)
-def cookiecutter_bake(cookies: Cookies, request: pytest.FixtureRequest) -> dict[str, Any]:
+def cookiecutter_bake(cookies: Cookies, request: pytest.FixtureRequest) -> dict[str, Path | Recipe]:
     """Bake a new project from a cookiecutter template.
 
     Args:
@@ -26,6 +26,10 @@ def cookiecutter_bake(cookies: Cookies, request: pytest.FixtureRequest) -> dict[
     """
     recipe = request.param
     result: Result = cookies.bake(extra_context=recipe)
+
+    if not result:
+        pytest.fail("Baking failed with no result.")
+
     if result.exit_code:
         pytest.fail(f"Baking failed with exit code {result.exit_code}")
 
@@ -42,7 +46,7 @@ def cookiecutter_bake(cookies: Cookies, request: pytest.FixtureRequest) -> dict[
 
 
 def test_excluded_files(
-    cookiecutter_bake: dict[str, Any],
+    cookiecutter_bake: dict[str, Path | Recipe],
 ) -> None:
     """Verify that the given files do not exist in the project path."""
     project_path = cookiecutter_bake["path"]
@@ -54,7 +58,7 @@ def test_excluded_files(
 
 
 def test_required_files(
-    cookiecutter_bake: dict[str, Any],
+    cookiecutter_bake: dict[str, Path | Recipe],
 ) -> None:
     """Verify that the given files exist in the project path."""
     project_path = cookiecutter_bake["path"]
@@ -71,7 +75,7 @@ def test_required_files(
 
 
 def test_verify_pyproject(
-    cookiecutter_bake: dict[str, Any],
+    cookiecutter_bake: dict[str, Path | Recipe],
 ) -> None:
     """Verify the contents of the pyproject.toml file after baking."""
     pyproject_path = cookiecutter_bake["path"] / "pyproject.toml"

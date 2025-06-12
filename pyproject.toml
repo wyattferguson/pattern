@@ -38,7 +38,6 @@ dev = [
 [project.urls]
 Repository = "https://github.com/wyattferguson/cookiecutter-python-uv"
 Documentation = "https://github.com/wyattferguson/cookiecutter-python-uv"
-Homepage = "https://github.com/wyattferguson/cookiecutter-python-uv"
 Issues = "https://github.com/wyattferguson/cookiecutter-python-uv/issues"
 
 [tool.taskipy.tasks]
@@ -71,6 +70,7 @@ ignore = [
     "D105", # undocumented magic method
     "D107", # undocumented public init
     "D203", # incorrect-blank-line-before-class
+    "D205", # line-between-summary-and-description
     "D212", # multi-line-summary-first-line
     "D407", # missing-dashed-underline-after-section
     "S311", # rand-usage

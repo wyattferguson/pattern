@@ -1,7 +1,31 @@
 from random import randint
-from typing import Any
+from typing import TypedDict
 
-cookie_full_bake: dict[str, Any] = {
+
+class Recipe(TypedDict, total=False):
+    """A TypedDict to represent the recipe for a cookiecutter project."""
+
+    project_name: str
+    project_slug: str
+    project_description: str
+    author: str
+    github_username: str
+    email: str
+    license: str
+    version: str
+    development_status: str
+    typechecker: str
+    include_docs: str
+    include_nox: str
+    include_changelog: str
+    include_contributing_guide: str
+    include_code_of_conduct: str
+    include_docker: str
+    pypi_deploy: str
+    excluded_files: list[str]
+
+
+cookie_full_bake: Recipe = {
     "project_name": f"test_full_bake ID{randint(1000, 9999)}",
     "project_slug": "test_full_bake",
     "project_description": "A great project that does cool things.",
@@ -22,7 +46,7 @@ cookie_full_bake: dict[str, Any] = {
     "excluded_files": [],
 }
 
-cookie_min_bake: dict[str, Any] = {
+cookie_min_bake: Recipe = {
     "project_name": f"Test Minimum Bake ID{randint(1000, 9999)}",
     "project_slug": "test_min_bake",
     "project_description": "A great project that does cool things.",
@@ -49,10 +73,11 @@ cookie_min_bake: dict[str, Any] = {
         "Dockerfile",
         ".dockerignore",
         ".github/workflows/pypi-deploy.yml",
+        ".github/workflows/gh-pages.yml",
     ],
 }
 
-recipes: list[dict[str, Any]] = [cookie_full_bake, cookie_min_bake]
+recipes: list[Recipe] = [cookie_full_bake, cookie_min_bake]
 
 required_files: list[str] = [
     "pyproject.toml",

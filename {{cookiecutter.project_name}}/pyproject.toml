@@ -11,7 +11,7 @@ requires-python = ">=3.13,<4"
 classifiers = [
     "{{cookiecutter.development_status}}",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
@@ -102,6 +102,7 @@ ignore = [
     "D105", # undocumented magic method
     "D107", # undocumented public init
     "D203", # incorrect-blank-line-before-class
+    "D205", # line-between-summary-and-description
     "D212", # multi-line-summary-first-line
     "D400", # missing-trailing-period
     "D407", # missing-dashed-underline-after-section

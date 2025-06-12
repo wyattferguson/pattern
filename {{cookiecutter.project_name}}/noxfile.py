@@ -8,7 +8,7 @@ nox.options.default_venv_backend = "uv"
     python=["3.13", "3.12", "3.11", "3.10"],
     reuse_venv=True,
 )
-def version_test(session):
+def version_test(session: nox.Session) -> None:
     """Run python version tests.
 
     Args:
