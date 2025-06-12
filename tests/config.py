@@ -2,7 +2,7 @@ from random import randint
 from typing import TypedDict
 
 
-class Recipe(TypedDict, total=False):
+class Recipe(TypedDict, total=True):
     """A TypedDict to represent the recipe for a cookiecutter project."""
 
     project_name: str

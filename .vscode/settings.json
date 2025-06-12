@@ -25,14 +25,5 @@
     "D212", // multi-line-summary-first-line
     "D407", // missing-dashed-underline-after-section
     "S311" // rand-usage
-  ],
-
-  // mypy settings
-  "python.linting.mypyEnabled": true,
-  "python.linting.mypyArgs": [
-    "--ignore-missing-imports",
-    "--follow-imports=silent",
-    "--show-column-numbers",
-    "--strict"
   ]
 }
