@@ -6,13 +6,14 @@ authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
 license = { file = "LICENSE" }
 readme = "README.md"
 keywords = ['cookiecutter', 'template', 'uv', 'python', 'project', 'generator']
-requires-python = ">=3.12,<4"
+requires-python = ">=3.10,<4"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
@@ -26,6 +27,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "nox>=2025.5.1",
     "mypy >=1.16.0",
     "pytest>=8.4.0",
     "pytest-cookies>=0.7.0",
@@ -45,6 +47,7 @@ format = "ruff format ./tests/"
 lint = "ruff check --fix ./tests/"
 type = "mypy --strict ./tests/"
 tests = "pytest --color=yes tests"
+nox = "nox"
 
 [tool.ruff]
 line-length = 100

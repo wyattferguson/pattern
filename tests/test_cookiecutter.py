@@ -24,7 +24,7 @@ def cookiecutter_bake(cookies: Cookies, request: pytest.FixtureRequest) -> tuple
         request (pytest.FixtureRequest): The request object for the fixture.
 
     Returns:
-        dict[str, Any]: A dictionary containing the path to the baked project and the recipe.
+        tuple[Path, Recipe]: A tuple containing the path to the baked project and the recipe used.
     """
     recipe = request.param
     result: Result = cookies.bake(extra_context=recipe)

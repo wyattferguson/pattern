@@ -75,6 +75,9 @@ serve = "mkdocs serve"
 doc_deploy = "mkdocs gh-deploy --force"
 {% endif %}
 tests = "pytest --verbose --color=yes tests"
+{% if cookiecutter.include_nox == 'y' -%}
+nox = "nox"
+{% endif %}
 coverage = "coverage html && coverage report -m"
 run = "uv run ./src/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py"
 
