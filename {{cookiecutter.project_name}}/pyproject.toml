@@ -12,6 +12,7 @@ classifiers = [
     "{{cookiecutter.development_status}}",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
@@ -23,7 +24,7 @@ dependencies = [
 [dependency-groups]
 dev = [
     {% if cookiecutter.typechecker == 'ty' -%}
-    "ty>=0.0.1a8",
+    "ty>=0.0.1a9",
     {% else %}
     "mypy >=1.16.0",
     {% endif %}
