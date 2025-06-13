@@ -23,36 +23,36 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    {% if cookiecutter.typechecker == 'ty' -%}
+    {%- if cookiecutter.typechecker == 'ty' %}
     "ty>=0.0.1a9",
     {% else %}
     "mypy >=1.16.0",
-    {% endif %}
-    {% if cookiecutter.include_nox == 'y' -%}
+    {%- endif %}
+    {%- if cookiecutter.include_nox == 'y' %}
     "nox>=2025.5.1",
-    {% endif %}
+    {%- endif %}
     "pytest>=8.4.0",
     "coverage>=7.8.2",
     "ruff>=0.11.12",
     "taskipy>=1.14.1",
-    {% if cookiecutter.include_docs == 'y' -%}
+    {%- if cookiecutter.include_docs == 'y' %}
     "mkdocs>=1.6.1",
     "mkdocs-material>=9.6.14",
     "mkdocstrings[python]>=0.26.1",
     "mkdocs-gen-files>=0.5.0",
     "mkdocs-literate-nav>=0.6.2",
-    {% endif %}
+    {%- endif %}
     "pre-commit>=4.2.0",
 ]
 
 [project.urls]
 homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
 repository = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git"
-{% if cookiecutter.include_docs == 'y' -%}
+{%- if cookiecutter.include_docs == 'y' %}
 documentation = "https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_slug}}"
-{% else %}
+{%- else %}
 documentation = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
-{% endif %}
+{%- endif %}
 issues = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/issues"
 
 [build-system]
@@ -65,20 +65,20 @@ packages = ["src/{{cookiecutter.project_slug}}"]
 [tool.taskipy.tasks]
 format = "ruff format ./src/"
 lint = "ruff check --fix ./src/"
-{% if cookiecutter.typechecker == 'ty' -%}
+{%- if cookiecutter.typechecker == 'ty' %}
 type = "ty check"
-{% else %}
+{%- else %}
 type = "mypy --strict ./src/"
-{% endif %}
-{% if cookiecutter.include_docs == 'y' -%}
+{%- endif%}
+{%- if cookiecutter.include_docs == 'y' %}
 docs = "mkdocs build & task serve"
 serve = "mkdocs serve"
 doc_deploy = "mkdocs gh-deploy --force"
-{% endif %}
+{%- endif %}
 tests = "pytest --verbose --color=yes tests"
-{% if cookiecutter.include_nox == 'y' -%}
+{%- if cookiecutter.include_nox == 'y' %}
 nox = "nox -s tests"
-{% endif %}
+{%- endif %}
 coverage = "coverage html && coverage report -m"
 run = "uv run ./src/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py"
 
@@ -113,13 +113,12 @@ ignore = [
     "S311", # rand-usage
 ]
 
-
-{% if cookiecutter.typechecker == 'ty' -%}
+{% if cookiecutter.typechecker == 'ty' %}
 [tool.ty]
 src.root = "./src"
 environment.python = "./.venv"
 terminal.output-format = "concise"
-{% else %}
+{%- else %}
 [tool.mypy]
 files = ["src", "tests"]
 ignore_missing_imports = true
@@ -130,7 +129,7 @@ check_untyped_defs = true
 warn_return_any = false
 warn_unused_ignores = true
 show_error_codes = true
-{% endif %}
+{%- endif %}
 
 [tool.coverage.paths]
 source = ["src"]

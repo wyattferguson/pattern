@@ -1,6 +1,5 @@
 """Run after cookiecutter to finish environment setup and remove excluded files."""
 
-import os
 import shutil
 import subprocess
 from pathlib import Path
@@ -9,7 +8,7 @@ from pathlib import Path
 def setup_uv_enviroment() -> None:
     """Set up the UV environment and install dependencies for the project."""
     try:
-        subprocess.run(["cd", "{{cookiecutter.project_slug}}"], shell=True, check=False)
+        subprocess.run(["cd", "{{cookiecutter.project_name}}"], shell=True, check=False)
         subprocess.run(["uv", "venv"], check=False)
         subprocess.run(["uv", "sync"], check=False)
     except Exception as e:

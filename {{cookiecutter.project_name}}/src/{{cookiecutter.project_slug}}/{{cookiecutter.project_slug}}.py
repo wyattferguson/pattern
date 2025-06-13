@@ -1,4 +1,4 @@
-"""{{ cookiecutter.project_slug }}."""
+"""{{cookiecutter.project_slug}}."""
 
 
 def main() -> None:

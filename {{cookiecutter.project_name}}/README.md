@@ -38,7 +38,7 @@ task run
 # run all tests
 task tests
 
-{% if cookiecutter.include_nox == 'y' %}
+{%- if cookiecutter.include_nox == 'y' %}
 # run tests with multiple python versions (3.13,3.12,3.11,3.10)
 task nox
 {%- endif %}
@@ -56,7 +56,7 @@ task lint
 task format
 ```
 
-{% if cookiecutter.pypi_deploy == 'y' %}
+{%- if cookiecutter.pypi_deploy == 'y' %}
 
 ## PyPI Deployment
 
@@ -64,10 +64,9 @@ task format
 - Add the API Token to your projects secrets with the name `PYPI_TOKEN`
 - Create a new release on Github.
 - Create a new tag in the form `*.*.*`.
+  {%- endif %}
 
-{%- endif %}
-
-{% if cookiecutter.include_docs== 'y' -%}
+{%- if cookiecutter.include_docs== 'y' %}
 
 ## Docs Build + Publishing
 
