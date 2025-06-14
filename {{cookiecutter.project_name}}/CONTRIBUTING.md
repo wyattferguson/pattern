@@ -71,13 +71,13 @@ Feel free to submit early, though—we can always iterate on this.
 It is recommended to open an issue before starting work on anything.
 This will allow a chance to talk it over with the owners and validate your approach.
 
-[source code]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}
+[source code]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}
 
 {% if cookiecutter.include_docs == 'y' -%}
-[documentation]: "https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_slug}}"
+[documentation]: "https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.repository_name}}"
 {% else %}
-[documentation]: "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
+[documentation]: "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}"
 {% endif %}
-[issue tracker]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/issues
-[pull request]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/pulls
+[issue tracker]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}/issues
+[pull request]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}/pulls
 [code of conduct]: CODE_OF_CONDUCT.md

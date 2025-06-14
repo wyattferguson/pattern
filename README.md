@@ -46,6 +46,10 @@ If this cookiecutter isnt your cup of tea, you might like one of these alternati
 
 Contributions or suggestions are more then welcome! If you'd like to enhance to this project, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
+```
+cookiecutter --replay-file .\cookiecutter-python-uv\tests\replay.json .\cookiecutter-python-uv\
+```
+
 ## License
 
 [MIT License](https://github.com/wyattferguson/cookiecutter-python-uv/blob/main/LICENSE)

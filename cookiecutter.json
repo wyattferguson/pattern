@@ -1,6 +1,7 @@
 {
-  "project_name": "project_name",
+  "project_name": "Project Name",
   "project_slug": "{{cookiecutter.project_name|slugify(separator='_')}}",
+  "repository_name": "{{cookiecutter.project_name|slugify(separator='-')}}",
   "project_description": "A brief description of your project.",
   "author": "Your Name",
   "github_username": "github_username",
@@ -36,7 +37,8 @@
   "__prompts__": {
     "project_name": "Name of your project",
     "project_slug": "Slug for your project (used in URLs and package names)",
-    "version": "Initial version of your project",
+    "repository_name": "Repository name (used in GitHub and other VCS)",
+    "version": "Version of your project (e.g., 0.1.0)",
     "project_description": "Project description",
     "author": "Author's name",
     "github_username": "GitHub username",

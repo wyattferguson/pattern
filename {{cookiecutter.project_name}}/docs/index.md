@@ -12,11 +12,19 @@ To get it all running from scratch:
 # create a virtual enviroment
 uv venv
 
-# activate virtual enviroment
-.venv\Scripts\activate
-
 # install all the cool dependancies
 uv sync
+```
+
+## Github Repo Setup
+
+To add your new project to its Github repository, firstly make sure you have created a project named _{{cookiecutter.project_slug}}_ on Github.
+Follow these steps to push your new project.
+
+```
+cd "{{cookiecutter.project_name}}"
+git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+git push -u origin main
 ```
 
 ## CLI Commands
@@ -30,37 +38,25 @@ task run
 # run all tests
 task tests
 
+{%- if cookiecutter.include_nox == 'y' %}
+# run tests with multiple python versions (3.13,3.12,3.11,3.10)
+task nox
+{%- endif %}
+
 # run test coverage and generate report
 task coverage
 
-# ty typechecking
-task typecheck
+# typechecking with Ty or Mypy
+task type
 
 # ruff linting
 task lint
 
 # format with ruff
 task format
-
-# format, lint, and typecheck combined
-task precommit
-
-# generate docs & serve
-task docs
 ```
 
-{% if cookiecutter.include_nox == 'y' %}
-
-## Nox
-
-```
-# run tests with multiple python versions (3.13,3.12,3.11,3.10)
-nox -s vtests
-```
-
-{%- endif %}
-
-{% if cookiecutter.pypi_deploy == 'y' %}
+{%- if cookiecutter.pypi_deploy == 'y' %}
 
 ## PyPI Deployment
 
@@ -68,12 +64,24 @@ nox -s vtests
 - Add the API Token to your projects secrets with the name `PYPI_TOKEN`
 - Create a new release on Github.
 - Create a new tag in the form `*.*.*`.
+  {%- endif %}
 
-{%- endif %}
-
-{% if cookiecutter.include_docs== 'y' -%}
+{%- if cookiecutter.include_docs== 'y' %}
 
 ## Docs Build + Publishing
+
+Your basic doc functions for creating, serving, and deploying can be done through these CLI commands:
+
+```
+# generate docs & serve
+task docs
+
+# serve docs
+task serve
+
+# deploy docks to github.io
+task doc_deploy
+```
 
 {%- endif %}
 
