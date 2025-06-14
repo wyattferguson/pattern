@@ -105,6 +105,8 @@ def display_project_details() -> None:
             f"Documentation: {Colors.CYAN}https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.repository_name}}{Colors.ENDC}",
         )
     print(f"License: {Colors.CYAN}{{cookiecutter.license}}{Colors.ENDC}")
+    print(f"Git Status: {Colors.CYAN}Init Commit{Colors.ENDC}")
+    print(f"UV Setup: {Colors.CYAN}Complete{Colors.ENDC}")
     print("\nFor more information, refer to the README.md")
     print("\nHappy coding!")
     print("\n####################################################################\n")

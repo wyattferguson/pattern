@@ -54,7 +54,7 @@ line-length = 100
 indent-width = 4
 format.indent-style = "space"
 target-version = "py313"
-src = ["tests"]
+src = ["tests","hooks"]
 
 [tool.ruff.lint]
 pydocstyle.convention = "google"
@@ -80,7 +80,7 @@ ignore = [
 ]
 
 [tool.mypy]
-files = ["tests"]
+files = ["tests","hooks"]
 disallow_untyped_defs = true
 disallow_any_unimported = true
 no_implicit_optional = true
