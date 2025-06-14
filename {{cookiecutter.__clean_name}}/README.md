@@ -6,24 +6,36 @@
 
 Installation is using [UV](https://docs.astral.sh/uv/) to manage everything.
 
-To get it all running from scratch:
+**Step 1**: Create a virtual enviroment
 
 ```
-# create a virtual enviroment
 uv venv
+```
 
-# install all the cool dependancies
+**Step 2**: Activate your new enviroment
+
+```
+# on windows
+.venv\Scripts\activate
+
+# on mac / linux
+source .venv/bin/activate
+```
+
+**Step 3**: Install all the cool dependancies
+
+```
 uv sync
 ```
 
 ## Github Repo Setup
 
-To add your new project to its Github repository, firstly make sure you have created a project named _{{cookiecutter.project_slug}}_ on Github.
+To add your new project to its Github repository, firstly make sure you have created a project named **{{cookiecutter.repository_name}}** on Github.
 Follow these steps to push your new project.
 
 ```
-cd "{{cookiecutter.project_name}}"
-git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+cd {{cookiecutter.__clean_name}}
+git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}.git
 git push -u origin main
 ```
 
@@ -32,7 +44,7 @@ git push -u origin main
 We've included a bunch of useful CLI commands for common project tasks using [taskipy](https://github.com/taskipy/taskipy).
 
 ```
-# run src/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py
+# run src/{{cookiecutter.__clean_slug}}/{{cookiecutter.__clean_slug}}.py
 task run
 
 # run all tests
@@ -64,7 +76,8 @@ task format
 - Add the API Token to your projects secrets with the name `PYPI_TOKEN`
 - Create a new release on Github.
 - Create a new tag in the form `*.*.*`.
-  {%- endif %}
+
+{%- endif %}
 
 {%- if cookiecutter.include_docs== 'y' %}
 
@@ -89,6 +102,6 @@ task doc_deploy
 
 {{cookiecutter.license}}
 
-## Contact + Support
+## Contact
 
 Created by [{{cookiecutter.author}}](https://github.com/{{cookiecutter.github_username}})

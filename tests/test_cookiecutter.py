@@ -45,7 +45,7 @@ def cookiecutter_bake(cookies: Cookies, request: pytest.FixtureRequest) -> Bake:
         if result.exception:
             pytest.fail(f"Exception occurred during baking: {result.exception}")
 
-        if result.project_path.name != recipe["project_name"]:
+        if result.project_path.name != recipe["__clean_name"]:
             pytest.fail(f"Unexpected project name: {result.project_path.name}")
 
         if not result.project_path.is_dir():
@@ -68,7 +68,7 @@ def test_excluded_files(bake: Bake) -> None:
 
 def test_required_files(bake: Bake) -> None:
     """Verify that the given files exist in the project path."""
-    slug = bake.recipe["project_slug"]
+    slug = bake.recipe["__clean_slug"]
     files: list[str] = [
         f"src/{slug}",
         f"src/{slug}/{slug}.py",
@@ -89,9 +89,9 @@ def test_verify_pyproject(bake: Bake) -> None:
         try:
             pyproject = toml.load(f)
 
-            if pyproject["project"]["name"] != bake.recipe["project_slug"]:
+            if pyproject["project"]["name"] != bake.recipe["__clean_slug"]:
                 pytest.fail(
-                    f"Pyproject Error: {bake.recipe['project_slug']} "
+                    f"Pyproject Error: {bake.recipe['__clean_slug']} "
                     f"!= {pyproject['project']['name']}",
                 )
 

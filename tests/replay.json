@@ -2,6 +2,8 @@
   "cookiecutter": {
     "project_name": "Test Full Bake",
     "project_slug": "test_full_bake",
+    "__clean_slug": "test_full_bake",
+    "__clean_name": "test-full-bake",
     "repository_name": "test-full-bake",
     "project_description": "A great project that does cool things.",
     "author": "Wyatt Ferguson",

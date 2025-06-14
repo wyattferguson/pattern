@@ -37,4 +37,4 @@ COPY --from=builder --chown=app:app /app /app
 ENV PATH="/app/.venv/bin:$PATH"
 
 # Run the application
-CMD ["python","app/src/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.py"]
+CMD ["python","app/src/{{cookiecutter.__clean_slug}}/{{cookiecutter.__clean_slug}}.py"]

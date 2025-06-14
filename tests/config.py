@@ -7,6 +7,9 @@ class Recipe(TypedDict, total=True):
 
     project_name: str
     project_slug: str
+    __clean_name: str
+    __clean_slug: str
+    repository_name: str
     project_description: str
     author: str
     github_username: str
@@ -28,6 +31,9 @@ class Recipe(TypedDict, total=True):
 cookie_full_bake: Recipe = {
     "project_name": f"test_full_bake ID{randint(1000, 9999)}",
     "project_slug": "test_full_bake",
+    "__clean_name": "test-full-bake",
+    "__clean_slug": "test_full_bake",
+    "repository_name": "test-full-bake",
     "project_description": "A great project that does cool things.",
     "author": "Wyatt Ferguson",
     "github_username": "wyattferguson",
@@ -49,6 +55,9 @@ cookie_full_bake: Recipe = {
 cookie_min_bake: Recipe = {
     "project_name": f"Test Minimum Bake ID{randint(1000, 9999)}",
     "project_slug": "test_min_bake",
+    "__clean_name": "test-min-bake",
+    "__clean_slug": "test_min_bake",
+    "repository_name": "test-min-bake",
     "project_description": "A great project that does cool things.",
     "author": "Wyatt Ferguson",
     "github_username": "wyattferguson",

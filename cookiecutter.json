@@ -1,7 +1,9 @@
 {
-  "project_name": "Project Name",
+  "project_name": "project-name",
   "project_slug": "{{cookiecutter.project_name|slugify(separator='_')}}",
   "repository_name": "{{cookiecutter.project_name|slugify(separator='-')}}",
+  "__clean_name": "{{cookiecutter.project_name|slugify(separator='-')}}",
+  "__clean_slug": "{{cookiecutter.project_slug|slugify(separator='_')}}",
   "project_description": "A brief description of your project.",
   "author": "Your Name",
   "github_username": "github_username",

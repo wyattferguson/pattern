@@ -7,7 +7,7 @@ import mkdocs_gen_files
 nav = mkdocs_gen_files.Nav()
 
 root = Path(__file__).parent.parent
-src = root / "{{cookiecutter.project_slug}}"
+src = root / "{{cookiecutter.__clean_slug}}"
 
 for path in sorted(src.rglob("*.py")):
     module_path = path.relative_to(src).with_suffix("")

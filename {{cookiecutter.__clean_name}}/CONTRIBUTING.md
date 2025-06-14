@@ -73,11 +73,11 @@ This will allow a chance to talk it over with the owners and validate your appro
 
 [source code]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}
 
-{% if cookiecutter.include_docs == 'y' -%}
+{%- if cookiecutter.include_docs == 'y' %}
 [documentation]: "https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.repository_name}}"
-{% else %}
+{%- else %}
 [documentation]: "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}"
-{% endif %}
+{%- endif %}
 [issue tracker]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}/issues
 [pull request]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}/pulls
 [code of conduct]: CODE_OF_CONDUCT.md
