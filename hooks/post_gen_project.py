@@ -2,7 +2,22 @@
 
 import shutil
 import subprocess
+from enum import StrEnum
 from pathlib import Path
+
+
+class Colors(StrEnum):
+    """ANSI color codes for terminal output."""
+
+    HEADER = "\033[95m"
+    BLUE = "\033[94m"
+    CYAN = "\033[96m"
+    GREEN = "\033[92m"
+    WARNING = "\033[93m"
+    FAIL = "\033[91m"
+    ENDC = "\033[0m"
+    BOLD = "\033[1m"
+    UNDERLINE = "\033[4m"
 
 
 def setup_uv_enviroment() -> None:
@@ -70,7 +85,27 @@ def setup_git() -> None:
         print(f"Git Setup Error: {e}")
 
 
+def display_project_details() -> None:
+    """Display the project details after setup."""
+    project_path = Path.cwd()
+    print("\n\n###################################################################\n")
+    print(f"{Colors.GREEN}Project Setup Complete!{Colors.ENDC}\n")
+    print(f"Project Name: {Colors.CYAN}{{cookiecutter.project_name}}{Colors.ENDC}")
+    print(
+        f"Author: {Colors.CYAN}{{cookiecutter.author}} ({{cookiecutter.email}}){Colors.ENDC}",
+    )
+    print(f"Project Path: {Colors.CYAN}{project_path}{Colors.ENDC}")
+    print(
+        f"Git URL: {Colors.CYAN}https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}{Colors.ENDC}",
+    )
+    print(f"License: {Colors.CYAN}{{cookiecutter.license}}{Colors.ENDC}")
+    print("\nFor more information, refer to the README.md")
+    print("\nHappy coding!")
+    print("\n####################################################################\n")
+
+
 if __name__ == "__main__":
     setup_uv_enviroment()
     prune_unwanted_files()
     setup_git()
+    display_project_details()
