@@ -1,6 +1,6 @@
 # :snake: Modern Cookiecutter Python Project
 
-This is a modern, opinionated, cookiecutter template for your next Python project. Included is modern tooling and dependencies with sensible rules and settings. Also included is all the boilerplate documentation and project extras you would need to create good foundation for your next open source project.
+This is a modern, opinionated, cookiecutter template for your next Python project. Included is modern tooling and dependencies with sensible rules and settings. Also included is all the boilerplate documentation and project extras you would need to create good foundation for your next python project.
 
 ## Setup New Project
 
@@ -16,13 +16,15 @@ Then just follow the prompts to get all setup quickly.
 
 ## Features
 
+Everything comes preconfigured to work out of the box.
+
 - :package: [UV](https://docs.astral.sh/uv/) - Package and project manager
 - :crab: [Ruff](https://docs.astral.sh/ruff/) - Linter and code formatter.
 - :bug: Typechecking with [Ty](https://github.com/astral-sh/ty) or [Mypy](https://www.mypy-lang.org/).
 - :test_tube: [Pytest](https://docs.pytest.org/en/stable/) - Testing
 - :telescope: [Coverage](https://coverage.readthedocs.io/en/7.6.12/) - Test coverage.
 - :shaved_ice: [Nox](https://nox.thea.codes/en/stable/index.html) - Testing in multiple Python environments.
-- :small_airplane: [Taskipy](https://github.com/taskipy/taskipy) - Task runner for included CLI shortcuts.
+- :small_airplane: [Taskipy](https://github.com/taskipy/taskipy) - Task runner for CLI shortcuts.
 - :vhs: [MKDocs](https://squidfunk.github.io/mkdocs-material/) - Doc generation with [material theme](https://github.com/squidfunk/mkdocs-material).
 - :screwdriver: GitHub Actions:
   - Publish docs to Github Pages.
@@ -30,8 +32,8 @@ Then just follow the prompts to get all setup quickly.
 - :tropical_drink: GitHub Issue Templates for documentation, feature requests, general reports, and bug reports.
 - :cactus: [Pre-commit](https://pre-commit.com/) - Linting, formatting, and common bug checks on Git commits.
 - :placard: Changelog, Code of Conduct, and Contributing Guide templates.
-- :whale2: Docker support including extensive dockerignore file.
-- :cocktail: VSCode - Settings and extension recommendations.
+- :whale2: [Docker](https://www.docker.com/) support including extensive dockerignore file.
+- :cocktail: [VSCode](https://code.visualstudio.com/) - Settings and extension integrations.
 
 ## Alternative Cookiecutter Projects
 
@@ -45,10 +47,6 @@ If this cookiecutter isnt your cup of tea, you might like one of these alternati
 ## Contributing
 
 Contributions or suggestions are more then welcome! If you'd like to enhance to this project, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
-
-```
-cookiecutter --replay-file .\cookiecutter-python-uv\tests\replay.json .\cookiecutter-python-uv\
-```
 
 ## License
 
