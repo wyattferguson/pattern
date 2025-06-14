@@ -100,6 +100,10 @@ def display_project_details() -> None:
     print(
         f"Git URL: {Colors.CYAN}https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}{Colors.ENDC}",
     )
+    if "{{cookiecutter.include_docs}}" == "y":
+        print(
+            f"Documentation: {Colors.CYAN}https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.repository_name}}{Colors.ENDC}",
+        )
     print(f"License: {Colors.CYAN}{{cookiecutter.license}}{Colors.ENDC}")
     print("\nFor more information, refer to the README.md")
     print("\nHappy coding!")

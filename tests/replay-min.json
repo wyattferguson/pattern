@@ -1,0 +1,24 @@
+{
+  "cookiecutter": {
+    "project_name": "Test Min Bake",
+    "project_slug": "test_min_bake",
+    "__clean_slug": "test_min_bake",
+    "__clean_name": "test-min-bake",
+    "repository_name": "test-min-bake",
+    "project_description": "A great project that does cool things.",
+    "author": "Wyatt Ferguson",
+    "github_username": "wyattferguson",
+    "email": "wyattxdev@duck.com",
+    "license": "MIT license",
+    "version": "3.2.1",
+    "development_status": "Development Status :: 4 - Beta",
+    "typechecker": "mypy",
+    "include_docs": "n",
+    "include_nox": "n",
+    "include_changelog": "n",
+    "include_contributing_guide": "n",
+    "include_code_of_conduct": "n",
+    "include_docker": "n",
+    "pypi_deploy": "n"
+  }
+}
