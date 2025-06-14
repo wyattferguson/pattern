@@ -9,12 +9,12 @@ from pathlib import Path
 class Colors(StrEnum):
     """ANSI color codes for terminal output."""
 
-    HEADER = "\033[95m"
+    PURPLE = "\033[95m"
     BLUE = "\033[94m"
     CYAN = "\033[96m"
     GREEN = "\033[92m"
-    WARNING = "\033[93m"
-    FAIL = "\033[91m"
+    ORANGE = "\033[93m"
+    RED = "\033[91m"
     ENDC = "\033[0m"
     BOLD = "\033[1m"
     UNDERLINE = "\033[4m"
@@ -88,7 +88,9 @@ def setup_git() -> None:
 def display_project_details() -> None:
     """Display the project details after setup."""
     project_path = Path.cwd()
-    print("\n\n###################################################################\n")
+    print(
+        "\n\n###################################################################\n",
+    )
     print(f"{Colors.GREEN}Project Setup Complete!{Colors.ENDC}\n")
     print(f"Project Name: {Colors.CYAN}{{cookiecutter.project_name}}{Colors.ENDC}")
     print(
