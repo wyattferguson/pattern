@@ -34,7 +34,6 @@ To add your new project to its Github repository, firstly make sure you have cre
 Follow these steps to push your new project.
 
 ```
-cd {{cookiecutter.__clean_name}}
 git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}.git
 git branch -M main
 git push -u origin main
@@ -82,7 +81,7 @@ task format
 
 {%- if cookiecutter.include_docs== 'y' %}
 
-## Docs Build + Publishing
+## Docs Generation + Publishing
 
 Your basic doc functions for creating, serving, and deploying can be done through these CLI commands:
 
@@ -96,7 +95,7 @@ task serve
 # generate static HTML docs (outputs to ./site/)
 task html
 
-# deploy docks to github.io
+# deploy docs to Github Pages
 task doc_deploy
 ```
 
