@@ -39,7 +39,7 @@ git branch -M main
 git push -u origin main
 ```
 
-## CLI Commands
+## Built-in CLI Commands
 
 We've included a bunch of useful CLI commands for common project tasks using [taskipy](https://github.com/taskipy/taskipy).
 
@@ -68,14 +68,34 @@ task lint
 task format
 ```
 
+{%- if cookiecutter.include_docker == 'y' %}
+
+## Docker Setup
+
+A Dockerfile optimized to reduce the image size has been included. To get it up and running follow these steps.
+
+**Step 1**: Build your Docker image.
+
+```
+docker build -t "{{cookiecutter.__clean_slug}}:Dockerfile" .
+```
+
+**Step 2**: Run your new image.
+
+```
+docker run -d {{cookiecutter.__clean_slug}}
+```
+
+{%- endif %}
+
 {%- if cookiecutter.pypi_deploy == 'y' %}
 
 ## PyPI Deployment
 
-- Register your project and create an API Token on [PyPI](https://pypi.org/).
-- Add the API Token to your projects secrets with the name `PYPI_TOKEN`
-- Create a new release on Github.
-- Create a new tag in the form `*.*.*`.
+1. Register your project and create an API Token on [PyPI](https://pypi.org/).
+2. Add the API Token to your projects secrets with the name `PYPI_TOKEN`
+3. Create a new release on Github.
+4. Create a new tag in the form `*.*.*`.
 
 {%- endif %}
 
