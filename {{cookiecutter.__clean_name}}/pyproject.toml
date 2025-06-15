@@ -145,4 +145,5 @@ source = ["src", "tests"]
 
 [tool.portray.mkdocs.theme]
 name = "material"
-palette = {primary = "blue grey", accent = "pink", scheme = "default"}
+custom_dir = "docs"
+palette = {scheme= "slate", primary="indigo", accent="indigo"}
