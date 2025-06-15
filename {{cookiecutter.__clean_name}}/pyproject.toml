@@ -36,11 +36,9 @@ dev = [
     "ruff>=0.11.12",
     "taskipy>=1.14.1",
     {%- if cookiecutter.include_docs == 'y' %}
-    "mkdocs>=1.6.1",
-    "mkdocs-material>=9.6.14",
-    "mkdocstrings[python]>=0.26.1",
-    "mkdocs-gen-files>=0.5.0",
-    "mkdocs-literate-nav>=0.6.2",
+    "portray>=1.8.0",
+    "legacy-cgi>=2.6.3",
+    "setuptools>=80.9.0",
     {%- endif %}
     "pre-commit>=4.2.0",
 ]
@@ -71,9 +69,9 @@ type = "ty check"
 type = "mypy --strict ./src/"
 {%- endif%}
 {%- if cookiecutter.include_docs == 'y' %}
-docs = "mkdocs build & task serve"
-serve = "mkdocs serve"
-doc_deploy = "mkdocs gh-deploy --force"
+docs = "portray in_browser"
+serve = "portray server"
+doc_deploy = "portray on_github_pages"
 {%- endif %}
 tests = "pytest --verbose --color=yes tests"
 {%- if cookiecutter.include_nox == 'y' %}
@@ -143,3 +141,7 @@ fail_under = 100
 [tool.coverage.run]
 branch = true
 source = ["src", "tests"]
+
+[tool.portray.mkdocs.theme]
+name = "material"
+palette = {primary = "blue grey", accent = "pink", scheme = "default"}
