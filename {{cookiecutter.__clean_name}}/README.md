@@ -95,8 +95,8 @@ task serve
 # generate static HTML docs (outputs to ./site/)
 task html
 
-# deploy docs to Github Pages
-task doc_deploy
+# publish docs to Github Pages
+task publish
 ```
 
 Note: Your repo must be public or have an upgraded account to deploy docs to Github Pages.

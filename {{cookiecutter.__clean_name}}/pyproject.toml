@@ -72,7 +72,7 @@ type = "mypy --strict ./src/"
 docs = "portray in_browser"
 serve = "portray server"
 html = "portray as_html"
-doc_deploy = "portray on_github_pages"
+publish = "portray on_github_pages"
 {%- endif %}
 tests = "pytest --verbose --color=yes tests"
 {%- if cookiecutter.include_nox == 'y' %}
