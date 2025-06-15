@@ -123,6 +123,10 @@ Note: Your repo must be public or have an upgraded account to deploy docs to Git
 
 {%- endif %}
 
+## References
+
+- [Cookiecutter Python UV Project](https://github.com/wyattferguson/cookiecutter-python-uv) - A modern cookiecutter template for your next Python project.
+
 ## License
 
 {{cookiecutter.license}}
