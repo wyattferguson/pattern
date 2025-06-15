@@ -103,7 +103,7 @@ docker run -d {{cookiecutter.__clean_slug}}
 
 ## Docs Generation + Publishing
 
-Your basic doc functions for creating, serving, and deploying can be done through these CLI commands:
+Doc generation is setup to scan everything inside `/src`, files with a prefix `_` will be ignored. Basic doc functions for generating, serving, and publishing can be done through these CLI commands:
 
 ```
 # generate docs & serve
@@ -125,7 +125,7 @@ Note: Your repo must be public or have an upgraded account to deploy docs to Git
 
 ## References
 
-- [Cookiecutter Python UV Project](https://github.com/wyattferguson/cookiecutter-python-uv) - A modern cookiecutter template for your next Python project.
+- [Cookiecutter Python Project](https://github.com/wyattferguson/cookiecutter-python-uv) - A modern cookiecutter template for your next Python project.
 
 ## License
 
