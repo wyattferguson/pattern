@@ -93,6 +93,9 @@ task docs
 # serve docs
 task serve
 
+# generate static HTML docs (outputs to ./site/)
+task html
+
 # deploy docks to github.io
 task doc_deploy
 ```

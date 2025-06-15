@@ -71,6 +71,7 @@ type = "mypy --strict ./src/"
 {%- if cookiecutter.include_docs == 'y' %}
 docs = "portray in_browser"
 serve = "portray server"
+html = "portray as_html"
 doc_deploy = "portray on_github_pages"
 {%- endif %}
 tests = "pytest --verbose --color=yes tests"
