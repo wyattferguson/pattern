@@ -77,13 +77,13 @@ A Dockerfile optimized to reduce the image size has been included. To get it up 
 **Step 1**: Build your Docker image.
 
 ```
-docker build -t "{{cookiecutter.__clean_slug}}:Dockerfile" .
+docker build --progress=plain -t "{{cookiecutter.__clean_slug}}:Dockerfile" .
 ```
 
 **Step 2**: Run your new image.
 
 ```
-docker run -d {{cookiecutter.__clean_slug}}
+docker run --rm {{cookiecutter.__clean_slug}}:Dockerfile
 ```
 
 {%- endif %}
