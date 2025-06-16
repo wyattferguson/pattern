@@ -16,7 +16,7 @@ Then just follow the prompts to get all setup quickly.
 
 ## Features
 
-Everything comes preconfigured to work out of the box.
+Everything comes preconfigured to work out of the box. On setup you can pick and choose what extras to install or to leave behind.
 
 - :package: [UV](https://docs.astral.sh/uv/) - Package and project manager
 - :crab: [Ruff](https://docs.astral.sh/ruff/) - Linter and code formatter.
