@@ -50,7 +50,7 @@ task run
 # run all tests
 task tests
 
-{%- if cookiecutter.include_nox == 'y' %}
+{% if cookiecutter.include_nox == 'y' %}
 # run tests with multiple python versions (3.13,3.12,3.11,3.10)
 task nox
 {%- endif %}
