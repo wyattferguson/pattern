@@ -34,6 +34,22 @@ Request features on the [Issue Tracker].
 
 You need Python 3.12+ and [uv](https://docs.astral.sh/uv/):
 
+Create a new virtual enviroment:
+
+```
+uv venv
+```
+
+Activate your new enviroment:
+
+```
+# on windows
+.venv\Scripts\activate
+
+# on mac / linux
+source .venv/bin/activate
+```
+
 Install the package with development requirements:
 
 ```
