@@ -42,6 +42,14 @@ If this cookiecutter isnt your cup of tea, you might like one of these alternati
 - [Cookiecutter pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) - Cookiecutter template for a Python package.
 - [Neuroinformatics cookiecutter](https://github.com/neuroinformatics-unit/python-cookiecutter) - Utility to create a basic Python project structure with tests, CI etc.
 
+## Upcoming Features
+
+After a few suggestions from community, here are the next features coming down the line.
+
+- Dependabot support for version and security scanning.
+- Customization guide for how to update the project to fit your specific needs better over time.
+- Cruft support
+
 ## Contributing
 
 Contributions or suggestions are more then welcome! If you'd like to enhance to this project, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
