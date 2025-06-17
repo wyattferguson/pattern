@@ -72,6 +72,9 @@ def prune_unwanted_files() -> None:
     if "{{cookiecutter.pypi_deploy}}" != "y":
         remove(".github/workflows/pypi-publish.yml")
 
+    if "{{cookiecutter.include_dbot}}" != "y":
+        remove(".github/dependabot.yml")
+
 
 def setup_git() -> None:
     """Initialize a git repository and set up the initial commit."""

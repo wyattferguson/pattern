@@ -32,6 +32,7 @@ Everything comes preconfigured to work out of the box. On setup you can pick and
 - :placard: Changelog, Code of Conduct, and Contributing Guide templates.
 - :whale2: [Docker](https://www.docker.com/) support including extensive dockerignore file.
 - :cocktail: [VSCode](https://code.visualstudio.com/) - Settings and extension integrations.
+- :rescue_worker_helmet: [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) - Dependency scanning for new versions and security alerts.
 
 ## Alternative Cookiecutter Projects
 
@@ -41,14 +42,6 @@ If this cookiecutter isnt your cup of tea, you might like one of these alternati
 - [Bosd uv-hypermodern-python](https://github.com/bosd/cookiecutter-uv-hypermodern-python) - bosd version of a cookiecutter uv project with github deployments.
 - [Cookiecutter pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) - Cookiecutter template for a Python package.
 - [Neuroinformatics cookiecutter](https://github.com/neuroinformatics-unit/python-cookiecutter) - Utility to create a basic Python project structure with tests, CI etc.
-
-## Upcoming Features
-
-After a few suggestions from community, here are the next features coming down the line.
-
-- Dependabot support for version and security scanning.
-- Customization guide for how to update the project to fit your specific needs better over time.
-- Cruft support
 
 ## Contributing
 

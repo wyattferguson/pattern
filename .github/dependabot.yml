@@ -1,0 +1,11 @@
+version: 2
+
+updates:
+  - package-ecosystem: "uv"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    security-updates: "auto"
+    open-pull-requests-limit: 10 # Maximum number of open pull requests
+    commit-message:
+      prefix: "DBOT" # Prefix for the commit message

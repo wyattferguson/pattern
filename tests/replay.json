@@ -15,6 +15,7 @@
     "typechecker": "mypy",
     "include_docs": "y",
     "include_nox": "y",
+    "include_dbot": "y",
     "include_changelog": "y",
     "include_contributing_guide": "y",
     "include_code_of_conduct": "y",
