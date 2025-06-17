@@ -1,6 +1,6 @@
 [project]
 name = "cookiecutter-python-uv"
-version = "0.5.0"
+version = "0.5.1"
 description = "A modern, opinionated, cookiecutter template for your next Python project."
 authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
 license = { file = "LICENSE" }

@@ -123,6 +123,18 @@ Note: Your repo must be public or have an upgraded account to deploy docs to Git
 
 {%- endif %}
 
+{%- if cookiecutter.include_dbot == 'y' %}
+
+## Dependabot Setup
+
+1. Go to the "Settings -> Advanced Security" tab in your repository.
+2. In the left sidebar, click "Dependabot Alerts" or "Dependabot Security Updates" (if available).
+3. Under the "Dependabot" section enable the options you want to monitor, we recommend the "Dependabot security updates" at the minimum.
+
+Dependabot is configured to do _weekly_ scans of your dependencies, and pull requests will be prefixed with "DBOT". These settings can be adjusted in the `./.github/dependabot.yml` file.
+
+{%- endif %}
+
 ## References
 
 - [Cookiecutter Python Project](https://github.com/wyattferguson/cookiecutter-python-uv) - A modern cookiecutter template for your next Python project.
