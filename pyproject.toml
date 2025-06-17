@@ -1,6 +1,6 @@
 [project]
 name = "cookiecutter-python-uv"
-version = "0.5.1"
+version = "0.5.2"
 description = "A modern, opinionated, cookiecutter template for your next Python project."
 authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
 license = { file = "LICENSE" }
@@ -35,6 +35,9 @@ dev = [
     "taskipy>=1.14.1",
     "toml>=0.10.2",
     "types-toml>=0.10.8.20240310",
+    "portray>=1.8.0",
+    "legacy-cgi>=2.6.3",
+    "setuptools>=80.9.0",
 ]
 
 [project.urls]
@@ -48,6 +51,10 @@ lint = "ruff check --fix ./tests/"
 type = "mypy --strict ./tests/"
 tests = "pytest --color=yes tests"
 nox = "nox -s tests"
+docs = "portray in_browser"
+serve = "portray server"
+html = "portray as_html"
+publish = "portray on_github_pages"
 
 [tool.ruff]
 line-length = 100
@@ -88,3 +95,8 @@ check_untyped_defs = true
 warn_return_any = true
 warn_unused_ignores = true
 show_error_codes = true
+
+[tool.portray.mkdocs.theme]
+name = "material"
+custom_dir = "docs"
+palette = {scheme= "slate", primary="deep purple", accent="purple"}
