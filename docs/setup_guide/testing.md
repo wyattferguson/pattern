@@ -20,6 +20,6 @@ To run all your [Nox] scripts at once use the command:
 task nox
 ```
 
-Visit the [Nox Config](https://nox.thea.codes/en/stable/config.html) to see the full list of its capabilities.
+Visit the [Nox Documentation](https://nox.thea.codes/en/stable/config.html) to see the full list of its capabilities.
 
 [Nox]: (https://nox.thea.codes/en/stable/index.html)

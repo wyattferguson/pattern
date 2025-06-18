@@ -40,7 +40,7 @@ Contributions or suggestions are more then welcome! If you'd like to enhance to 
 
 ## Alternative Cookiecutter Projects
 
-If this cookiecutter isnt your cup of tea, you might like one of these alternatives.
+If this cookiecutter isn't your cup of tea, you might like one of these alternatives.
 
 - [Fpgmaas cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) - fpgmaas version of a cookiecutter using UV.
 - [Bosd uv-hypermodern-python](https://github.com/bosd/cookiecutter-uv-hypermodern-python) - bosd version of a cookiecutter uv project with github deployments.
