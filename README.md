@@ -32,7 +32,7 @@ Everything comes preconfigured to work out of the box. On setup you can pick and
 - :placard: Changelog, Code of Conduct, and Contributing Guide templates.
 - :whale2: [Docker](https://www.docker.com/) support including extensive dockerignore file.
 - :cocktail: [VSCode](https://code.visualstudio.com/) - Settings and extension integrations.
-- :rescue_worker_helmet: [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) - Dependency scanning for new versions and security alerts.
+- :robot: [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) - Dependency scanning for new versions and security alerts.
 
 ## Alternative Cookiecutter Projects
 
