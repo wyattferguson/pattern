@@ -96,7 +96,44 @@ warn_return_any = true
 warn_unused_ignores = true
 show_error_codes = true
 
+
+[tool.portray]
+modules=["tests"]
+
 [tool.portray.mkdocs.theme]
 name = "material"
 custom_dir = "docs"
 palette = {scheme= "slate", primary="deep purple", accent="purple"}
+
+[tool.portray.mkdocs]
+site_name = "Cookiecutter Python UV"
+extra_css = ["css/extra.css"]
+
+# Custom Docs Navigation Order
+[[tool.portray.mkdocs.nav]]
+Home = "docs/home.md"
+
+[[tool.portray.mkdocs.nav]]
+    [[tool.portray.mkdocs.nav."Setup Guide"]]
+    "Installation" = "docs/setup_guide/installation.md"
+
+    [[tool.portray.mkdocs.nav."Setup Guide"]]
+    "CLI" = "docs/setup_guide/cli.md"
+
+    [[tool.portray.mkdocs.nav."Setup Guide"]]
+    "Github" = "docs/setup_guide/github.md"
+
+    [[tool.portray.mkdocs.nav."Setup Guide"]]
+    "PyPI" = "docs/setup_guide/pypi.md"
+
+    [[tool.portray.mkdocs.nav."Setup Guide"]]
+    "Documentation" = "docs/setup_guide/documentation.md"
+
+    [[tool.portray.mkdocs.nav."Setup Guide"]]
+    "Testing" = "docs/setup_guide/testing.md"
+
+    [[tool.portray.mkdocs.nav."Setup Guide"]]
+    "Configuration" = "docs/setup_guide/configuration.md"
+
+[[tool.portray.mkdocs.nav]]
+License = "license.md"

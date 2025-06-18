@@ -143,7 +143,11 @@ fail_under = 100
 branch = true
 source = ["src", "tests"]
 
+[tool.portray.mkdocs]
+site_name = "{{cookiecutter.project_name}}"
+
 [tool.portray.mkdocs.theme]
 name = "material"
 custom_dir = "docs"
 palette = {scheme= "slate", primary="deep purple", accent="purple"}
+
