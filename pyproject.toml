@@ -136,4 +136,4 @@ Home = "docs/home.md"
     "Configuration" = "docs/setup_guide/configuration.md"
 
 [[tool.portray.mkdocs.nav]]
-License = "license.md"
+License = "docs/license.md"

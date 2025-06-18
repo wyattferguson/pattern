@@ -1,4 +1,4 @@
-# PyPI
+# 📡 PyPI
 
 ## Initial Setup
 
