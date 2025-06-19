@@ -4,9 +4,11 @@ All of your config settings can be found in the `pyproject.toml` file.
 
 ## Ruff Rules
 
-[Ruff] is included by default with your setup to cover all your linting and formatting needs. We've tried to pick a reasonable set of rules to follow, and some to ignore. We try and walk the line between a good dev experience and keeping code quality high. Checkout the [Ruff Rules](https://docs.astral.sh/ruff/rules/) to see the giant list of options.
+[Ruff] is included by default with your setup to cover all your linting and formatting needs. We've tried to pick a reasonable set of rules to follow, and some to ignore. We try and walk the line between a good dev experience and keeping code quality high.
 
 ```toml
+# pyproject.toml
+
 [tool.ruff]
 line-length = 100
 indent-width = 4
