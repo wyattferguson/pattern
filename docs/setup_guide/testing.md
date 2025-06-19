@@ -1,5 +1,7 @@
 # 🧪 Testing
 
+We've included [PyTest], [Coverage], and [Nox] to give you a good base to build your testing from.
+
 ## PyTest
 
 [PyTest] is the gold standard for testing your code in Python and is included by default in your install. A empty test file is generated for you on install.

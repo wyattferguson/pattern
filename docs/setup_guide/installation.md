@@ -8,7 +8,7 @@ Create new project:
 uvx cookiecutter gh:wyattferguson/cookiecutter-python-uv
 ```
 
-Then just follow the prompts to get all setup
+Then just follow the prompts, pick the tools you want to install, and watch the magic happen.
 
 ## Requirements
 
@@ -16,6 +16,6 @@ Then just follow the prompts to get all setup
 - [Git](https://git-scm.com/)
 - [GitHub Account](https://github.com/)
 
-## Optional Features
+## Optional Requirements
 
 - [Docker](https://www.docker.com/products/docker-desktop/)
