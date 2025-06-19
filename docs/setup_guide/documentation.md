@@ -1,6 +1,6 @@
 # 📼 Documentation
 
-All your documentation needs are handled by [Portray] it acts as a layer over entrenched docs tools like pdocs and MkDocs to simply alot of the most common functions.
+All your documentation needs are handled by [Portray] it acts as a layer over entrenched docs tools like pdocs and MkDocs to simply a lot of the most common functions.
 
 ## Generating Docs
 
@@ -21,7 +21,7 @@ task html
 
 ## Publishing Docs
 
-Using [Portray] publishing your docs to [GitHub Pages] couldnt be any easier. Make sure all your changes are synced to your repo and run the provided command:
+Using [Portray] publishing your docs to [GitHub Pages] couldn't be any easier. Make sure all your changes are synced to your repo and run the provided command:
 
 ```
 task publish
@@ -35,7 +35,7 @@ To add a static page to your docs, create a `.md` file in the `docs` directory a
 
 ## Theming
 
-You can modify the color scheme, primary, and accent color inside your `pyprojec.toml`. The default settings are:
+You can modify the color scheme, primary, and accent color inside your `pyproject.toml`. The default settings are:
 
 ```
 [tool.portray.mkdocs.theme]
