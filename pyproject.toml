@@ -1,6 +1,6 @@
 [project]
 name = "cookiecutter-python-uv"
-version = "0.5.2"
+version = "0.5.3"
 description = "A modern, opinionated, cookiecutter template for your next Python project."
 authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
 license = { file = "LICENSE" }
@@ -95,7 +95,6 @@ check_untyped_defs = true
 warn_return_any = true
 warn_unused_ignores = true
 show_error_codes = true
-
 
 [tool.portray]
 modules=["tests"]

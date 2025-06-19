@@ -12,7 +12,7 @@ Create new project:
 uvx cookiecutter gh:wyattferguson/cookiecutter-python-uv
 ```
 
-Then just follow the prompts to get all setup quickly.
+Then just follow the prompts, pick the tools you want to install, and watch the magic happen.
 
 ## Features
 
