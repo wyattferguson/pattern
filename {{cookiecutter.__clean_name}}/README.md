@@ -2,17 +2,17 @@
 
 {{cookiecutter.project_description}}
 
-## Setup Dev Enviroment
+## Setup Dev Environment
 
 Installation is using [UV](https://docs.astral.sh/uv/) to manage everything.
 
-**Step 1**: Create a virtual enviroment
+**Step 1**: Create a virtual environment
 
 ```
 uv venv
 ```
 
-**Step 2**: Activate your new enviroment
+**Step 2**: Activate your new environment
 
 ```
 # on windows
@@ -22,7 +22,7 @@ uv venv
 source .venv/bin/activate
 ```
 
-**Step 3**: Install all the cool dependancies
+**Step 3**: Install all the cool dependencies
 
 ```
 uv sync

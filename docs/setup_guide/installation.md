@@ -4,7 +4,7 @@ Make sure you have [uv installed](https://docs.astral.sh/uv/getting-started/inst
 
 Create new project:
 
-```
+```bash
 uvx cookiecutter gh:wyattferguson/cookiecutter-python-uv
 ```
 
@@ -14,7 +14,7 @@ Then just follow the prompts, pick the tools you want to install, and watch the 
 
 - [UV](https://docs.astral.sh/uv/getting-started/installation/) - An extremely fast Python package and project manager.
 - [Git](https://git-scm.com/)
-- [GitHub Account](https://github.com/)
+- [GitHub Account](https://github.com/) - A GitHub account is not necessarily required but is highly encouraged.
 
 ## Optional Requirements
 

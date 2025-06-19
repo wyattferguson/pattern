@@ -178,7 +178,7 @@ wheels = [
 
 [[package]]
 name = "cookiecutter-python-uv"
-version = "0.5.2"
+version = "0.5.3"
 source = { virtual = "." }
 dependencies = [
     { name = "cookiecutter" },
@@ -190,6 +190,7 @@ dev = [
     { name = "mypy" },
     { name = "nox" },
     { name = "portray" },
+    { name = "pygments" },
     { name = "pytest" },
     { name = "pytest-cookies" },
     { name = "ruff" },
@@ -208,6 +209,7 @@ dev = [
     { name = "mypy", specifier = ">=1.16.0" },
     { name = "nox", specifier = ">=2025.5.1" },
     { name = "portray", specifier = ">=1.8.0" },
+    { name = "pygments", specifier = ">=2.19.1" },
     { name = "pytest", specifier = ">=8.4.0" },
     { name = "pytest-cookies", specifier = ">=0.7.0" },
     { name = "ruff", specifier = ">=0.11.12" },

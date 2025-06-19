@@ -8,7 +8,7 @@ We've included [PyTest], [Coverage], and [Nox] to give you a good base to build 
 
 To run all your tests we have included this handy command:
 
-```
+```bash
 task tests
 ```
 
@@ -22,7 +22,7 @@ task tests
 
 All settings for [Coverage] are located in your `pyproject.toml`. Here are the included defaults:
 
-```
+```toml
 [tool.coverage.report]
 # Skip files that have no executable code
 skip_empty = true
@@ -36,7 +36,7 @@ fail_under = 100
 
 To run a coverage test we have a built-in command to generate your report:
 
-```
+```bash
 task coverage
 ```
 
@@ -50,13 +50,13 @@ task coverage
 
 Include in our project `noxfile.py` is a basic script to run all your pytest tests against the most modern versions of Python. If you want to modify what versions it runs against you will find the list below in the file and simply tack it on to the list.
 
-```
+```toml
 python_versions = ["3.10", "3.11", "3.12", "3.13"]
 ```
 
 To run all your [Nox] scripts at once use the command:
 
-```
+```bash
 task nox
 ```
 

@@ -8,7 +8,7 @@ Make sure you have [uv installed](https://docs.astral.sh/uv/getting-started/inst
 
 Create new project:
 
-```
+```bash
 uvx cookiecutter gh:wyattferguson/cookiecutter-python-uv
 ```
 
