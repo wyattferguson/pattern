@@ -1,6 +1,6 @@
 [project]
-name = "cookiecutter-python-uv"
-version = "0.5.3"
+name = "pattern"
+version = "1.0.0"
 description = "A modern, opinionated, cookiecutter template for your next Python project."
 authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
 license = { file = "LICENSE" }
@@ -43,9 +43,9 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/wyattferguson/cookiecutter-python-uv"
-Documentation = "https://github.com/wyattferguson/cookiecutter-python-uv"
-Issues = "https://github.com/wyattferguson/cookiecutter-python-uv/issues"
+Repository = "https://github.com/wyattferguson/pattern"
+Documentation = "https://github.com/wyattferguson/pattern"
+Issues = "https://github.com/wyattferguson/pattern/issues"
 
 [tool.taskipy.tasks]
 format = "ruff format ./tests/"

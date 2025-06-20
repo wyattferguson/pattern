@@ -1,6 +1,6 @@
-# :snake: Modern Cookiecutter Python Project
+# :snake: Pattern - Modern Cookiecutter Python Project
 
-This is a modern, opinionated, cookiecutter template for your next Python project. Included is modern tooling and dependencies with sensible rules and settings. Also included is all the boilerplate documentation and project extras you would need to create good foundation for your next python project.
+Pattern is a modern, opinionated, cookiecutter template for your next Python project. Included is modern tooling and dependencies with sensible rules and settings. Also included is all the boilerplate documentation and project extras you would need to create good foundation for your next python project.
 
 ## Setup New Project
 
@@ -9,7 +9,7 @@ Make sure you have [uv installed](https://docs.astral.sh/uv/getting-started/inst
 Create new project:
 
 ```bash
-uvx cookiecutter gh:wyattferguson/cookiecutter-python-uv
+uvx cookiecutter gh:wyattferguson/pattern
 ```
 
 Then just follow the prompts, pick the tools you want to install, and watch the magic happen.
@@ -49,7 +49,7 @@ Contributions or suggestions are more then welcome! If you'd like to enhance to 
 
 ## License
 
-[MIT License](https://github.com/wyattferguson/cookiecutter-python-uv/blob/main/LICENSE)
+[MIT License](https://github.com/wyattferguson/pattern/blob/main/LICENSE)
 
 ## Contact + Support
 

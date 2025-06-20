@@ -136,7 +136,7 @@ Dependabot is configured to do _weekly_ scans of your dependencies, and pull req
 
 ## References
 
-- [Cookiecutter Python Project](https://github.com/wyattferguson/cookiecutter-python-uv) - A modern cookiecutter template for your next Python project.
+- [Cookiecutter Python Project](https://github.com/wyattferguson/pattern) - A modern cookiecutter template for your next Python project.
 
 ## License
 

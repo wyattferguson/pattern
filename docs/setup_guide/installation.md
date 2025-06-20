@@ -5,7 +5,7 @@ Make sure you have [uv installed](https://docs.astral.sh/uv/getting-started/inst
 Create new project:
 
 ```bash
-uvx cookiecutter gh:wyattferguson/cookiecutter-python-uv
+uvx cookiecutter gh:wyattferguson/pattern
 ```
 
 Then just follow the prompts, pick the tools you want to install, and watch the magic happen.
