@@ -37,5 +37,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/wyattferguson/cookiecutter-python-uv
 markdown_extensions:
-  - pymdownx.betterem
   - pymdownx.superfences
+  - pymdownx.highlight:
+      use_pygments: true         # use pygments library
+      pygments_style: material    # use 'default' style
+      noclasses: true
+  - pymdownx.inlinehilite
