@@ -35,9 +35,11 @@ dev = [
     "taskipy>=1.14.1",
     "toml>=0.10.2",
     "types-toml>=0.10.8.20240310",
-    "portray>=1.8.0",
-    "legacy-cgi>=2.6.3",
-    "setuptools>=80.9.0",
+    "mkdocs>=1.3.1",
+    "mkdocs-include-markdown-plugin>=7.1.6",
+    "mkdocs-material>=9.6.14",
+    "mkdocstrings>=0.29.1",
+    "pymdown-extensions>=10.15",
 ]
 
 [project.urls]
@@ -51,10 +53,9 @@ lint = "ruff check --fix ./tests/"
 type = "mypy --strict ./tests/"
 tests = "pytest --color=yes tests"
 nox = "nox -s tests"
-docs = "portray in_browser"
-serve = "portray server"
-html = "portray as_html"
-publish = "portray on_github_pages"
+docs = "mkdocs build"
+serve = "mkdocs serve"
+publish = "mkdocs gh-deploy"
 
 [tool.ruff]
 line-length = 100
@@ -95,44 +96,3 @@ check_untyped_defs = true
 warn_return_any = true
 warn_unused_ignores = true
 show_error_codes = true
-
-[tool.portray]
-modules=["tests"]
-
-[tool.portray.mkdocs.theme]
-name = "material"
-custom_dir = "docs"
-palette = {scheme= "slate", primary="deep purple", accent="purple"}
-
-[tool.portray.mkdocs]
-site_name = "Cookiecutter Python UV"
-extra_css = ["css/extra.css"]
-
-# Custom Docs Navigation Order
-[[tool.portray.mkdocs.nav]]
-Home = "docs/home.md"
-
-[[tool.portray.mkdocs.nav]]
-    [[tool.portray.mkdocs.nav."Setup Guide"]]
-    "Installation" = "docs/setup_guide/installation.md"
-
-    [[tool.portray.mkdocs.nav."Setup Guide"]]
-    "CLI" = "docs/setup_guide/cli.md"
-
-    [[tool.portray.mkdocs.nav."Setup Guide"]]
-    "Github" = "docs/setup_guide/github.md"
-
-    [[tool.portray.mkdocs.nav."Setup Guide"]]
-    "PyPI" = "docs/setup_guide/pypi.md"
-
-    [[tool.portray.mkdocs.nav."Setup Guide"]]
-    "Documentation" = "docs/setup_guide/documentation.md"
-
-    [[tool.portray.mkdocs.nav."Setup Guide"]]
-    "Testing" = "docs/setup_guide/testing.md"
-
-    [[tool.portray.mkdocs.nav."Setup Guide"]]
-    "Configuration" = "docs/setup_guide/configuration.md"
-
-[[tool.portray.mkdocs.nav]]
-License = "docs/license.md"

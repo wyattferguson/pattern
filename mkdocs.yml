@@ -1,0 +1,41 @@
+site_name: Cookiecutter Python UV
+repo_url: https://github.com/wyattferguson/cookiecutter-python-uv
+site_url: https://github.com/wyattferguson/cookiecutter-python-uv
+site_description: A modern, opinionated, cookiecutter template for your next Python project.
+site_author: Wyatt Ferguson
+edit_uri: edit/main/docs/
+repo_name: wyattferguson/cookiecutter-python-uv
+copyright: Maintained by <a href="https://github.com/wyattferguson">Wyatt Ferguson</a>.
+nav:
+  - Home: index.md
+  - Setup Guide:
+      - Installation: setup_guide/installation.md
+      - Configuration: setup_guide/configuration.md
+      - Documentation: setup_guide/documentation.md
+      - Github: setup_guide/github.md
+      - CLI: setup_guide/cli.md
+      - Testing: setup_guide/testing.md
+      - PyPI: setup_guide/pypi.md
+  - License: license.md
+theme:
+  name: material
+plugins:
+  - search
+extra_css:
+  - css/extra.css
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: purple
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/wyattferguson/cookiecutter-python-uv
+markdown_extensions:
+  - pymdownx.betterem
+  - pymdownx.superfences

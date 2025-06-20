@@ -56,7 +56,7 @@ task publish
 
 To add a static page to your docs, create a `.md` file in the `docs` directory and it will be automatically included. If you want to add folders, or organize your docs in a certain way take a look at the [Portray Examples](https://timothycrosley.github.io/portray/docs/quick_start/4.-configuration/).
 
-## Theming
+## Themes
 
 You can modify the color scheme, primary, and accent color inside your `pyproject.toml`. The default settings are:
 
