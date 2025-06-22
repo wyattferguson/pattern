@@ -20,7 +20,7 @@ class Colors(StrEnum):
     UNDERLINE = "\033[4m"
 
 
-def setup_uv_enviroment() -> None:
+def setup_uv_environment() -> None:
     """Set up the UV environment and install dependencies for the project."""
     try:
         subprocess.run(["cd", "{{cookiecutter.project_name}}"], shell=True, check=False)
@@ -114,7 +114,7 @@ def display_project_details() -> None:
 
 
 if __name__ == "__main__":
-    setup_uv_enviroment()
+    setup_uv_environment()
     prune_unwanted_files()
     setup_git()
     display_project_details()
