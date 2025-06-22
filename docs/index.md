@@ -1,4 +1,4 @@
-# 🐍 Pattern - Modern Cookiecutter Project
+# 🐍 Pattern - Modern Python Cookiecutter Project
 
 Pattern is a modern, opinionated, cookiecutter template for your next Python project. Included is modern tooling and dependencies with sensible rules and settings. Also included is all the boilerplate documentation and project extras you would need to create good foundation for your next python project.
 
@@ -26,13 +26,14 @@ Everything comes preconfigured to work out of the box. On setup you can pick and
 - 🏭 [Nox](https://nox.thea.codes/en/stable/index.html) - Testing in multiple Python environments.
 - 🛵 [Taskipy](https://github.com/taskipy/taskipy) - Task runner for CLI shortcuts.
 - 📼 [Portray](https://timothycrosley.github.io/portray/) - Doc generation and Github Pages deployment.
-- 📡 GitHub Action to publish package to PyPI.
+- 📡 [PyPI](https://pypi.org/) package publishing.
 - 🍹 GitHub Issue Templates for documentation, feature requests, general reports, and bug reports.
 - 🌵 [Pre-commit](https://pre-commit.com/) - Linting, formatting, and common bug checks on Git commits.
 - 🍩 Changelog, Code of Conduct, and Contributing Guide templates.
 - 🐋 [Docker](https://www.docker.com/) support including extensive dockerignore file.
 - 🍸 [VSCode](https://code.visualstudio.com/) - Settings and extension integrations.
 - 🤖 [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) - Dependency scanning for new versions and security alerts.
+- 🧙‍♂️ [Release Drafter](https://github.com/release-drafter/release-drafter) - Automatically generate release notes as pull requests are merged.
 
 ## Contributing
 

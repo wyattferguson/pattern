@@ -16,7 +16,6 @@
     "Apache Software License v2.0",
     "GNU GPL v3"
   ],
-  "version": "0.1.0",
   "development_status": [
     "Development Status :: 1 - Planning",
     "Development Status :: 2 - Pre-Alpha",
@@ -30,6 +29,7 @@
   "include_docs": "y",
   "include_nox": "y",
   "include_dbot": "y",
+  "include_release_draft": "y",
   "include_changelog": "y",
   "include_contributing_guide": "y",
   "include_code_of_conduct": "y",
@@ -52,6 +52,7 @@
     "include_docs": "Include documentation support?",
     "include_nox": "Include Nox for environment testing?",
     "include_dbot": "Include Dependabot for dependency management?",
+    "include_release_draft": "Include a release drafter?",
     "include_changelog": "Include a changelog?",
     "include_contributing_guide": "Include a contributing guide?",
     "include_code_of_conduct": "Include a code of conduct?",
