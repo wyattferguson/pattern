@@ -4,7 +4,7 @@
 name: Publish to PyPI
 
 on:
-  # Deploy to Pypi when a realse is published
+  # Deploy to Pypi when a release is published
   release:
     types: [published]
 

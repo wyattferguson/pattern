@@ -8,7 +8,7 @@ Make sure you have [uv installed](https://docs.astral.sh/uv/getting-started/inst
 
 Create new project:
 
-```
+```sh
 uvx cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
 ```
 
@@ -16,7 +16,7 @@ Then just follow the prompts to get all setup quickly.
 
 ## Features
 
-Everything comes preconfigured to work out of the box. On setup you can pick and choose what extras to install or to leave behind.
+Everything comes pre-configured to work out of the box. On setup you can pick and choose what extras to install or to leave behind.
 
 - :package: [UV](https://docs.astral.sh/uv/) - Package and project manager
 - :crab: [Ruff](https://docs.astral.sh/ruff/) - Linter and code formatter.
@@ -36,7 +36,7 @@ Everything comes preconfigured to work out of the box. On setup you can pick and
 
 ## Alternative Cookiecutter Projects
 
-If this cookiecutter isnt your cup of tea, you might like one of these alternatives.
+If this cookiecutter is not your cup of tea, you might like one of these alternatives.
 
 - [Fpgmaas cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) - fpgmaas version of a cookiecutter using UV.
 - [Bosd uv-hypermodern-python](https://github.com/bosd/cookiecutter-uv-hypermodern-python) - bosd version of a cookiecutter uv project with github deployments.
