@@ -1,6 +1,6 @@
 [project]
 name = "pattern"
-version = "1.0.0"
+version = "2.0.0"
 description = "A modern, opinionated, cookiecutter template for your next Python project."
 authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
 license = { file = "LICENSE" }
@@ -8,7 +8,7 @@ readme = "README.md"
 keywords = ['cookiecutter', 'template', 'uv', 'python', 'project', 'generator']
 requires-python = ">=3.10,<4"
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
@@ -40,6 +40,8 @@ dev = [
     "mkdocs-material>=9.6.14",
     "mkdocstrings>=0.29.1",
     "pymdown-extensions>=10.15",
+    "mkdocs-minify-plugin>=0.8.0",
+    "mkdocs-github-admonitions-plugin>=0.1.1",
 ]
 
 [project.urls]

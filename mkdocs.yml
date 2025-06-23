@@ -21,6 +21,11 @@ theme:
   name: material
 plugins:
   - search
+  - gh-admonitions
+  - minify:
+      minify_html: true
+      htmlmin_opts:
+        remove_comments: true
 theme:
   name: material
   palette:
@@ -29,7 +34,8 @@ theme:
     accent: purple
   icon:
     repo: fontawesome/brands/github
-
+    admonition:
+      note: "octicons/tag-16"
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -43,3 +49,5 @@ markdown_extensions:
       pygments_style: material
       noclasses: true
   - pymdownx.inlinehilite
+  - pymdownx.emoji
+  - admonition

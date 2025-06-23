@@ -1,10 +1,11 @@
-# :snake: Pattern - Modern Cookiecutter Python Project
+# :snake: Pattern - Modern Python Cookiecutter Project
 
-Pattern is a modern, opinionated, cookiecutter template for your next Python project. Included is modern tooling and dependencies with sensible rules and settings. Also included is all the boilerplate documentation and project extras you would need to create good foundation for your next python project.
+Pattern is a modern, opinionated, cookiecutter template for your next Python project. Included is modern tooling and dependencies with sensible rules and settings. Also included is all the boilerplate documentation, GitHub actions, and project extras you would need to create good foundation for your next python project.
 
 ## Setup New Project
 
-Make sure you have [uv installed](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) before you start.
+> [!note]
+> Make sure you have [uv installed](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) before you start.
 
 Create new project:
 
@@ -29,11 +30,15 @@ Everything comes preconfigured to work out of the box. On setup you can pick and
 - :takeout_box: [PyPI](https://pypi.org/) package publishing.
 - :tropical_drink: GitHub Issue Templates for documentation, feature requests, general reports, and bug reports.
 - :cactus: [Pre-commit](https://pre-commit.com/) - Linting, formatting, and common bug checks on Git commits.
-- :placard: Changelog, Code of Conduct, and Contributing Guide templates.
+- :bookmark_tabs: Changelog, Code of Conduct, and Contributing Guide templates.
 - :whale2: [Docker](https://www.docker.com/) support including extensive dockerignore file.
 - :cocktail: [VSCode](https://code.visualstudio.com/) - Settings and extension integrations.
 - :robot: [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) - Dependency scanning for new versions and security alerts.
 - :mage_man: [Release Drafter](https://github.com/release-drafter/release-drafter) - Automatically generate release notes as pull requests are merged.
+
+## Contributing
+
+Contributions or suggestions are more then welcome! If you'd like to enhance to this project, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Alternative Cookiecutter Projects
 
@@ -43,10 +48,6 @@ If this cookiecutter isn't your cup of tea, you might like one of these alternat
 - [Bosd uv-hypermodern-python](https://github.com/bosd/cookiecutter-uv-hypermodern-python) - bosd version of a cookiecutter uv project with github deployments.
 - [Cookiecutter pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) - Cookiecutter template for a Python package.
 - [Neuroinformatics cookiecutter](https://github.com/neuroinformatics-unit/python-cookiecutter) - Utility to create a basic Python project structure with tests, CI etc.
-
-## Contributing
-
-Contributions or suggestions are more then welcome! If you'd like to enhance to this project, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
@@ -63,7 +64,3 @@ For any questions or comments heres how you can reach me:
 ### :mailbox_with_mail: Email me at [wyattxdev@duck.com](wyattxdev@duck.com)
 
 ### :tropical_drink: Follow on [BlueSky @wyattf](https://wyattf.bsky.social)
-
-If you find this useful and want to tip me a little coffee money:
-
-### :coffee: [Buy Me A Coffee](https://www.buymeacoffee.com/wyattferguson)
