@@ -1,9 +1,9 @@
 ## Title
 
-- Prefix your name with what type of change your making. Supported Types: feat, fix, docs, style, refactor, perf, test, build, ci, revert, deps.
+- Prefix your name with what type of change your making. Supported Types: **feat, fix, docs, style, refactor, perf, test, build, ci, revert, deps**.
 - Make your title succinct and descriptive.
 
-- (Sample) **feat: Server analytics monitor added**
+- (Good Example) **feat: Server analytics monitor added**
 
 **<center>[REMOVE THIS SECTION BEFORE SUBMISSION]</center>**
 
@@ -21,11 +21,6 @@
 ## Description
 
 [Provide a detailed explanation of the changes you have made. Include the reasons behind these changes and any relevant context.]
-
-## Related Tickets & Documents
-
-- Related Issue #
-- Closes #
 
 ## Changes
 
