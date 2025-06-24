@@ -28,7 +28,7 @@ Everything comes preconfigured to work out of the box. On setup you can pick and
 - 🛵 [Taskipy](https://github.com/taskipy/taskipy) - Task runner for CLI shortcuts.
 - 📼 [Portray](https://timothycrosley.github.io/portray/) - Doc generation and Github Pages deployment.
 - 📡 [PyPI](https://pypi.org/) package publishing.
-- 🍹 GitHub Issue Templates for documentation, feature requests, general reports, and bug reports.
+- 🍹 GitHub Templates for documentation, feature requests, general reports, bug reports, and pull requests.
 - 🌵 [Pre-commit](https://pre-commit.com/) - Linting, formatting, and common bug checks on Git commits.
 - 🍩 Changelog, Code of Conduct, and Contributing Guide templates.
 - 🐋 [Docker](https://www.docker.com/) support including extensive dockerignore file.

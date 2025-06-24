@@ -28,13 +28,13 @@ Everything comes preconfigured to work out of the box. On setup you can pick and
 - :small_airplane: [Taskipy](https://github.com/taskipy/taskipy) - Task runner for CLI shortcuts.
 - :vhs: [Portray](https://timothycrosley.github.io/portray/) - Doc generation and Github Pages deployment.
 - :takeout_box: [PyPI](https://pypi.org/) package publishing.
-- :tropical_drink: GitHub Issue Templates for documentation, feature requests, general reports, and bug reports.
+- :tropical_drink: GitHub Templates for documentation, feature requests, general reports, bug reports, and pull requests.
 - :cactus: [Pre-commit](https://pre-commit.com/) - Linting, formatting, and common bug checks on Git commits.
 - :bookmark_tabs: Changelog, Code of Conduct, and Contributing Guide templates.
 - :whale2: [Docker](https://www.docker.com/) support including extensive dockerignore file.
 - :cocktail: [VSCode](https://code.visualstudio.com/) - Settings and extension integrations.
 - :robot: [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) - Dependency scanning for new versions and security alerts.
-- :mage_man: [Release Drafter](https://github.com/release-drafter/release-drafter) - Automatically generate release notes as pull requests are merged.
+- :mage_man: GitHub Actions - [Release Drafter](https://github.com/release-drafter/release-drafter), [Semantic Pull Requests](https://github.com/marketplace/semantic-pull-requests)
 
 ## Contributing
 

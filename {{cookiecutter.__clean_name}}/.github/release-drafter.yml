@@ -17,6 +17,7 @@ categories:
   - title: "🚀 Features"
     labels:
       - "feature"
+      - "feat"
       - "enhancement"
   - title: "🐛 Bug Fixes"
     labels:
@@ -47,6 +48,9 @@ categories:
       - "refactor"
       - "test"
       - "ci"
+      - "build"
+      - "revert"
+      - "perf"
 
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
