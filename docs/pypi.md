@@ -7,5 +7,5 @@
 3. Create a new release on Github.
 4. Create a new tag in the form `*.*.*`.
 
-[PyPI]: (https://pypi.org)
-[GitHub Action]: (https://docs.github.com/en/actions/writing-workflows/quickstart)
+[PyPI]: https://pypi.org
+[GitHub Action]: https://docs.github.com/en/actions/writing-workflows/quickstart

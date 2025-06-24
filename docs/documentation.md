@@ -77,5 +77,5 @@ extra_css = ["css/extra.css"]
 
 [Portray] is compatible with all [Mkdocs Themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes).
 
-[GitHub Pages]: (https://pages.github.com/)
-[Portray]: (https://timothycrosley.github.io/portray/)
+[GitHub Pages]: https://pages.github.com/
+[Portray]: https://timothycrosley.github.io/portray/

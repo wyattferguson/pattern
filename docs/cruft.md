@@ -41,4 +41,4 @@ cruft check
 cruft update
 ```
 
-[Cruft]: (https://cruft.github.io/cruft/)
+[Cruft]: https://cruft.github.io/cruft/

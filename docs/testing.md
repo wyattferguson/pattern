@@ -14,8 +14,6 @@ task tests
 
 [PyTest] has a huge number of options and integrations, we highly recommend you check out [PyTest Documentation](https://docs.pytest.org/en/stable/).
 
-[PyTest]: (https://docs.pytest.org/en/stable/)
-
 ## Coverage
 
 [Coverage] is included by default for every install. It works hand-in-hand with [PyTest] and measures how much of code is covered by your tests.
@@ -42,8 +40,6 @@ task coverage
 
 [Coverage] has a huge amount of config options and types of reports it can generate. Visit the [Coverage Documentation](https://coverage.readthedocs.io/en/7.9.1/) for more information.
 
-[Coverage]: (https://coverage.readthedocs.io/en)
-
 ## Nox
 
 [Nox] is a very useful tool for running any array of tests across different Python environments and is included as an optional install.
@@ -62,4 +58,6 @@ task nox
 
 Visit the [Nox Documentation](https://nox.thea.codes/en/stable/config.html) to see the full list of its capabilities.
 
-[Nox]: (https://nox.thea.codes/en/stable/index.html)
+[Nox]: https://nox.thea.codes/en/stable/index.html
+[PyTest]: https://docs.pytest.org/en/stable/
+[Coverage]: https://coverage.readthedocs.io/en

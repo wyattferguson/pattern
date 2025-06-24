@@ -100,4 +100,4 @@ warn_unused_ignores = true
 show_error_codes = true
 
 [tool.cruft]
-skip = [ "*/__init__.py", "tests/"]
+skip = [ "*/__init__.py", "tests/", "docs/"]

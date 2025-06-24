@@ -70,7 +70,7 @@ warn_unused_ignores = true
 show_error_codes = true
 ```
 
-[Mypy]: (https://mypy.readthedocs.io/en/stable/getting_started.html)
-[Ty]: (https://github.com/astral-sh/ty)
-[Ruff]: (https://astral.sh/ruff)
-[Ruff Rules Docs]: (https://docs.astral.sh/ruff/rules/)
+[Mypy]: https://mypy.readthedocs.io/en/stable/getting_started.html
+[Ty]: https://github.com/astral-sh/ty
+[Ruff]: https://astral.sh/ruff
+[Ruff Rules Docs]: https://docs.astral.sh/ruff/rules/
