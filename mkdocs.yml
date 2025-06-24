@@ -9,6 +9,7 @@ copyright: Maintained by <a href="https://github.com/wyattferguson">Wyatt Fergus
 nav:
   - Home: index.md
   - Installation: installation.md
+  - Cruft: cruft.md
   - Configuration: configuration.md
   - Documentation: documentation.md
   - Github: github.md
