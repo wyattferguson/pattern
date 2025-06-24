@@ -13,6 +13,12 @@ Create new project:
 uvx cookiecutter gh:wyattferguson/pattern
 ```
 
+Alternatively you can use [Cruft](https://cruft.github.io/cruft/):
+
+```bash
+uvx cruft create gh:wyattferguson/pattern
+```
+
 Then just follow the prompts, pick the tools you want to install, and watch the magic happen.
 
 ## Features
@@ -35,6 +41,7 @@ Everything comes preconfigured to work out of the box. On setup you can pick and
 - :cocktail: [VSCode](https://code.visualstudio.com/) - Settings and extension integrations.
 - :robot: [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) - Dependency scanning for new versions and security alerts.
 - :mage_man: GitHub Actions - [Release Drafter](https://github.com/release-drafter/release-drafter), [Semantic Pull Requests](https://github.com/marketplace/semantic-pull-requests)
+- 🚚 [Cruft](https://cruft.github.io/cruft/) - Automatic template updates and validation.
 
 ## Contributing
 
