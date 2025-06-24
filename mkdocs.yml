@@ -8,14 +8,13 @@ repo_name: wyattferguson/pattern
 copyright: Maintained by <a href="https://github.com/wyattferguson">Wyatt Ferguson</a>.
 nav:
   - Home: index.md
-  - Setup Guide:
-      - Installation: setup_guide/installation.md
-      - Configuration: setup_guide/configuration.md
-      - Documentation: setup_guide/documentation.md
-      - Github: setup_guide/github.md
-      - CLI: setup_guide/cli.md
-      - Testing: setup_guide/testing.md
-      - PyPI: setup_guide/pypi.md
+  - Installation: installation.md
+  - Configuration: configuration.md
+  - Documentation: documentation.md
+  - Github: github.md
+  - CLI: cli.md
+  - Testing: testing.md
+  - PyPI: pypi.md
   - License: license.md
 theme:
   name: material

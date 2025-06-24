@@ -5,18 +5,7 @@
 
 - (Good Example) **feat: Server analytics monitor added**
 
-**<center>[REMOVE THIS SECTION BEFORE SUBMISSION]</center>**
-
-## Type of Change
-
-- [ ] New feature
-- [ ] Bug fix
-- [ ] Documentation
-- [ ] Refactoring
-- [ ] Security patch
-- [ ] UI/UX improvement
-- [ ] Testing
-- [ ] Other
+**[REMOVE THIS SECTION BEFORE SUBMISSION]**
 
 ## Description
 
