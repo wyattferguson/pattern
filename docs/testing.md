@@ -56,7 +56,11 @@ To run all your [Nox] scripts at once use the command:
 task nox
 ```
 
-Visit the [Nox Documentation](https://nox.thea.codes/en/stable/config.html) to see the full list of its capabilities.
+## References
+
+- [Nox Documentation](https://nox.thea.codes/en/stable/config.html)
+- [PyTest Documentation](https://docs.pytest.org/en/stable/)
+- [Coverage Documentation](https://coverage.readthedocs.io/en)
 
 [Nox]: https://nox.thea.codes/en/stable/index.html
 [PyTest]: https://docs.pytest.org/en/stable/

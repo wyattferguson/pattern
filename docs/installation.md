@@ -24,3 +24,7 @@ Then just follow the prompts, pick the tools you want to install, and watch the 
 ## Optional Requirements
 
 - [Docker](https://www.docker.com/products/docker-desktop/)
+
+## References
+
+- [Nox Documentation](https://nox.thea.codes/en/stable/config.html)

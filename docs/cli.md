@@ -36,4 +36,8 @@ task html
 
 ## Adding Your Own Commands
 
+## References
+
+- [Taskipy Documentation](https://github.com/taskipy/taskipy)
+
 [Taskipy]: https://github.com/taskipy/taskipy

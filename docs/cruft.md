@@ -41,4 +41,9 @@ cruft check
 cruft update
 ```
 
+## References
+
+- [Cruft Documentation](https://cruft.github.io/cruft/)
+- [Cookiecutter](https://www.cookiecutter.io/)
+
 [Cruft]: https://cruft.github.io/cruft/
