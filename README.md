@@ -17,10 +17,6 @@ Alternatively you can use [Cruft](https://cruft.github.io/cruft/):
 
 ```bash
 uvx cruft create gh:wyattferguson/pattern
-=======
-```sh
-uvx cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
->>>>>>> main
 ```
 
 Then just follow the prompts, pick the tools you want to install, and watch the magic happen.
