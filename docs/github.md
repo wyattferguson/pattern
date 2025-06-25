@@ -21,7 +21,11 @@ To setup [Dependabot] scans for your project follow these steps:
 
 [GitHub Actions] makes it easy to automate all your software workflows. We've included two useful [GitHub Actions], a [Release Drafter] and a [Pull Request Title Enforcer].
 
+### Release Drafter
+
 [Release Drafter] creates your next release notes as pull requests are merged into master. Saving you time pulling together all the details from each commit and giving you a well formatted draft for your release. The settings for this action can be found `.github/release-drafter.yml` and the action itself is found at `.github/workflows/release-drafter.yml`
+
+### Pull Request Title Enforcer
 
 [Pull Request Title Enforcer] makes sure every pull request to your repo is prefixed with a proper type: _feat, fix, docs, style, refactor, perf, test, build, ci, revert, deps_. The settings for this action can be found `.github/workflows/pull-requests.yml`
 
