@@ -46,7 +46,7 @@ To add your own commands goto the `[tool.taskipy.tasks]` section in your `pyproj
 [tool.taskipy.tasks]
 black = "black path/to/my_module"
 
-# Also you can add some helper text but its optional
+# Alternatively you can add some helper text but its optional
 black = { cmd = "black path/to/my_module", help = "Format my_module with Black" }
 ```
 

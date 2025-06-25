@@ -36,6 +36,8 @@ theme:
     repo: fontawesome/brands/github
     admonition:
       note: "octicons/tag-16"
+extra_css:
+  - css/extras.css
 extra:
   social:
     - icon: fontawesome/brands/github
