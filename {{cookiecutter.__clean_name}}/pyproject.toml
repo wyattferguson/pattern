@@ -61,25 +61,25 @@ build-backend = "hatchling.build"
 packages = ["src/{{cookiecutter.__clean_slug}}"]
 
 [tool.taskipy.tasks]
-format = "ruff format ./src/"
-lint = "ruff check --fix ./src/"
+format = { cmd = "ruff format ./src/", help = "Format code using ruff" }
+lint = { cmd = "ruff check --fix ./src/", help = "Lint code using ruff" }
 {%- if cookiecutter.typechecker == 'ty' %}
-type = "ty check"
+type = { cmd = "ty check", help = "Typecheck code using ty" }
 {%- else %}
-type = "mypy --strict ./src/"
-{%- endif%}
+type = { cmd = "mypy --strict ./src/", help = "Typecheck code using mypy" }
+{%- endif %}
 {%- if cookiecutter.include_docs == 'y' %}
-docs = "portray in_browser"
-serve = "portray server"
-html = "portray as_html"
-publish = "portray on_github_pages"
+docs = { cmd = "portray in_browser", help = "Serve documentation in browser" }
+serve = { cmd = "portray server", help = "Serve documentation" }
+html = { cmd = "portray as_html", help = "Build HTML documentation" }
+publish = { cmd = "portray on_github_pages", help = "Publish documentation on GitHub Pages" }
 {%- endif %}
-tests = "pytest --verbose --color=yes tests"
+tests = { cmd = "pytest --verbose --color=yes tests", help = "Run all tests using pytest" }
 {%- if cookiecutter.include_nox == 'y' %}
-nox = "nox -s tests"
+nox = { cmd = "nox -s tests", help = "Run tests in a nox session" }
 {%- endif %}
-coverage = "coverage html && coverage report -m"
-run = "uv run ./src/{{cookiecutter.__clean_slug}}/{{cookiecutter.__clean_slug}}.py"
+coverage = { cmd = "coverage html && coverage report -m", help = "Generate coverage report" }
+run = { cmd = "uv run ./src/{{cookiecutter.__clean_slug}}/{{cookiecutter.__clean_slug}}.py", help = "Run main application" }
 
 [tool.ruff]
 line-length = 100

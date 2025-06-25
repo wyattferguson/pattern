@@ -27,4 +27,7 @@ Then just follow the prompts, pick the tools you want to install, and watch the 
 
 ## References
 
-- [Nox Documentation](https://nox.thea.codes/en/stable/config.html)
+- [Cookiecutter](https://www.cookiecutter.io/)
+- [UV Documentation](https://docs.astral.sh/uv)
+- [Cruft Documentation](https://cruft.github.io/cruft/)
+- [Docker Getting Started](https://www.docker.com/get-started/)
