@@ -1,0 +1,55 @@
+site_name: Pattern
+repo_url: https://github.com/wyattferguson/pattern
+site_url: https://github.com/wyattferguson/pattern
+site_description: A modern, opinionated, cookiecutter template for your next Python project.
+site_author: Wyatt Ferguson
+edit_uri: edit/main/docs/
+repo_name: wyattferguson/pattern
+copyright: Maintained by <a href="https://github.com/wyattferguson">Wyatt Ferguson</a>.
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Cruft: cruft.md
+  - Configuration: configuration.md
+  - Documentation: documentation.md
+  - Github: github.md
+  - CLI: cli.md
+  - Testing: testing.md
+  - PyPI: pypi.md
+  - License: license.md
+theme:
+  name: material
+plugins:
+  - search
+  - gh-admonitions
+  - minify:
+      minify_html: true
+      htmlmin_opts:
+        remove_comments: true
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: purple
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      note: "octicons/tag-16"
+extra_css:
+  - css/extras.css
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/wyattferguson/pattern
+    - icon: fontawesome/brands/bluesky
+      link: https://wyattf.bsky.social/
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_style: material
+      noclasses: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji
+  - admonition

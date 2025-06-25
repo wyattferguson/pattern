@@ -1,14 +1,14 @@
 [project]
-name = "cookiecutter-python-uv"
-version = "0.5.1"
-description = "A modern, opinionated, cookiecutter template for your next Python project."
+name = "pattern"
+version = "2.0.0"
+description = "Pattern - A modern, opinionated, cookiecutter template for your next Python project."
 authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
 license = { file = "LICENSE" }
 readme = "README.md"
-keywords = ['cookiecutter', 'template', 'uv', 'python', 'project', 'generator']
+keywords = ['cookiecutter', 'template', 'uv', 'python', 'project', 'generator', 'pattern']
 requires-python = ">=3.10,<4"
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
@@ -28,26 +28,36 @@ dependencies = [
 [dependency-groups]
 dev = [
     "nox>=2025.5.1",
-    "mypy >=1.16.0",
-    "pytest>=8.4.0",
+    "mypy >=1.16.1",
+    "pytest>=8.4.1",
     "pytest-cookies>=0.7.0",
-    "ruff>=0.11.12",
+    "ruff>=0.12.0",
     "taskipy>=1.14.1",
     "toml>=0.10.2",
     "types-toml>=0.10.8.20240310",
+    "mkdocs>=1.3.1",
+    "mkdocs-include-markdown-plugin>=7.1.6",
+    "mkdocs-material>=9.6.14",
+    "mkdocstrings>=0.29.1",
+    "pymdown-extensions>=10.15",
+    "mkdocs-minify-plugin>=0.8.0",
+    "mkdocs-github-admonitions-plugin>=0.1.1",
 ]
 
 [project.urls]
-Repository = "https://github.com/wyattferguson/cookiecutter-python-uv"
-Documentation = "https://github.com/wyattferguson/cookiecutter-python-uv"
-Issues = "https://github.com/wyattferguson/cookiecutter-python-uv/issues"
+Repository = "https://github.com/wyattferguson/pattern"
+Documentation = "https://github.com/wyattferguson/pattern"
+Issues = "https://github.com/wyattferguson/pattern/issues"
 
 [tool.taskipy.tasks]
-format = "ruff format ./tests/"
-lint = "ruff check --fix ./tests/"
-type = "mypy --strict ./tests/"
-tests = "pytest --color=yes tests"
-nox = "nox -s tests"
+format = { cmd = "ruff format ./src/", help = "Format code using ruff" }
+lint = { cmd = "ruff check --fix ./src/", help = "Lint code using ruff" }
+type = { cmd = "mypy --strict ./tests/", help = "Typecheck code using mypy" }
+tests = { cmd = "pytest --color=yes tests", help = "Run all tests using pytest" }
+nox = { cmd = "nox -s tests", help = "Run tests in a nox session" }
+docs = { cmd = "mkdocs build", help = "Build documentation using mkdocs" }
+serve = { cmd = "mkdocs serve", help = "Serve documentation using mkdocs" }
+publish = { cmd = "mkdocs gh-deploy", help = "Publish documentation to GitHub Pages" }
 
 [tool.ruff]
 line-length = 100

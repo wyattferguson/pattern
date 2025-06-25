@@ -95,12 +95,6 @@ def test_verify_pyproject(bake: Bake) -> None:
                     f"!= {pyproject['project']['name']}",
                 )
 
-            if pyproject["project"]["version"] != bake.recipe["version"]:
-                pytest.fail(
-                    f"Pyproject Error: {bake.recipe['version']} "
-                    f"!= {pyproject['project']['version']}",
-                )
-
             if pyproject["project"]["description"] != bake.recipe["project_description"]:
                 pytest.fail(
                     f"Pyproject Error: {bake.recipe['project_description']} "

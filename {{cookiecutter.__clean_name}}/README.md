@@ -2,17 +2,17 @@
 
 {{cookiecutter.project_description}}
 
-## Setup Dev Enviroment
+## Setup Dev Environment
 
 Installation is using [UV](https://docs.astral.sh/uv/) to manage everything.
 
-**Step 1**: Create a virtual enviroment
+**Step 1**: Create a virtual environment
 
 ```
 uv venv
 ```
 
-**Step 2**: Activate your new enviroment
+**Step 2**: Activate your new environment
 
 ```
 # on windows
@@ -22,7 +22,7 @@ uv venv
 source .venv/bin/activate
 ```
 
-**Step 3**: Install all the cool dependancies
+**Step 3**: Install all the cool dependencies
 
 ```
 uv sync
@@ -136,7 +136,7 @@ Dependabot is configured to do _weekly_ scans of your dependencies, and pull req
 
 ## References
 
-- [Cookiecutter Python Project](https://github.com/wyattferguson/cookiecutter-python-uv) - A modern cookiecutter template for your next Python project.
+- [Cookiecutter Python Project](https://github.com/wyattferguson/pattern) - A modern cookiecutter template for your next Python project.
 
 ## License
 

@@ -15,12 +15,12 @@ class Recipe(TypedDict, total=True):
     github_username: str
     email: str
     license: str
-    version: str
     development_status: str
     typechecker: str
     include_docs: str
     include_nox: str
-    include_dbot:str
+    include_release_draft: str
+    include_dbot: str
     include_changelog: str
     include_contributing_guide: str
     include_code_of_conduct: str
@@ -40,12 +40,12 @@ cookie_full_bake: Recipe = {
     "github_username": "wyattferguson",
     "email": "wyattxdev@duck.com",
     "license": "MIT license",
-    "version": "0.1.2",
     "development_status": "Development Status :: 4 - Beta",
     "typechecker": "mypy",
     "include_docs": "y",
     "include_nox": "y",
     "include_dbot": "y",
+    "include_release_draft": "y",
     "include_changelog": "y",
     "include_contributing_guide": "y",
     "include_code_of_conduct": "y",
@@ -65,12 +65,12 @@ cookie_min_bake: Recipe = {
     "github_username": "wyattferguson",
     "email": "wyattxdev@duck.com",
     "license": "Mozilla Public License v2.0",
-    "version": "3.14.15",
     "development_status": "Development Status :: 2 - Pre-Alpha",
     "typechecker": "ty",
     "include_docs": "n",
     "include_nox": "n",
     "include_dbot": "n",
+    "include_release_draft": "n",
     "include_changelog": "n",
     "include_contributing_guide": "n",
     "include_code_of_conduct": "n",
@@ -87,6 +87,9 @@ cookie_min_bake: Recipe = {
         ".github/dependabot.yml",
         ".github/workflows/pypi-deploy.yml",
         ".github/workflows/gh-pages.yml",
+        ".github/workflows/release-drafter.yml",
+        ".github/release-drafter.yml",
+        ".github/workflows/release-publish.yml",
     ],
 }
 
