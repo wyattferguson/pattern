@@ -5,7 +5,7 @@ Pattern is a modern, opinionated, cookiecutter template for your next Python pro
 ## Setup New Project
 
 > [!note]
-> Make sure you have [uv installed](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) before you start.
+> Make sure you have [UV installed](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) before you start.
 
 Create new project:
 
@@ -41,7 +41,7 @@ Everything comes preconfigured to work out of the box. On setup you can pick and
 - 🍸 [VSCode](https://code.visualstudio.com/) - Settings and extension integrations.
 - 🤖 [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) - Dependency scanning for new versions and security alerts.
 - 🧙‍♂️ GitHub Actions - [Release Drafter](https://github.com/release-drafter/release-drafter), Semantic Pull Requests
-- 🚚 [Cruft](https://cruft.github.io/cruft/) - Automatic template updates and validation.
+- 🚚 [Cruft Support](https://cruft.github.io/cruft/) - Automatic template updates and validation.
 
 ## Contributing
 

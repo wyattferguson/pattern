@@ -5,7 +5,7 @@ Pattern is a modern, opinionated, cookiecutter template for your next Python pro
 ## Setup New Project
 
 > [!note]
-> Make sure you have [uv installed](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) before you start.
+> Make sure you have [UV installed](https://docs.astral.sh/uv/getting-started/installation/#installation-methods) before you start.
 
 Create new project:
 
@@ -41,11 +41,7 @@ Everything comes preconfigured to work out of the box. On setup you can pick and
 - :cocktail: [VSCode](https://code.visualstudio.com/) - Settings and extension integrations.
 - :robot: [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) - Dependency scanning for new versions and security alerts.
 - :mage_man: GitHub Actions - [Release Drafter](https://github.com/release-drafter/release-drafter), Semantic Pull Requests
-- 🚚 [Cruft](https://cruft.github.io/cruft/) - Automatic template updates and validation.
-
-## Contributing
-
-Contributions or suggestions are more then welcome! If you'd like to enhance to this project, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+- 🚚 [Cruft Support](https://cruft.github.io/cruft/) - Automatic template updates and validation.
 
 ## Alternative Cookiecutter Projects
 
@@ -55,6 +51,10 @@ If this cookiecutter isn't your cup of tea, you might like one of these alternat
 - [Bosd uv-hypermodern-python](https://github.com/bosd/cookiecutter-uv-hypermodern-python) - bosd version of a cookiecutter uv project with github deployments.
 - [Cookiecutter pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) - Cookiecutter template for a Python package.
 - [Neuroinformatics cookiecutter](https://github.com/neuroinformatics-unit/python-cookiecutter) - Utility to create a basic Python project structure with tests, CI etc.
+
+## Contributing
+
+Contributions or suggestions are more then welcome! If you'd like to enhance to this project, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
