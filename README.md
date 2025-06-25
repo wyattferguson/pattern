@@ -2,6 +2,8 @@
 
 Pattern is a modern, opinionated, cookiecutter template for your next Python project. Included is modern tooling and dependencies with sensible rules and settings. Also included is all the boilerplate documentation, GitHub actions, and project extras you would need to create good foundation for your next python project.
 
+- **[View our full documentation.](https://wyattferguson.github.io/pattern/)**
+
 ## Setup New Project
 
 > [!note]
@@ -55,6 +57,8 @@ If this cookiecutter isn't your cup of tea, you might like one of these alternat
 ## Contributing
 
 Contributions or suggestions are more then welcome! If you'd like to enhance to this project, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+**[View our full documentation.](https://wyattferguson.github.io/pattern/)**
 
 ## License
 

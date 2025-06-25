@@ -46,7 +46,7 @@ dev = [
 
 [project.urls]
 Repository = "https://github.com/wyattferguson/pattern"
-Documentation = "https://github.com/wyattferguson/pattern"
+Documentation = "https://wyattferguson.github.io/pattern"
 Issues = "https://github.com/wyattferguson/pattern/issues"
 
 [tool.taskipy.tasks]
