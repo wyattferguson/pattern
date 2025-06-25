@@ -9,6 +9,7 @@ Pattern is a modern, opinionated, cookiecutter template for your next Python pro
 
 Create new project:
 
+<<<<<<< setup-guide-
 ```bash
 uvx cookiecutter gh:wyattferguson/pattern
 ```
@@ -17,13 +18,17 @@ Alternatively you can use [Cruft](https://cruft.github.io/cruft/):
 
 ```bash
 uvx cruft create gh:wyattferguson/pattern
+=======
+```sh
+uvx cookiecutter https://github.com/wyattferguson/cookiecutter-python-uv.git
+>>>>>>> main
 ```
 
 Then just follow the prompts, pick the tools you want to install, and watch the magic happen.
 
 ## Features
 
-Everything comes preconfigured to work out of the box. On setup you can pick and choose what extras to install or to leave behind.
+Everything comes pre-configured to work out of the box. On setup you can pick and choose what extras to install or to leave behind.
 
 - :package: [UV](https://docs.astral.sh/uv/) - Package and project manager
 - :crab: [Ruff](https://docs.astral.sh/ruff/) - Linter and code formatter.
@@ -45,7 +50,11 @@ Everything comes preconfigured to work out of the box. On setup you can pick and
 
 ## Alternative Cookiecutter Projects
 
+<<<<<<< setup-guide-
 If this cookiecutter isn't your cup of tea, you might like one of these alternatives.
+=======
+If this cookiecutter is not your cup of tea, you might like one of these alternatives.
+>>>>>>> main
 
 - [Fpgmaas cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv) - fpgmaas version of a cookiecutter using UV.
 - [Bosd uv-hypermodern-python](https://github.com/bosd/cookiecutter-uv-hypermodern-python) - bosd version of a cookiecutter uv project with github deployments.
