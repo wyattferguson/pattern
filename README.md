@@ -42,7 +42,7 @@ Everything comes pre-configured to work out of the box. On setup you can pick an
 - :whale2: [Docker](https://www.docker.com/) support including extensive dockerignore file.
 - :cocktail: [VSCode](https://code.visualstudio.com/) - Settings and extension integrations.
 - :robot: [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) - Dependency scanning for new versions and security alerts.
-- :mage_man: GitHub Actions - [Release Drafter](https://github.com/release-drafter/release-drafter), Semantic Pull Requests
+- :mage_man: Semantic Pull Requests - Enforce pull request titles
 - 🚚 [Cruft Support](https://cruft.github.io/cruft/) - Automatic template updates and validation.
 
 ## Alternative Cookiecutter Projects
