@@ -15,7 +15,6 @@
     "include_docs": "n",
     "include_nox": "n",
     "include_dbot": "n",
-    "include_release_draft": "n",
     "include_changelog": "n",
     "include_contributing_guide": "n",
     "include_code_of_conduct": "n",

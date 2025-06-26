@@ -19,7 +19,6 @@ class Recipe(TypedDict, total=True):
     typechecker: str
     include_docs: str
     include_nox: str
-    include_release_draft: str
     include_dbot: str
     include_changelog: str
     include_contributing_guide: str
@@ -45,7 +44,6 @@ cookie_full_bake: Recipe = {
     "include_docs": "y",
     "include_nox": "y",
     "include_dbot": "y",
-    "include_release_draft": "y",
     "include_changelog": "y",
     "include_contributing_guide": "y",
     "include_code_of_conduct": "y",
@@ -70,7 +68,6 @@ cookie_min_bake: Recipe = {
     "include_docs": "n",
     "include_nox": "n",
     "include_dbot": "n",
-    "include_release_draft": "n",
     "include_changelog": "n",
     "include_contributing_guide": "n",
     "include_code_of_conduct": "n",
