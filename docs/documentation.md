@@ -44,13 +44,14 @@ task html
 
 ## Publishing Docs
 
+> [!note]
+> Your repo must be public or have an upgraded account to deploy docs to Github Pages.
+
 Using [Portray] publishing your docs to [GitHub Pages] couldn't be any easier. Make sure all your changes are synced to your repo and run the provided command:
 
 ```bash
 task publish
 ```
-
-**_Note: Your repo must be public or have an upgraded account to deploy docs to Github Pages._**
 
 ## Adding Static Pages
 
@@ -75,7 +76,8 @@ To add custom css to your docs, add the `extra_css` field to your `pyproject.tom
 extra_css = ["css/extra.css"]
 ```
 
-[Portray] is compatible with all [Mkdocs Themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes).
+> [!note]
+> [Portray] is compatible with all [Mkdocs Themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes).
 
 ## References
 
