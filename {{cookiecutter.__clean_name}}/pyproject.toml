@@ -78,7 +78,7 @@ tests = { cmd = "pytest --verbose --color=yes tests", help = "Run all tests usin
 {%- if cookiecutter.include_nox == 'y' %}
 nox = { cmd = "nox -s tests", help = "Run tests in a nox session" }
 {%- endif %}
-coverage = { cmd = "coverage html && coverage report -m", help = "Generate coverage report" }
+coverage = { cmd = "coverage run -m pytest tests && coverage report", help = "Generate coverage report" }
 run = { cmd = "uv run ./src/{{cookiecutter.__clean_slug}}/{{cookiecutter.__clean_slug}}.py", help = "Run main application" }
 
 [tool.ruff]
@@ -110,6 +110,8 @@ ignore = [
     "D400", # missing-trailing-period
     "D407", # missing-dashed-underline-after-section
     "S311", # rand-usage
+    "EM102", # f-string-exception
+    "TRY003", # long-exception-messages
 ]
 
 {% if cookiecutter.typechecker == 'ty' %}
@@ -130,10 +132,6 @@ warn_unused_ignores = true
 show_error_codes = true
 {%- endif %}
 
-[tool.coverage.paths]
-source = ["src"]
-tests = ["tests","*/tests"]
-
 [tool.coverage.report]
 skip_empty = true
 show_missing = true
@@ -141,7 +139,8 @@ fail_under = 100
 
 [tool.coverage.run]
 branch = true
-source = ["src", "tests"]
+source = ["src"]
+omit = ["_*.py", "__*.py"]
 
 [tool.portray.mkdocs]
 site_name = "{{cookiecutter.project_name}}"
