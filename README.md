@@ -36,7 +36,7 @@ Everything comes pre-configured to work out of the box. On setup you can pick an
 - :small_airplane: [Taskipy](https://github.com/taskipy/taskipy) - Task runner for CLI shortcuts.
 - :vhs: [Portray](https://timothycrosley.github.io/portray/) - Doc generation and Github Pages deployment.
 - :takeout_box: [PyPI](https://pypi.org/) package publishing.
-- :tropical_drink: GitHub Templates for documentation, feature requests, general reports, bug reports, and pull requests.
+- :tropical_drink: GitHub Templates for documentation, feature requests, general reports, bug reports, pull requests, and citations.
 - :cactus: [Pre-commit](https://pre-commit.com/) - Linting, formatting, and common bug checks on Git commits.
 - :bookmark_tabs: Changelog, Code of Conduct, and Contributing Guide templates.
 - :whale2: [Docker](https://www.docker.com/) support including extensive dockerignore file.
