@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "{{cookiecutter.project_description}}"
+title: "{{cookiecutter.project_name}}"
+abstract: "{{cookiecutter.project_description}}"
+authors:
+  - name: "{{cookiecutter.author}}"
+version: 0.1.0
+license: "{{cookiecutter.license}}"
+repository-code: "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}"
+keywords:
+  - "python"

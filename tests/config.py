@@ -21,6 +21,7 @@ class Recipe(TypedDict, total=True):
     include_nox: str
     include_dbot: str
     include_changelog: str
+    include_citation: str
     include_contributing_guide: str
     include_code_of_conduct: str
     include_docker: str
@@ -38,13 +39,14 @@ cookie_full_bake: Recipe = {
     "author": "Wyatt Ferguson",
     "github_username": "wyattferguson",
     "email": "wyattxdev@duck.com",
-    "license": "MIT license",
+    "license": "MIT",
     "development_status": "Development Status :: 4 - Beta",
     "typechecker": "mypy",
     "include_docs": "y",
     "include_nox": "y",
     "include_dbot": "y",
     "include_changelog": "y",
+    "include_citation": "y",
     "include_contributing_guide": "y",
     "include_code_of_conduct": "y",
     "include_docker": "y",
@@ -62,13 +64,14 @@ cookie_min_bake: Recipe = {
     "author": "Wyatt Ferguson",
     "github_username": "wyattferguson",
     "email": "wyattxdev@duck.com",
-    "license": "Mozilla Public License v2.0",
+    "license": "MIT",
     "development_status": "Development Status :: 2 - Pre-Alpha",
     "typechecker": "ty",
     "include_docs": "n",
     "include_nox": "n",
     "include_dbot": "n",
     "include_changelog": "n",
+    "include_citation": "n",
     "include_contributing_guide": "n",
     "include_code_of_conduct": "n",
     "include_docker": "n",
