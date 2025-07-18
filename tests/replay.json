@@ -9,7 +9,7 @@
     "author": "Wyatt Ferguson",
     "github_username": "wyattferguson",
     "email": "wyattxdev@duck.com",
-    "license": "MIT license",
+    "license": "MIT",
     "development_status": "Development Status :: 4 - Beta",
     "typechecker": "mypy",
     "include_docs": "y",

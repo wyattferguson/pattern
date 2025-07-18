@@ -63,6 +63,9 @@ def prune_unwanted_files() -> None:
     if "{{cookiecutter.include_changelog}}" != "y":
         remove("CHANGELOG.md")
 
+    if "{{cookiecutter.include_citation}}" != "y":
+        remove("CITATION.cff")
+
     if "{{cookiecutter.include_contributing_guide}}" != "y":
         remove("CONTRIBUTING.md")
 

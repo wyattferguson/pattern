@@ -8,14 +8,7 @@
   "author": "Your Name",
   "github_username": "github_username",
   "email": "email@example.com",
-  "license": [
-    "MIT license",
-    "BSD license",
-    "ISC license",
-    "Mozilla Public License v2.0",
-    "Apache Software License v2.0",
-    "GNU GPL v3"
-  ],
+  "license": ["MIT", "ISC", "Apache-2.0", "GPL-3.0", "MPL-2.0"],
   "development_status": [
     "Development Status :: 1 - Planning",
     "Development Status :: 2 - Pre-Alpha",
@@ -32,6 +25,7 @@
   "include_changelog": "y",
   "include_contributing_guide": "y",
   "include_code_of_conduct": "y",
+  "include_citation": "y",
   "include_docker": "y",
   "pypi_deploy": "y",
   "_copy_without_render": [".github/*"],
@@ -54,6 +48,7 @@
     "include_changelog": "Include a changelog?",
     "include_contributing_guide": "Include a contributing guide?",
     "include_code_of_conduct": "Include a code of conduct?",
+    "include_citation": "Include a citation file?",
     "include_docker": "Include Docker support?",
     "pypi_deploy": "Include PyPI deployment scripts?"
   }
