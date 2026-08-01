@@ -8,7 +8,7 @@
   "author": "Your Name",
   "github_username": "github_username",
   "email": "email@example.com",
-  "license": ["MIT", "ISC", "Apache-2.0", "GPL-3.0", "MPL-2.0", "None"],
+  "license": ["MIT", "ISC", "Apache-2.0", "GPL-3.0-only", "MPL-2.0", "None"],
   "development_status": [
     "Development Status :: 1 - Planning",
     "Development Status :: 2 - Pre-Alpha",
@@ -19,14 +19,12 @@
     "Development Status :: 7 - Inactive"
   ],
   "include_docs": "y",
-  "include_nox": "y",
   "include_dbot": "y",
   "include_changelog": "y",
   "include_contributing_guide": "y",
   "include_code_of_conduct": "y",
   "include_citation": "y",
   "include_docker": "y",
-  "include_agents": "y",
   "pypi_deploy": "y",
   "_copy_without_render": [".github/*"],
   "_extensions": ["cookiecutter.extensions.SlugifyExtension"],
@@ -42,14 +40,12 @@
     "license": "License for the project",
     "development_status": "Development status of the project",
     "include_docs": "Include documentation support?",
-    "include_nox": "Include Nox for environment testing?",
     "include_dbot": "Include Dependabot for dependency management?",
     "include_changelog": "Include a changelog?",
     "include_contributing_guide": "Include a contributing guide?",
     "include_code_of_conduct": "Include a code of conduct?",
     "include_citation": "Include a citation file?",
     "include_docker": "Include Docker support?",
-    "include_agents": "Include AGENTS.md for better coding agent support?",
     "pypi_deploy": "Include PyPI deployment scripts?"
   }
 }

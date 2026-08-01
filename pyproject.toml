@@ -1,9 +1,10 @@
 [project]
 name = "pattern"
-version = "2.3.0"
+version = "3.0.0"
 description = "Pattern - A modern, opinionated, cookiecutter template for your next Python project."
 authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
-license = { file = "LICENSE" }
+license = "MIT"
+license-files = ["LICENSE"]
 readme = "README.md"
 keywords = ['cookiecutter', 'template', 'uv', 'python', 'project', 'generator', 'pattern']
 requires-python = ">=3.13,<4"
@@ -18,20 +19,18 @@ classifiers = [
 ]
 
 dependencies = [
-  "cookiecutter>=2.6.0",
+  "cookiecutter>=2.7.1",
 ]
 
 [dependency-groups]
 dev = [
-    "nox>=2026.2.9",
-    "mypy>=1.19.1",
-    "pytest>=9.0.2",
+    "ty>=0.0.65",
+    "pytest>=9.1.1",
     "pytest-cookies>=0.7.0",
-    "ruff>=0.15.1",
+    "ruff>=0.16.1",
     "taskipy>=1.14.1",
     "toml>=0.10.2",
-    "types-toml>=0.10.8.20240310",
-    "zensical>=0.0.23",
+    "zensical>=0.0.52",
     "cffconvert>=2.0.0",
 ]
 
@@ -41,14 +40,13 @@ Documentation = "https://wyattferguson.github.io/pattern"
 Issues = "https://github.com/wyattferguson/pattern/issues"
 
 [tool.taskipy.tasks]
-format = { cmd = "ruff format ./src/", help = "Format code using ruff" }
-lint = { cmd = "ruff check --fix ./src/", help = "Lint code using ruff" }
-type = { cmd = "mypy --strict ./tests/", help = "Typecheck code using mypy" }
+format = { cmd = "ruff format ./tests/ ./hooks/", help = "Format code using ruff" }
+lint = { cmd = "ruff check --fix ./tests/ ./hooks/", help = "Lint code using ruff" }
+type = { cmd = "ty check", help = "Typecheck code using ty" }
 tests = { cmd = "pytest -v --color=yes tests", help = "Run all tests using pytest" }
-nox = { cmd = "nox -s tests", help = "Run tests in a nox session" }
 docs = { cmd = "zensical build", help = "Build documentation using zensical" }
 serve = { cmd = "zensical serve", help = "Serve documentation using zensical" }
-upgrade = { cmd = "uv sync --upgrade", help = "Upgrade all dependencies to lastest versions."}
+upgrade = { cmd = "uv sync --upgrade", help = "Upgrade all dependencies to latest versions."}
 
 [tool.ruff]
 line-length = 100
@@ -78,14 +76,18 @@ ignore = [
     "D212", # multi-line-summary-first-line
     "D407", # missing-dashed-underline-after-section
     "S311", # rand-usage
+    "S602", # subprocess shell=True (cross-platform cookiecutter hook)
+    "S607", # partial executable path (uv/git on PATH)
+    "C901", # hook complexity (linear if-chain by design)
+    "PLR0133", # jinja constant comparison (cookiecutter pattern)
+    "TC002", # pytest_cookies is untyped; kept behind type: ignore
 ]
 
-[tool.mypy]
-files = ["tests","hooks"]
-disallow_untyped_defs = true
-disallow_any_unimported = true
-no_implicit_optional = true
-check_untyped_defs = true
-warn_return_any = true
-warn_unused_ignores = true
-show_error_codes = true
+[tool.ty]
+terminal.output-format = "full"
+
+[tool.ty.environment]
+python = ".venv"
+
+[tool.ty.src]
+include = ["tests/**/*.py", "hooks/**/*.py"]

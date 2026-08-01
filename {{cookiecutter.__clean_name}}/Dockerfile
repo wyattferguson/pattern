@@ -38,4 +38,4 @@ COPY --from=builder /app/src /app/src
 ENV PATH="/app/.venv/bin:$PATH"
 
 # Run the project's main module as the container's default command.
-CMD ["python","-m","app.src.{{cookiecutter.__clean_slug}}.{{cookiecutter.__clean_slug}}"]
+CMD ["python", "-m", "{{cookiecutter.__clean_slug}}.{{cookiecutter.__clean_slug}}"]

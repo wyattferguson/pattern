@@ -1,62 +1,84 @@
-# REQUIRED: Create a secret for PYPI_TOKEN in the repository settings
-# secrets.PYPI_TOKEN: PyPI API token
+# Release automation with python-semantic-release + trusted publishing.
+#
+# Flow:
+#   1. Push to `main` -> python-semantic-release inspects conventional commits,
+#      bumps the version in pyproject.toml, updates CHANGELOG.md, and pushes a
+#      `v*.*.*` tag (no release -> no-op).
+#   2. Tag push -> build the package, generate PEP 740 attestations, and
+#      publish to PyPI via Trusted Publishing (no API token required).
+#
+# One-time setup on PyPI (https://pypi.org/manage/account/publishing/):
+#   - Add a trusted publisher for this repository:
+#       Workflow name: pypi-publish.yml
+#       Environment:   pypi
+#       Repository:    <owner>/{{ cookiecutter.repository_name }}
 
-name: Publish to PyPI
+name: Release & Publish
 
 on:
-  # Deploy to Pypi when a release is published
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
 
 jobs:
-  # Get release version
-  set-version:
-    runs-on: ubuntu-24.04
+  release:
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # push version bump + tag
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Export tag
-        id: vars
-        run: echo tag=${GITHUB_REF#refs/*/} >> $GITHUB_OUTPUT
-        if: ${{ github.event_name == 'release' }}
-
-      - name: Update project version
-        run: |
-          sed -i "s/^version = \".*\"/version = \"$RELEASE_VERSION\"/" pyproject.toml
-        env:
-          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
-        if: ${{ github.event_name == 'release' }}
-
-      - name: Upload updated pyproject.toml
-        uses: actions/upload-artifact@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          name: pyproject-toml
-          path: pyproject.toml
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "0.11.15"
+          enable-cache: false
+      - name: Install dependencies
+        run: uv sync --locked
+      - name: Create release
+        run: uv run python-semantic-release version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish:
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
-    needs: [set-version]
+    environment: pypi
+    permissions:
+      id-token: write # trusted publishing + attestations
+      attestations: write # PEP 740 attestations
     steps:
-      - name: Check out
-        uses: actions/checkout@v4
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          version: "0.6.5"
-
-      - name: Install Python dependencies
-        run: uv sync
-
-      - name: Download updated pyproject.toml
-        uses: actions/download-artifact@v4
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
         with:
-          name: pyproject-toml
-
+          version: "0.11.15"
+          enable-cache: false
+      - name: Install dependencies
+        run: uv sync --locked
       - name: Build package
         run: uv build
-
+      - name: Generate attestations
+        uses: astral-sh/attest-action@f589a42a7efb6fe400b4f400de60b4bc90390027 # v0.0.6
+        with:
+          paths: |
+            dist/*.whl
+            dist/*.tar.gz
       - name: Publish package
         run: uv publish
+      - name: Create GitHub Release
+        run: gh release create "${GITHUB_REF#refs/tags/}" dist/* --generate-notes
         env:
-          UV_PUBLISH_TOKEN: ${{ secrets.PYPI_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

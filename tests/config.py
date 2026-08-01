@@ -17,14 +17,12 @@ class Recipe(TypedDict, total=True):
     license: str
     development_status: str
     include_docs: str
-    include_nox: str
     include_dbot: str
     include_changelog: str
     include_citation: str
     include_contributing_guide: str
     include_code_of_conduct: str
     include_docker: str
-    include_agents: str
     pypi_deploy: str
     excluded_files: list[str]
 
@@ -42,14 +40,12 @@ cookie_full_bake: Recipe = {
     "license": "MIT",
     "development_status": "Development Status :: 4 - Beta",
     "include_docs": "y",
-    "include_nox": "y",
     "include_dbot": "y",
     "include_changelog": "y",
     "include_citation": "y",
     "include_contributing_guide": "y",
     "include_code_of_conduct": "y",
     "include_docker": "y",
-    "include_agents": "y",
     "pypi_deploy": "y",
     "excluded_files": [],
 }
@@ -67,31 +63,24 @@ cookie_min_bake: Recipe = {
     "license": "None",
     "development_status": "Development Status :: 2 - Pre-Alpha",
     "include_docs": "n",
-    "include_nox": "n",
     "include_dbot": "n",
     "include_changelog": "n",
     "include_citation": "n",
     "include_contributing_guide": "n",
     "include_code_of_conduct": "n",
     "include_docker": "n",
-    "include_agents": "n",
     "pypi_deploy": "n",
     "excluded_files": [
         "docs",
-        "noxfile.py",
         "CHANGELOG.md",
         "CONTRIBUTING.md",
         "CODE_OF_CONDUCT.md",
-        "AGENTS.md",
         "LICENSE",
         "Dockerfile",
         ".dockerignore",
         ".github/dependabot.yml",
-        ".github/workflows/pypi-deploy.yml",
-        ".github/workflows/gh-pages.yml",
-        ".github/workflows/release-drafter.yml",
-        ".github/release-drafter.yml",
-        ".github/workflows/release-publish.yml",
+        ".github/workflows/pypi-publish.yml",
+        ".github/workflows/docs.yml",
     ],
 }
 
@@ -101,8 +90,10 @@ required_files: list[str] = [
     "pyproject.toml",
     "README.md",
     "src",
+    "SECURITY.md",
+    "CODEOWNERS",
     ".vscode/settings.json",
     ".vscode/extensions.json",
     ".gitignore",
-    ".pre-commit-hooks.yaml",
+    ".pre-commit-config.yaml",
 ]

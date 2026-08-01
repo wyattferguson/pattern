@@ -6,7 +6,8 @@ description = "{{cookiecutter.project_description}}"
 authors = [{ name = "{{cookiecutter.author}}", email = "{{cookiecutter.email}}" }]
 readme = "README.md"
 {%- if cookiecutter.license != 'None' %}
-license = {file = "LICENSE"}
+license = "{{ cookiecutter.license }}"
+license-files = ["LICENSE"]
 {%- endif %}
 keywords = ["python"]
 requires-python = ">=3.13,<4"
@@ -23,20 +24,22 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "ty>=0.0.44",
-    {%- if cookiecutter.include_nox == 'y' %}
-    "nox>=2026.2.9",
-    {%- endif %}
-    "pytest>=9.0.2",
-    "coverage>=7.8.2",
-    "ruff>=0.15.16",
+    "ty>=0.0.65",
+    "pytest>=9.1.1",
+    "pytest-timeout>=2.4.0",
+    "pytest-xdist>=3.8.0",
+    "pytest-randomly>=4.1.0",
+    "hypothesis>=6.164.0",
+    "coverage>=7.15.2",
+    "ruff>=0.16.1",
     "taskipy>=1.14.1",
     {%- if cookiecutter.include_docs == 'y' %}
-    "portray>=1.8.0",
-    "legacy-cgi>=2.6.3",
-    "setuptools>=80.9.0",
+    "zensical>=0.0.52",
     {%- endif %}
-    "pre-commit>=4.2.0",
+    "pre-commit>=4.6.1",
+    {%- if cookiecutter.pypi_deploy == 'y' %}
+    "python-semantic-release>=10.6.1",
+    {%- endif %}
 ]
 
 [project.urls]
@@ -50,30 +53,27 @@ documentation = "https://github.com/{{cookiecutter.github_username}}/{{cookiecut
 issues = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}/issues"
 
 [build-system]
-requires = ["uv_build>=0.11.0,<0.12.0"]
+requires = ["uv_build>=0.12.1,<0.13.0"]
 build-backend = "uv_build"
 
 [tool.uv]
 package = true
-exclude-newer = "1 week"
 
 [tool.taskipy.tasks]
 format = { cmd = "ruff format ./src/", help = "Format code using ruff" }
 lint = { cmd = "ruff check --fix ./src/", help = "Lint code using ruff" }
 type = { cmd = "ty check", help = "Typecheck code using ty" }
 {%- if cookiecutter.include_docs == 'y' %}
-docs = { cmd = "portray in_browser", help = "Serve documentation in browser" }
-serve = { cmd = "portray server", help = "Serve documentation" }
-html = { cmd = "portray as_html", help = "Build HTML documentation" }
-publish = { cmd = "portray on_github_pages", help = "Publish documentation on GitHub Pages" }
+docs = { cmd = "zensical build", help = "Build documentation" }
+serve = { cmd = "zensical serve", help = "Serve documentation" }
+{%- endif %}
+{%- if cookiecutter.pypi_deploy == 'y' %}
+release = { cmd = "uv run python-semantic-release version", help = "Create a release (version bump + changelog + tag)" }
 {%- endif %}
 tests = { cmd = "pytest --verbose --color=yes tests", help = "Run all tests using pytest" }
-{%- if cookiecutter.include_nox == 'y' %}
-nox = { cmd = "nox -s tests", help = "Run tests in a nox session" }
-{%- endif %}
 coverage = { cmd = "coverage run -m pytest tests && coverage report", help = "Generate coverage report" }
 run = { cmd = "uv run ./src/{{cookiecutter.__clean_slug}}/{{cookiecutter.__clean_slug}}.py", help = "Run main application" }
-upgrade = { cmd = "uv sync --upgrade", help = "Upgrade all dependencies to lastest versions."}
+upgrade = { cmd = "uv sync --upgrade", help = "Upgrade all dependencies to latest versions."}
 {%- if cookiecutter.include_docker == 'y' %}
 dbuild = { cmd = "docker build --progress=plain -t \"{{cookiecutter.__clean_slug}}:Dockerfile\" .", help = "Build docker image" }
 drun = { cmd = "docker run --rm -it {{cookiecutter.__clean_slug}}:Dockerfile", help = "Run the built docker image" }
@@ -154,17 +154,27 @@ include = ["src/**/*.py"]
 skip_empty = true
 show_missing = true
 fail_under = 100
+exclude_also = [
+    "if __name__ == .__main__.:",
+]
 
 [tool.coverage.run]
 branch = true
 source = ["src"]
 omit = ["_*.py", "__*.py"]
 
-[tool.portray.mkdocs]
-site_name = "{{cookiecutter.project_name}}"
+[tool.pytest.ini_options]
+addopts = ["-ra", "--strict-markers", "--strict-config"]
+testpaths = ["tests"]
+pythonpath = ["src"]
+timeout = 60
 
-[tool.portray.mkdocs.theme]
-name = "material"
-custom_dir = "docs"
-palette = {scheme= "slate", primary="deep purple", accent="purple"}
+{%- if cookiecutter.pypi_deploy == 'y' %}
 
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+commit_author = "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+commit_parser = "angular"
+tag_format = "v{version}"
+branch = "main"
+{%- endif %}

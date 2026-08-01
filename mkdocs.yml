@@ -19,15 +19,6 @@ nav:
   - License: license.md
 theme:
   name: material
-plugins:
-  - search
-  - gh-admonitions
-  - minify:
-      minify_html: true
-      htmlmin_opts:
-        remove_comments: true
-theme:
-  name: material
   palette:
     scheme: slate
     primary: deep purple
@@ -36,6 +27,13 @@ theme:
     repo: fontawesome/brands/github
     admonition:
       note: "octicons/tag-16"
+plugins:
+  - search
+  - gh-admonitions
+  - minify:
+      minify_html: true
+      htmlmin_opts:
+        remove_comments: true
 extra_css:
   - css/extras.css
 extra:

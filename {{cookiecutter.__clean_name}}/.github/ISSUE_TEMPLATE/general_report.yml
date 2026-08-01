@@ -1,0 +1,17 @@
+name: General Report
+description: Provide general feedback or inquiries
+title: "general: "
+labels: ["general"]
+body:
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback or Inquiry
+      description: Provide your feedback or inquiry.
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      description: Add any other relevant details here.

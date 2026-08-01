@@ -52,9 +52,7 @@ def prune_unwanted_files() -> None:
     """Remove unwanted files and directories from the project."""
     if "{{cookiecutter.include_docs}}" != "y":
         remove("docs")
-
-    if "{{cookiecutter.include_nox}}" != "y":
-        remove("noxfile.py")
+        remove(".github/workflows/docs.yml")
 
     if "{{cookiecutter.include_docker}}" != "y":
         remove("Dockerfile")
@@ -77,14 +75,6 @@ def prune_unwanted_files() -> None:
 
     if "{{cookiecutter.include_dbot}}" != "y":
         remove(".github/dependabot.yml")
-
-    if "{{cookiecutter.include_agents}}" != "y":
-        remove("AGENTS.md")
-
-    if "{{cookiecutter.include_dbot}}" != "y":
-        remove(".github/release-drafter.yml")
-        remove(".github/workflows/release-publish.yml")
-        remove(".github/workflows/release-drafter.yml")
 
     if "{{cookiecutter.license}}" == "None":
         remove("LICENSE")

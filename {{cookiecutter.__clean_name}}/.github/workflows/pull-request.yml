@@ -1,16 +1,53 @@
-name: "PR Title Enforcement"
+name: CI
 on:
   pull_request:
     types: [edited, opened, synchronize, reopened]
-
+  push:
+    branches:
+      - main
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
 jobs:
   title-check:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: naveenk1223/action-pr-title@master
+      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
         with:
-          regex: ".+" # Regex the title should match.
-          allowed_prefixes: "feat, fix, docs, style, refactor, perf, test, build, ci, revert, deps" # title should start with the given prefix
-          prefix_case_sensitive: false # title prefix are case insensitive
-          min_length: 5 # Min length of the title
-          max_length: 120 # Max length of the title
+          types: "feat, fix, docs, style, refactor, perf, test, build, ci, revert, deps"
+          requireScope: false
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "0.11.15"
+          enable-cache: true
+      - name: Pin Python ${{ matrix.python-version }}
+        run: uv python install ${{ matrix.python-version }} && uv python pin ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: uv sync --locked
+      - name: Lint
+        run: uv run ruff check .
+      - name: Format
+        run: uv run ruff format --check .
+      - name: Typecheck
+        run: uv run ty check
+      - name: Test
+        run: uv run pytest -n auto tests
+      - name: Coverage
+        run: uv run coverage run -m pytest tests && uv run coverage report
+      - name: Audit dependencies
+        run: uv audit
+      - name: Audit workflows
+        run: uvx zizmor .github/workflows/
