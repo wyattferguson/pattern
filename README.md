@@ -1,4 +1,14 @@
-# :snake: Pattern - Modern Python Cookiecutter Project
+<div align="center">
+  <h1>:snake: Pattern</h1>
+  <p><strong>Modern Python Cookiecutter Project</strong></p>
+
+[![CI](https://github.com/wyattferguson/pattern/actions/workflows/pull-request.yml/badge.svg)](https://github.com/wyattferguson/pattern/actions/workflows/pull-request.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Docs](https://github.com/wyattferguson/pattern/actions/workflows/docs.yml/badge.svg)](https://github.com/wyattferguson/pattern/actions/workflows/docs.yml)
+
+</div>
+
+---
 
 Pattern is a modern, opinionated, cookiecutter template for your next Python project. Included is modern tooling and dependencies with sensible rules and settings. Also included is all the boilerplate documentation, GitHub actions, and project extras you would need to create good foundation for your next python project.
 
