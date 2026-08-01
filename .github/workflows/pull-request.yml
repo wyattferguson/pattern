@@ -33,9 +33,9 @@ jobs:
       - name: Install dependencies
         run: uv sync --locked
       - name: Lint
-        run: uv run ruff check tests hooks noxfile.py
+        run: uv run ruff check tests hooks
       - name: Format
-        run: uv run ruff format --check tests hooks noxfile.py
+        run: uv run ruff format --check tests hooks
       - name: Typecheck
         run: uv run ty check
       - name: Test (template bake)

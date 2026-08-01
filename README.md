@@ -32,7 +32,6 @@ Everything comes pre-configured to work out of the box. On setup you can pick an
 - :bug: Typechecking with [Ty](https://docs.astral.sh/ty/).
 - :test_tube: [Pytest](https://docs.pytest.org/en/stable/) - Testing.
 - :telescope: [Coverage](https://coverage.readthedocs.io/en/7.6.12/) - Test coverage.
-- :shaved_ice: [Nox](https://nox.thea.codes/en/stable/index.html) - Testing in multiple Python environments.
 - :small_airplane: [Taskipy](https://github.com/taskipy/taskipy) - Task runner for CLI shortcuts.
 - :vhs: [Zensical](https://zensical.org/docs/) - Doc generation and Github Pages deployment.
 - :takeout_box: [PyPI](https://pypi.org/) package publishing.

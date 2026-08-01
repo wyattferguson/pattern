@@ -17,7 +17,6 @@ class Recipe(TypedDict, total=True):
     license: str
     development_status: str
     include_docs: str
-    include_nox: str
     include_dbot: str
     include_changelog: str
     include_citation: str
@@ -41,7 +40,6 @@ cookie_full_bake: Recipe = {
     "license": "MIT",
     "development_status": "Development Status :: 4 - Beta",
     "include_docs": "y",
-    "include_nox": "y",
     "include_dbot": "y",
     "include_changelog": "y",
     "include_citation": "y",
@@ -65,7 +63,6 @@ cookie_min_bake: Recipe = {
     "license": "None",
     "development_status": "Development Status :: 2 - Pre-Alpha",
     "include_docs": "n",
-    "include_nox": "n",
     "include_dbot": "n",
     "include_changelog": "n",
     "include_citation": "n",
@@ -75,7 +72,6 @@ cookie_min_bake: Recipe = {
     "pypi_deploy": "n",
     "excluded_files": [
         "docs",
-        "noxfile.py",
         "CHANGELOG.md",
         "CONTRIBUTING.md",
         "CODE_OF_CONDUCT.md",

@@ -25,9 +25,6 @@ dependencies = [
 [dependency-groups]
 dev = [
     "ty>=0.0.65",
-    {%- if cookiecutter.include_nox == 'y' %}
-    "nox>=2026.7.11",
-    {%- endif %}
     "pytest>=9.1.1",
     "pytest-timeout>=2.4.0",
     "pytest-xdist>=3.8.0",
@@ -74,9 +71,6 @@ serve = { cmd = "zensical serve", help = "Serve documentation" }
 release = { cmd = "uv run python-semantic-release version", help = "Create a release (version bump + changelog + tag)" }
 {%- endif %}
 tests = { cmd = "pytest --verbose --color=yes tests", help = "Run all tests using pytest" }
-{%- if cookiecutter.include_nox == 'y' %}
-nox = { cmd = "nox -s tests", help = "Run tests in a nox session" }
-{%- endif %}
 coverage = { cmd = "coverage run -m pytest tests && coverage report", help = "Generate coverage report" }
 run = { cmd = "uv run ./src/{{cookiecutter.__clean_slug}}/{{cookiecutter.__clean_slug}}.py", help = "Run main application" }
 upgrade = { cmd = "uv sync --upgrade", help = "Upgrade all dependencies to latest versions."}

@@ -11,9 +11,6 @@ task run
 # run all tests
 task tests
 
-# run tests with multiple python versions (3.13,3.14)
-task nox
-
 # run test coverage and generate report
 task coverage
 

@@ -13,7 +13,7 @@
 - Automated releases with [python-semantic-release](https://python-semantic-release.readthedocs.io/)
 - PyPI publishing with Trusted Publishing + PEP 740 attestations
 - Documentation built with [Zensical](https://zensical.org/docs/) and deployed to GitHub Pages
-- Docker multi-stage build, optional Nox matrix, and a full GitHub issue template suite
+- Docker multi-stage build, automated releases, and a full GitHub issue template suite
 
 ## Quick Start
 

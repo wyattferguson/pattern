@@ -54,9 +54,6 @@ def prune_unwanted_files() -> None:
         remove("docs")
         remove(".github/workflows/docs.yml")
 
-    if "{{cookiecutter.include_nox}}" != "y":
-        remove("noxfile.py")
-
     if "{{cookiecutter.include_docker}}" != "y":
         remove("Dockerfile")
         remove(".dockerignore")

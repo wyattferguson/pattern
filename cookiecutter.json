@@ -19,7 +19,6 @@
     "Development Status :: 7 - Inactive"
   ],
   "include_docs": "y",
-  "include_nox": "y",
   "include_dbot": "y",
   "include_changelog": "y",
   "include_contributing_guide": "y",
@@ -41,7 +40,6 @@
     "license": "License for the project",
     "development_status": "Development status of the project",
     "include_docs": "Include documentation support?",
-    "include_nox": "Include Nox for environment testing?",
     "include_dbot": "Include Dependabot for dependency management?",
     "include_changelog": "Include a changelog?",
     "include_contributing_guide": "Include a contributing guide?",

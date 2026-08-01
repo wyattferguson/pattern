@@ -12,7 +12,6 @@
     "license": "MIT",
     "development_status": "Development Status :: 4 - Beta",
     "include_docs": "y",
-    "include_nox": "y",
     "include_dbot": "y",
     "include_changelog": "y",
     "include_contributing_guide": "y",
