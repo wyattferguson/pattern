@@ -66,6 +66,10 @@ task lint
 
 # format with ruff
 task format
+
+# build/serve docs
+task docs
+task serve
 ```
 
 {%- if cookiecutter.include_docker == 'y' %}
