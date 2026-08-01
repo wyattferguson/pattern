@@ -45,7 +45,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-{% elif cookiecutter.license == 'GPL-3.0' -%}
+{% elif cookiecutter.license == 'GPL-3.0-only' -%}
 
 GNU GENERAL PUBLIC LICENSE
 Version 3, 29 June 2007

@@ -1,0 +1,36 @@
+site_name: {{ cookiecutter.project_name }}
+repo_url: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repository_name }}
+site_url: https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.repository_name }}
+site_description: {{ cookiecutter.project_description }}
+site_author: {{ cookiecutter.author }}
+repo_name: {{ cookiecutter.github_username }}/{{ cookiecutter.repository_name }}
+edit_uri: edit/main/docs/
+copyright: Maintained by <a href="https://github.com/{{ cookiecutter.github_username }}">{{ cookiecutter.author }}</a>.
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - License: license.md
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: purple
+  icon:
+    repo: fontawesome/brands/github
+plugins:
+  - search
+  - gh-admonitions
+  - minify:
+      minify_html: true
+      htmlmin_opts:
+        remove_comments: true
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_style: material
+      noclasses: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji
+  - admonition

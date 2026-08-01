@@ -87,11 +87,8 @@ cookie_min_bake: Recipe = {
         "Dockerfile",
         ".dockerignore",
         ".github/dependabot.yml",
-        ".github/workflows/pypi-deploy.yml",
-        ".github/workflows/gh-pages.yml",
-        ".github/workflows/release-drafter.yml",
-        ".github/release-drafter.yml",
-        ".github/workflows/release-publish.yml",
+        ".github/workflows/pypi-publish.yml",
+        ".github/workflows/docs.yml",
     ],
 }
 
@@ -101,8 +98,10 @@ required_files: list[str] = [
     "pyproject.toml",
     "README.md",
     "src",
+    "SECURITY.md",
+    "CODEOWNERS",
     ".vscode/settings.json",
     ".vscode/extensions.json",
     ".gitignore",
-    ".pre-commit-hooks.yaml",
+    ".pre-commit-config.yaml",
 ]

@@ -11,7 +11,7 @@ task run
 # run all tests
 task tests
 
-# run tests with multiple python versions (3.13,3.12,3.11,3.10)
+# run tests with multiple python versions (3.13,3.14)
 task nox
 
 # run test coverage and generate report
@@ -26,16 +26,16 @@ task lint
 # format with ruff
 task format
 
-# generate docs & serve
+# build docs (outputs to ./site/)
 task docs
 
 # serve docs
 task serve
 
-# generate static HTML docs (outputs to ./site/)
-task html
+# create a release (version bump + changelog + tag)
+task release
 
-# upgrade all dependencies to lastest versions
+# upgrade all dependencies to latest versions
 task upgrade
 
 # build Docker image

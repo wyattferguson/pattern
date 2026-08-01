@@ -23,7 +23,7 @@ To setup [Dependabot] scans for your project follow these steps:
 
 ## Pre Commit Hooks
 
-Pre commit hooks are included in the `.pre-commit-hooks.yaml` file, these are scripts that run before your git commit to ensure code quality, security, and standards are enforced before they get committed to your repo.
+Pre commit hooks are included in the `.pre-commit-config.yaml` file, these are scripts that run before your git commit to ensure code quality, security, and standards are enforced before they get committed to your repo.
 
 ### GitHub
 
@@ -42,7 +42,7 @@ hooks:
 
 ### Ruff
 
-Ruff has there own [pre commit hooks](https://github.com/astral-sh/ruff-pre-commit) we've included, to enforce formatting consitency on every commit.
+Ruff has there own [pre commit hooks](https://github.com/astral-sh/ruff-pre-commit) we've included, to enforce formatting consistency on every commit.
 
 ```yaml
 hooks:

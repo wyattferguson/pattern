@@ -1,0 +1,29 @@
+name: Documentation
+description: Suggest updates or additions to documentation
+title: "docs: "
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: update
+    attributes:
+      label: Documentation Update
+      description: What part of the documentation needs to be updated or added?
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why Is This Needed?
+      description: Explain the importance of this update.
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: Suggested Changes
+      description: Provide a detailed description of the changes.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Include any related resources.

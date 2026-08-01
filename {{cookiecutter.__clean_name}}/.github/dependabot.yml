@@ -7,5 +7,20 @@ updates:
       interval: "weekly"
     security-updates: "auto"
     open-pull-requests-limit: 10 # Maximum number of open pull requests
+    groups:
+      runtime-deps:
+        dependency-type: "production"
+      dev-deps:
+        dependency-type: "development"
     commit-message:
-      prefix: "DBOT" # Prefix for the commit message
+      prefix: "deps" # Prefix for the commit message
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      docker:
+        patterns: ["*"]
+    commit-message:
+      prefix: "docker" # Prefix for the commit message

@@ -29,12 +29,12 @@ Everything comes pre-configured to work out of the box. On setup you can pick an
 
 - :package: [UV](https://docs.astral.sh/uv/) - Package and project manager.
 - :crab: [Ruff](https://docs.astral.sh/ruff/) - Linter and code formatter.
-- :bug: Typechecking with [Ty](https://github.com/astral-sh/ty).
+- :bug: Typechecking with [Ty](https://docs.astral.sh/ty/).
 - :test_tube: [Pytest](https://docs.pytest.org/en/stable/) - Testing.
 - :telescope: [Coverage](https://coverage.readthedocs.io/en/7.6.12/) - Test coverage.
 - :shaved_ice: [Nox](https://nox.thea.codes/en/stable/index.html) - Testing in multiple Python environments.
 - :small_airplane: [Taskipy](https://github.com/taskipy/taskipy) - Task runner for CLI shortcuts.
-- :vhs: [Portray](https://timothycrosley.github.io/portray/) - Doc generation and Github Pages deployment.
+- :vhs: [Zensical](https://zensical.org/docs/) - Doc generation and Github Pages deployment.
 - :takeout_box: [PyPI](https://pypi.org/) package publishing.
 - :tropical_drink: GitHub Templates for documentation, feature requests, general reports, bug reports, and pull requests.
 - :cactus: [Pre-commit](https://pre-commit.com/) - Linting, formatting, and common bug checks on Git commits.
@@ -45,7 +45,7 @@ Everything comes pre-configured to work out of the box. On setup you can pick an
 - :mage_man: Semantic Pull Requests - Enforce pull request titles.
 - 🚚 [Cruft Support](https://cruft.github.io/cruft/) - Automatic template updates and validation.
 - :space_invader: [AGENTS.md](https://agents.md/) - Guidelines for AI agents to better navigate your project, reduce token usage, and better maintain code quality.
-- :stopwatch: Package update delay of 1 week, to reduce chances of installing rogue packages.
+- :shield: Dependency auditing with [uv audit](https://docs.astral.sh/uv/) and [zizmor](https://zizmor.sh/) - Supply-chain scanning for vulnerabilities and workflow security.
 
 ## Alternative Cookiecutter Projects
 
@@ -81,4 +81,3 @@ For any questions or comments heres how you can reach me:
 If you find this useful and want to tip me a little coffee money:
 
 **:coffee: [Buy Me A Coffee](https://www.buymeacoffee.com/wyattferguson)**
-

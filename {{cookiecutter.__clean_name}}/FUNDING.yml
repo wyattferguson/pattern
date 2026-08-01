@@ -1,0 +1,3 @@
+# Funding options
+# See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
+github: [{{ cookiecutter.github_username }}]

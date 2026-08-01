@@ -71,7 +71,7 @@ indent-style = "space"
 ]
 ```
 
-Checkout the [Ruff Rules Docs] to see all the posible rules you have at your finger tips.
+Checkout the [Ruff Rules Docs] to see all the possible rules you have at your finger tips.
 
 ## Typechecking Rules
 
@@ -91,14 +91,12 @@ include = ["src/**/*.py"]
 
 ```
 
-## UV Package Delay
+## Dependency Auditing
 
-With the explosion of tool chain attacks, I've included a 1 week delay for new package updates. This greatly reduces the chances of pulling a back package, as most get caught in under 24 hours.
+Supply-chain safety is handled with `uv audit`, which scans the resolved dependency tree for known vulnerabilities and is wired into the CI pipeline and the release workflow.
 
-```toml
-[tool.uv]
-package = true
-exclude-newer = "1 week"
+```bash
+uv audit
 ```
 
 ## References

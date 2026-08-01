@@ -52,6 +52,7 @@ def prune_unwanted_files() -> None:
     """Remove unwanted files and directories from the project."""
     if "{{cookiecutter.include_docs}}" != "y":
         remove("docs")
+        remove(".github/workflows/docs.yml")
 
     if "{{cookiecutter.include_nox}}" != "y":
         remove("noxfile.py")
