@@ -23,20 +23,20 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "ty>=0.0.44",
+    "ty>=0.0.65",
     {%- if cookiecutter.include_nox == 'y' %}
-    "nox>=2026.2.9",
+    "nox>=2026.7.11",
     {%- endif %}
-    "pytest>=9.0.2",
-    "coverage>=7.8.2",
-    "ruff>=0.15.16",
+    "pytest>=9.1.1",
+    "coverage>=7.15.2",
+    "ruff>=0.16.1",
     "taskipy>=1.14.1",
     {%- if cookiecutter.include_docs == 'y' %}
     "portray>=1.8.0",
-    "legacy-cgi>=2.6.3",
-    "setuptools>=80.9.0",
+    "legacy-cgi>=2.6.4",
+    "setuptools>=83.0.0",
     {%- endif %}
-    "pre-commit>=4.2.0",
+    "pre-commit>=4.6.1",
 ]
 
 [project.urls]
@@ -50,7 +50,7 @@ documentation = "https://github.com/{{cookiecutter.github_username}}/{{cookiecut
 issues = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}/issues"
 
 [build-system]
-requires = ["uv_build>=0.11.0,<0.12.0"]
+requires = ["uv_build>=0.12.1,<0.13.0"]
 build-backend = "uv_build"
 
 [tool.uv]

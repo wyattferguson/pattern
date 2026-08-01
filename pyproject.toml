@@ -1,6 +1,6 @@
 [project]
 name = "pattern"
-version = "2.3.0"
+version = "3.0.0"
 description = "Pattern - A modern, opinionated, cookiecutter template for your next Python project."
 authors = [{ name = "Wyatt Ferguson", email = "wyattxdev@duck.com" }]
 license = { file = "LICENSE" }
@@ -18,20 +18,20 @@ classifiers = [
 ]
 
 dependencies = [
-  "cookiecutter>=2.6.0",
+  "cookiecutter>=2.7.1",
 ]
 
 [dependency-groups]
 dev = [
-    "nox>=2026.2.9",
-    "mypy>=1.19.1",
-    "pytest>=9.0.2",
+    "nox>=2026.7.11",
+    "mypy>=2.3.0",
+    "pytest>=9.1.1",
     "pytest-cookies>=0.7.0",
-    "ruff>=0.15.1",
+    "ruff>=0.16.1",
     "taskipy>=1.14.1",
     "toml>=0.10.2",
-    "types-toml>=0.10.8.20240310",
-    "zensical>=0.0.23",
+    "types-toml>=0.10.8.20260518",
+    "zensical>=0.0.52",
     "cffconvert>=2.0.0",
 ]
 

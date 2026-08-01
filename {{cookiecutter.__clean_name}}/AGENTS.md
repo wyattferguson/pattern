@@ -1,6 +1,4 @@
-# {{cookiecutter.__clean_slug}}
-
-## version: 1.0.0
+# version: 0.2.0
 
 ## Stack
 
@@ -21,19 +19,3 @@ Python 3.13, uv, pytest, ruff, ty, taskipy
 - Small functions, max line length 100 characters.
 - Focused files, max 1000 lines.
 - Validate changed code with Ruff, Ty, and relevant tests.
-
-## Commands
-
-- Format: "task format"
-- Lint: "task lint"
-- Type Checking: "task type"
-- Tests: "task tests"
-- Test Coverage: "task coverage"
-  {%- if cookiecutter.include_nox == 'y' %}
-- Nox Version Testing: "task nox"
-  {%- endif %}
-- Run App: "task run"
-  {%- if cookiecutter.include_docker == 'y' %}
-- Docker Build: "task dbuild"
-- Docker Run Image: "task drun"
-  {%- endif %}
