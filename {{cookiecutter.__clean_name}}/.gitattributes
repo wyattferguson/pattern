@@ -1,0 +1,12 @@
+# Normalize line endings: everything stored as LF in the repo,
+# checked out as LF on every platform. Prevents mixed-EOL churn.
+* text=auto eol=lf
+
+# Explicit binary types (never touched by EOL normalization)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
