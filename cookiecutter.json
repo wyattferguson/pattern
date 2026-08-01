@@ -26,7 +26,6 @@
   "include_code_of_conduct": "y",
   "include_citation": "y",
   "include_docker": "y",
-  "include_agents": "y",
   "pypi_deploy": "y",
   "_copy_without_render": [".github/*"],
   "_extensions": ["cookiecutter.extensions.SlugifyExtension"],
@@ -49,7 +48,6 @@
     "include_code_of_conduct": "Include a code of conduct?",
     "include_citation": "Include a citation file?",
     "include_docker": "Include Docker support?",
-    "include_agents": "Include AGENTS.md for better coding agent support?",
     "pypi_deploy": "Include PyPI deployment scripts?"
   }
 }

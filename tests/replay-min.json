@@ -18,7 +18,6 @@
     "include_contributing_guide": "n",
     "include_code_of_conduct": "n",
     "include_docker": "n",
-    "include_agents": "n",
     "pypi_deploy": "n"
   }
 }

@@ -18,7 +18,6 @@
     "include_contributing_guide": "y",
     "include_code_of_conduct": "y",
     "include_docker": "y",
-    "include_agents": "y",
     "pypi_deploy": "y"
   }
 }

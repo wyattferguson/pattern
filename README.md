@@ -44,7 +44,6 @@ Everything comes pre-configured to work out of the box. On setup you can pick an
 - :robot: [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) - Dependency scanning for new versions and security alerts.
 - :mage_man: Semantic Pull Requests - Enforce pull request titles.
 - 🚚 [Cruft Support](https://cruft.github.io/cruft/) - Automatic template updates and validation.
-- :space_invader: [AGENTS.md](https://agents.md/) - Guidelines for AI agents to better navigate your project, reduce token usage, and better maintain code quality.
 - :shield: Dependency auditing with [uv audit](https://docs.astral.sh/uv/) and [zizmor](https://zizmor.sh/) - Supply-chain scanning for vulnerabilities and workflow security.
 
 ## Alternative Cookiecutter Projects

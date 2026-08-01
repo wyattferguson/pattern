@@ -79,14 +79,6 @@ def prune_unwanted_files() -> None:
     if "{{cookiecutter.include_dbot}}" != "y":
         remove(".github/dependabot.yml")
 
-    if "{{cookiecutter.include_agents}}" != "y":
-        remove("AGENTS.md")
-
-    if "{{cookiecutter.include_dbot}}" != "y":
-        remove(".github/release-drafter.yml")
-        remove(".github/workflows/release-publish.yml")
-        remove(".github/workflows/release-drafter.yml")
-
     if "{{cookiecutter.license}}" == "None":
         remove("LICENSE")
 

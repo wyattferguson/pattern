@@ -24,7 +24,6 @@ class Recipe(TypedDict, total=True):
     include_contributing_guide: str
     include_code_of_conduct: str
     include_docker: str
-    include_agents: str
     pypi_deploy: str
     excluded_files: list[str]
 
@@ -49,7 +48,6 @@ cookie_full_bake: Recipe = {
     "include_contributing_guide": "y",
     "include_code_of_conduct": "y",
     "include_docker": "y",
-    "include_agents": "y",
     "pypi_deploy": "y",
     "excluded_files": [],
 }
@@ -74,7 +72,6 @@ cookie_min_bake: Recipe = {
     "include_contributing_guide": "n",
     "include_code_of_conduct": "n",
     "include_docker": "n",
-    "include_agents": "n",
     "pypi_deploy": "n",
     "excluded_files": [
         "docs",
@@ -82,7 +79,6 @@ cookie_min_bake: Recipe = {
         "CHANGELOG.md",
         "CONTRIBUTING.md",
         "CODE_OF_CONDUCT.md",
-        "AGENTS.md",
         "LICENSE",
         "Dockerfile",
         ".dockerignore",
